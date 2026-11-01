@@ -1,0 +1,332 @@
+{
+  "language": "zh",
+  "table_headers": {
+    "description": [
+      "项目",
+      "項目",
+      "参数",
+      "參數"
+    ],
+    "unit": [
+      "单位",
+      "單位"
+    ]
+  },
+  "sections": {
+    "加工范围": "Capacity",
+    "加工範圍": "Capacity",
+    "工作台": "Table",
+    "驱动进给": "Feedrates",
+    "驅動進給": "Feedrates",
+    "主轴": "Spindle",
+    "主軸": "Spindle",
+    "刀库": "Automatic tool changer (ATC)",
+    "刀庫": "Automatic tool changer (ATC)",
+    "精度": "Accuracy",
+    "其他": "Machine"
+  },
+  "optional_pattern": "选配|選配|可选|可選",
+  "machine_types": [
+    {
+      "pattern": "桥式五轴加工中心|橋式五軸加工中心",
+      "class": "machining",
+      "type": "Bridge 5-Axis Machining Center"
+    },
+    {
+      "pattern": "摇篮式五轴加工中心|搖籃式五軸加工中心",
+      "class": "machining",
+      "type": "Cradle 5-Axis Machining Center"
+    },
+    {
+      "pattern": "五轴加工中心|五軸加工中心",
+      "class": "machining",
+      "type": "5-Axis Machining Center"
+    },
+    {
+      "pattern": "石墨机|石墨機",
+      "class": "machining",
+      "type": "Graphite Machining Center"
+    },
+    {
+      "pattern": "型材加工中心",
+      "class": "machining",
+      "type": "Profile Machining Center"
+    },
+    {
+      "pattern": "卧式加工中心|臥式加工中心",
+      "class": "machining",
+      "type": "Horizontal Machining Center"
+    },
+    {
+      "pattern": "立式加工中心",
+      "class": "machining",
+      "type": "Vertical Machining Center"
+    },
+    {
+      "pattern": "龙门数控铣|龍門數控銑",
+      "class": "machining",
+      "type": "Gantry CNC Milling Machine"
+    },
+    {
+      "pattern": "数控雕铣机|數控雕銑機",
+      "class": "machining",
+      "type": "CNC Engraving and Milling Machine"
+    },
+    {
+      "pattern": "高速精密加工中心",
+      "class": "machining",
+      "type": "High-speed Precision Machining Center"
+    },
+    {
+      "pattern": "中高速加工中心",
+      "class": "machining",
+      "type": "Medium and High-speed Machining Center"
+    },
+    {
+      "pattern": "加工中心",
+      "class": "machining",
+      "type": "Machining Center"
+    },
+    {
+      "pattern": "车削中心|車削中心|数控车床|數控車床",
+      "class": "turning",
+      "type": "Turning Center"
+    }
+  ],
+  "rules": [
+    {
+      "key": "travel_x_mm",
+      "pattern": "x\\s*轴行程|x\\s*軸行程",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_y_mm",
+      "pattern": "y\\s*轴行程|y\\s*軸行程",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_z_mm",
+      "pattern": "z\\s*轴行程|z\\s*軸行程",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_a_deg",
+      "pattern": "a\\s*轴摆动角度|a\\s*軸擺動角度",
+      "unit": "deg",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_b_deg",
+      "pattern": "b\\s*轴摆动角度|b\\s*軸擺動角度",
+      "unit": "deg",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_c_deg",
+      "pattern": "c\\s*轴摆动角度|c\\s*軸擺動角度",
+      "unit": "deg",
+      "category": "Capacity"
+    },
+    {
+      "key": "gantry_width_mm",
+      "pattern": "龙门宽度|龍門寬度",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "crossbeam_to_table_mm",
+      "pattern": "横梁至工作台面距离",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "spindle_nose_to_table_top_mm",
+      "pattern": "主轴(?:鼻端|垂直方向端面|端口)至工作台(?:面)?距离",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "spindle_center_to_table_mm",
+      "pattern": "主轴(?:水平方向)?中心(?:线)?至工作台面距离",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "spindle_center_to_column_mm",
+      "pattern": "主轴中心至立柱距离",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "door_width_mm",
+      "pattern": "开门宽度",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "table_size_mm",
+      "pattern": "工作台尺寸",
+      "unit": "mm",
+      "category": "Table"
+    },
+    {
+      "key": "table_t_slot",
+      "pattern": "[tT]\\s*型槽",
+      "unit": "",
+      "category": "Table"
+    },
+    {
+      "key": "table_load_kg",
+      "pattern": "最大工作负重|工作台最大载重",
+      "unit": "kg",
+      "category": "Table"
+    },
+    {
+      "key": "table_indexing",
+      "pattern": "工作台分度",
+      "unit": "",
+      "category": "Table"
+    },
+    {
+      "key": "table_drive_power_kw",
+      "pattern": "转台的功率",
+      "unit": "kW",
+      "category": "Table"
+    },
+    {
+      "key": "rapid_traverse_xyz_m_min",
+      "pattern": "x\\s*/\\s*y\\s*/\\s*z\\s*快速移动速度",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "cutting_feed_xyz_m_min",
+      "pattern": "x\\s*/\\s*y\\s*/\\s*z\\s*最大切削速度",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "axis_motor_power_xyz_kw",
+      "pattern": "x\\s*/\\s*y\\s*/\\s*z\\s*轴电机功率",
+      "unit": "kW",
+      "category": "Motor"
+    },
+    {
+      "key": "rotary_axis_speed_rpm",
+      "pattern": "[abc]\\s*/\\s*[abc]\\s*轴最高转速",
+      "unit": "rpm",
+      "category": "Feedrate"
+    },
+    {
+      "key": "spindle_power_kw",
+      "pattern": "主轴功率",
+      "unit": "kW",
+      "category": "Spindle"
+    },
+    {
+      "key": "spindle_speed_rpm",
+      "pattern": "主轴最高转速|主轴转速",
+      "unit": "rpm",
+      "category": "Spindle"
+    },
+    {
+      "key": "spindle_torque_nm",
+      "pattern": "主轴扭矩",
+      "unit": "N*m",
+      "category": "Spindle"
+    },
+    {
+      "key": "tool_shank_type",
+      "pattern": "刀具规格",
+      "unit": "",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "spindle_outer_diameter_mm",
+      "pattern": "主轴外径",
+      "unit": "mm",
+      "category": "Spindle"
+    },
+    {
+      "key": "tool_magazine_type",
+      "pattern": "刀库类型",
+      "unit": "",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "tool_max_diameter_mm",
+      "pattern": "最大刀具直径",
+      "unit": "mm",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "tool_max_length_mm",
+      "pattern": "最大刀具长度",
+      "unit": "mm",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "tool_max_weight_kg",
+      "pattern": "最大刀具重量",
+      "unit": "kg",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "tool_capacity",
+      "pattern": "刀库容量",
+      "unit": "pcs",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "repeatability",
+      "pattern": "重复定位精度",
+      "unit": "",
+      "category": "Accuracy"
+    },
+    {
+      "key": "positioning_accuracy",
+      "pattern": "(?<!重复)定位精度",
+      "unit": "",
+      "category": "Accuracy"
+    },
+    {
+      "key": "power_supply_specification",
+      "pattern": "工作电压及总容量",
+      "unit": "",
+      "category": "Machine"
+    },
+    {
+      "key": "machine_weight_kg",
+      "pattern": "机床重量",
+      "unit": "kg",
+      "category": "Machine"
+    },
+    {
+      "key": "machine_dimensions_mm",
+      "pattern": "外形尺寸",
+      "unit": "mm",
+      "category": "Machine"
+    },
+    {
+      "key": "control_system",
+      "pattern": "数控系统|控制系统",
+      "unit": "",
+      "category": "Control"
+    },
+    {
+      "key": "max_turning_diameter_mm",
+      "pattern": "最大车削直径",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "max_turning_length_mm",
+      "pattern": "最大车削长度",
+      "unit": "mm",
+      "category": "Capacity"
+    }
+  ]
+}

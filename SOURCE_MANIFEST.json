@@ -1,0 +1,132 @@
+{
+  "project_name": "MachineCatalog Engine",
+  "version": "8.4.5",
+  "distribution": "source-only",
+  "excluded": [
+    "user PDFs",
+    "generated outputs",
+    "test catalogues"
+  ],
+  "files": [
+    {
+      "path": "INSTALL_DEPS.bat",
+      "bytes": 477,
+      "sha256": "d777163af23bf94f5e608b9b6e215416ef93c04a68e252f6ecb239c20241ce3a"
+    },
+    {
+      "path": "README_RU.md",
+      "bytes": 1995,
+      "sha256": "75f6de15797d8e0553a84f4f953acee7490fde0359e440d0023fb49436629436"
+    },
+    {
+      "path": "START_LOCAL.bat",
+      "bytes": 551,
+      "sha256": "3587c456e2716096a2749acd0b7e6d1801b49ec9da939412c2f785992ae583fb"
+    },
+    {
+      "path": "START_NO_CACHE.bat",
+      "bytes": 62,
+      "sha256": "354462a0f7e80e0f72ba7061dbd0013b3931e14b7a370b0852d1fd1994e0b5cb"
+    },
+    {
+      "path": "catalog_engine/__init__.py",
+      "bytes": 195,
+      "sha256": "11a0a43401dd164a6722e803a2e44fe4113ba4caf9ce3c6bc93fd1c5aad49453"
+    },
+    {
+      "path": "catalog_engine/exports.py",
+      "bytes": 12301,
+      "sha256": "9b781b71b4df66191d8ff3f5f26e9de64f551c53eb3492567038449257304d3a"
+    },
+    {
+      "path": "catalog_engine/extract.py",
+      "bytes": 18062,
+      "sha256": "82467b16d5d37ff7c97c3fe60f5787df0213b196b501643e044ef2cb1bebac0f"
+    },
+    {
+      "path": "catalog_engine/geometry.py",
+      "bytes": 19744,
+      "sha256": "9f3456ba447de1d590ec45cbf44880f8b87b2159c8795edab7354d3b0bbafad9"
+    },
+    {
+      "path": "catalog_engine/identity.py",
+      "bytes": 2440,
+      "sha256": "93c8104f75d81e7df67f17404be9f96694d85f6f860cd26f7d078fbb8584dedc"
+    },
+    {
+      "path": "catalog_engine/models.py",
+      "bytes": 6056,
+      "sha256": "f084d3fa3ba8de41a45cb10f84d7a1e826c918493be51fc358f61b017905166a"
+    },
+    {
+      "path": "catalog_engine/progress.py",
+      "bytes": 3677,
+      "sha256": "573c294795fadca04d1a6a3ebb7815760e5e38c714d90b1f99fa2b966fb4ac4e"
+    },
+    {
+      "path": "catalog_engine/quality.py",
+      "bytes": 5255,
+      "sha256": "a089b03e839ecf97f9ab071d891c1533c12326f4563051cfe9faee90290518fd"
+    },
+    {
+      "path": "catalog_engine/runner.py",
+      "bytes": 11314,
+      "sha256": "65838570cfe663b332cc9fc2a1b8edb32a13165e8d9f60f7ad1a4b2933e1a576"
+    },
+    {
+      "path": "catalog_engine/schema.py",
+      "bytes": 4544,
+      "sha256": "95579d43526a344a9e35adbde325f50be2205827ba921e9a15745026cdbc9fc8"
+    },
+    {
+      "path": "catalog_engine/storage.py",
+      "bytes": 1784,
+      "sha256": "02ad84901db26da39b87116a35be2045a2cb4998a4873032c7ec196c50bdd73e"
+    },
+    {
+      "path": "catalog_engine/values.py",
+      "bytes": 9973,
+      "sha256": "0cfab7ad57336a9deee1c4da0c71071770d3411fccb68c95b4e50bcb787db98a"
+    },
+    {
+      "path": "compat_v842.py",
+      "bytes": 138126,
+      "sha256": "8c07e72c1c0b0a8f1f2f7a4ad759ba4aa69e98e400f5603e7826b34b91dc10af"
+    },
+    {
+      "path": "config/dictionaries/en.json",
+      "bytes": 1498,
+      "sha256": "6b2dd1e8b7b947c3109ee0c18b1fab1061bdf8b02be900ef6769265b1bd81e79"
+    },
+    {
+      "path": "config/dictionaries/ru.json",
+      "bytes": 1861,
+      "sha256": "a077b546bc19895d666bdcb267ed8eae9bf6350e214fb7904f50787f8ef85409"
+    },
+    {
+      "path": "config/dictionaries/zh.json",
+      "bytes": 8112,
+      "sha256": "7596b6340353bd300b2321c110ac0ecf84e24c71231ae98a3030584ade882a23"
+    },
+    {
+      "path": "config/overrides.example.json",
+      "bytes": 263,
+      "sha256": "528a6b53653d7937e4db058b2235933ff495a1d0cec37ed3bdef181a3ff3277f"
+    },
+    {
+      "path": "config/schema.json",
+      "bytes": 16448,
+      "sha256": "e338a9ad3129e408aac4a51db755fde7da9f3266b40ad7c63bb2d477f554a517"
+    },
+    {
+      "path": "main.py",
+      "bytes": 2309,
+      "sha256": "40e73339202f30f4d7b9737c5cad84383a797fc8d5a40b9a42bc945214527fac"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 238,
+      "sha256": "298dd88c3cc6703ae9fa19588bf609d580cb10b1641a8a02bec34514ff6c05fc"
+    }
+  ]
+}
