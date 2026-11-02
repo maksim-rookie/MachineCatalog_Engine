@@ -1,0 +1,8 @@
+-r requirements.txt
+# Optional v8.4.2 legacy adapter: non-PDF sources and legacy OCR fallback.
+Pillow>=10
+pytesseract>=0.3
+pandas>=2.1
+openpyxl>=3.1
+xlrd>=2.0
+python-docx>=1.1

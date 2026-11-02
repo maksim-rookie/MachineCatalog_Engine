@@ -1,0 +1,12 @@
+{
+  "corrections": [
+    {
+      "source_file": "your_catalog.pdf",
+      "source_sha256": "REPLACE_WITH_SHA256_FROM_RUN_MANIFEST",
+      "fact_id": "REPLACE_WITH_FACT_ID_FROM_ALL_MODELS_LONG",
+      "corrected_value": "REPLACE_WITH_VERIFIED_VALUE_IN_SOURCE_UNIT",
+      "reviewer": "REVIEWER_NAME",
+      "reason": "Exact page/row evidence and why the source extraction should be corrected"
+    }
+  ]
+}

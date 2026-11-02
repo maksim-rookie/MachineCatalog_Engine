@@ -1,7 +1,10 @@
 .venv/
+.idea/
 __pycache__/
 *.py[cod]
-*.pdf
-/pdf/
-/output/
-/releases/
+.pytest_cache/
+output/
+*.7z
+pdf/*.pdf
+config/overrides.json
+config/review_overrides.json

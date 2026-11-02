@@ -1,5 +1,5 @@
 {
-  "schema_version": "8.4.5.1",
+  "schema_version": "4.8.5.2",
   "label_aliases": {
     "moter": "motor",
     "spdinel": "spindle",
@@ -13,6 +13,134 @@
     "capasity": "capacity"
   },
   "rules": [
+    {
+      "key": "spindle_c_index_deg",
+      "pattern": "(?:min\\.?\\s*spindle\\s+indexing\\s+angle|c[- ]?axis.*index)",
+      "unit": "deg",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "turret_max_boring_bar_diameter_mm",
+      "pattern": "max\\.?\\s*boring\\s+bar\\s+size",
+      "unit": "mm",
+      "category": "Turret",
+      "section": "^turret\\b"
+    },
+    {
+      "key": "turret_interface_type",
+      "pattern": "^bmt\\s*\\d{2,3}[a-z]?$",
+      "unit": "",
+      "category": "Turret",
+      "section": "^turret\\b"
+    },
+    {
+      "key": "tailstock_quill_diameter_mm",
+      "pattern": "^quill\\s+diameter$",
+      "unit": "mm",
+      "category": "Tailstock",
+      "section": "^tailstock\\b"
+    },
+    {
+      "key": "tailstock_quill_travel_mm",
+      "pattern": "^quill\\s+travel$",
+      "unit": "mm",
+      "category": "Tailstock",
+      "section": "^tailstock\\b"
+    },
+    {
+      "key": "tailstock_quill_taper",
+      "pattern": "^quill\\s+bore\\s+taper$",
+      "unit": "",
+      "category": "Tailstock",
+      "section": "^tailstock\\b"
+    },
+    {
+      "key": "control_system",
+      "pattern": "^(?:nc|cnc)\\s+system$|^control\\s+system$",
+      "unit": "",
+      "category": "Control",
+      "section": ""
+    },
+    {
+      "key": "travel_w_mm",
+      "pattern": "\\bw[- ]?axis\\b",
+      "unit": "mm",
+      "category": "Travel",
+      "section": "^travels?\\b"
+    },
+    {
+      "key": "rapid_traverse_xyz_m_min",
+      "pattern": "\\bx\\s*[,/]?\\s*y\\s*[,/]?\\s*z\\s*axes?\\b",
+      "context": "^feedrates?\\s*/\\s*rapid traverse",
+      "unit_family": "linear_speed",
+      "unit": "m/min",
+      "category": "Feedrate",
+      "section": "^feedrates?\\b"
+    },
+    {
+      "key": "rapid_traverse_w_m_min",
+      "pattern": "\\bw[- ]?axis\\b",
+      "context": "^feedrates?\\s*/\\s*rapid traverse",
+      "unit_family": "linear_speed",
+      "unit": "m/min",
+      "category": "Feedrate",
+      "section": "^feedrates?\\b"
+    },
+    {
+      "key": "cutting_feed_xyz_mm_min",
+      "pattern": "\\bx\\s*[,/]?\\s*y\\s*[,/]?\\s*z\\s*axes?\\b",
+      "context": "^feedrates?\\s*/\\s*cutting feedrate",
+      "unit": "mm/min",
+      "category": "Feedrate",
+      "section": "^feedrates?\\b"
+    },
+    {
+      "key": "max_workpiece_swing_mm",
+      "pattern": "\\bwith(?:out)?\\s+semi[- ]?s/?g\\b|\\bmax\\.?\\s*swing\\s+diameter\\b",
+      "context": "\\bmax\\.?\\s*swing\\s+diameter",
+      "unit": "mm",
+      "category": "Table",
+      "section": "^table\\b"
+    },
+    {
+      "key": "table_load_kg",
+      "pattern": "^\\d{3,5}\\s*[x\\u00d7]\\s*\\d{3,5}\\s*mm\\b",
+      "context": "^table\\s*/\\s*load capacity\\s*/",
+      "unit_family": "mass",
+      "unit": "kg",
+      "category": "Table",
+      "section": "^table\\b"
+    },
+    {
+      "key": "table_load_kg",
+      "pattern": "\\bload capacity\\b",
+      "unit_family": "mass",
+      "unit": "kg",
+      "category": "Table",
+      "section": "^table\\b"
+    },
+    {
+      "key": "boring_spindle_diameter_mm",
+      "pattern": "\\bboring spindle diameter\\b",
+      "unit": "mm",
+      "category": "Spindle",
+      "section": "^spindle\\b"
+    },
+    {
+      "key": "quill_diameter_mm",
+      "pattern": "\\bquill diameter\\b",
+      "unit": "mm",
+      "category": "Spindle",
+      "section": "^spindle\\b"
+    },
+    {
+      "key": "spindle_power_kw",
+      "pattern": "\\bspindle motor\\b",
+      "unit": "kW",
+      "category": "Spindle",
+      "section": "^motor\\b"
+    },
     {
       "key": "swing_over_bed_mm",
       "pattern": "swing over bed",
@@ -29,7 +157,7 @@
     },
     {
       "key": "recommended_turning_diameter_mm",
-      "pattern": "recommended turning (?:diameter|dia)",
+      "pattern": "recomm[ae]nded turning (?:diameter|dia)",
       "unit": "mm",
       "category": "Capacity",
       "section": ""
@@ -615,9 +743,28 @@
       "tool_capacity",
       "machine_weight_kg",
       "control_system"
+    ],
+    "boring": [
+      "travel_x_mm",
+      "travel_y_mm",
+      "travel_z_mm",
+      "travel_w_mm",
+      "spindle_speed_rpm",
+      "table_load_kg",
+      "machine_weight_kg",
+      "control_system"
     ]
   },
-  "hidden_wide_parameters": [],
+  "hidden_wide_parameters": [
+    "table_work_inertia_nm2",
+    "spindle_taper",
+    "axis_acceleration_xyz_g",
+    "tool_max_moment_nm",
+    "tool_pull_stud",
+    "tool_selection_type",
+    "coolant_pump_motor_power_kw",
+    "air_pressure_mpa"
+  ],
   "section_unit_rules": [
     {
       "section": "^table\\b",
@@ -634,195 +781,289 @@
     "dictionaries/zh.json",
     "dictionaries/ru.json"
   ],
-  "parameter_categories": {
-    "swing_over_bed_mm": "Capacity",
-    "swing_over_saddle_mm": "Capacity",
-    "recommended_turning_diameter_mm": "Capacity",
-    "max_turning_diameter_mm": "Capacity",
-    "max_turning_length_mm": "Capacity",
-    "bar_working_diameter_mm": "Capacity",
-    "chuck_size_inch": "Spindle",
-    "travel_x_mm": "Travel",
-    "rapid_traverse_x_m_min": "Feedrate",
-    "travel_y_mm": "Travel",
-    "rapid_traverse_y_m_min": "Feedrate",
-    "travel_z_mm": "Travel",
-    "rapid_traverse_z_m_min": "Feedrate",
-    "travel_a_deg": "Travel",
-    "rapid_traverse_a_rpm": "Feedrate",
-    "travel_b_deg": "Travel",
-    "rapid_traverse_b_rpm": "Feedrate",
-    "travel_c_deg": "Travel",
-    "rapid_traverse_c_rpm": "Feedrate",
-    "table_rotation_speed_rpm": "Table",
-    "spindle_nose_to_table_center_mm": "Travel",
-    "spindle_nose_to_table_top_mm": "Travel",
-    "table_load_kg": "Table",
-    "table_size_mm": "Table",
-    "max_workpiece_size_mm": "Table",
-    "pallet_size_mm": "Table",
-    "pallet_change_time_sec": "Table",
-    "table_t_slot": "Table",
-    "table_work_inertia_nm2": "Table",
-    "sub_spindle_speed_rpm": "Sub spindle",
-    "sub_spindle_power_kw": "Sub spindle",
-    "sub_spindle_torque_nm": "Sub spindle",
-    "sub_spindle_nose": "Sub spindle",
-    "sub_spindle_bearing_diameter_mm": "Sub spindle",
-    "sub_spindle_bore_mm": "Sub spindle",
-    "sub_spindle_c_index_deg": "Sub spindle",
-    "sub_spindle_taper": "Sub spindle",
-    "spindle_speed_rpm": "Spindle",
-    "spindle_power_kw": "Spindle",
-    "spindle_torque_nm": "Spindle",
-    "spindle_nose": "Spindle",
-    "spindle_bearing_diameter_mm": "Spindle",
-    "spindle_bore_mm": "Spindle",
-    "spindle_c_index_deg": "Spindle",
-    "spindle_taper": "Spindle",
-    "turret_station_count": "Turret",
-    "turret_od_tool_size_mm": "Turret",
-    "turret_max_id_tool_mm": "Turret",
-    "turret_indexing_time_sec": "Turret",
-    "driven_tool_speed_rpm": "Turret",
-    "driven_tool_power_kw": "Turret",
-    "tailstock_travel_mm": "Tailstock",
-    "tailstock_quill_taper": "Tailstock",
-    "tool_capacity": "Automatic tool changer (ATC)",
-    "tool_max_diameter_mm": "Automatic tool changer (ATC)",
-    "tool_max_length_mm": "Automatic tool changer (ATC)",
-    "tool_max_weight_kg": "Automatic tool changer (ATC)",
-    "tool_max_moment_nm": "Automatic tool changer (ATC)",
-    "tool_shank_type": "Automatic tool changer (ATC)",
-    "tool_pull_stud": "Automatic tool changer (ATC)",
-    "tool_selection_type": "Automatic tool changer (ATC)",
-    "tool_change_time_sec": "Automatic tool changer (ATC)",
-    "power_supply_kva": "Power source",
-    "air_pressure_mpa": "Power source",
-    "coolant_pump_motor_power_kw": "Motor",
-    "coolant_tank_l": "Tank capacity",
-    "machine_dimensions_mm": "Machine dimensions",
-    "machine_height_mm": "Machine dimensions",
-    "machine_width_mm": "Machine dimensions",
-    "machine_length_mm": "Machine dimensions",
-    "machine_weight_kg": "Machine dimensions",
-    "control_system": "Control",
-    "controlled_axes": "Control",
-    "simultaneously_controlled_axes": "Control",
-    "axis_acceleration_xyz_g": "Feedrate",
-    "positioning_accuracy": "Accuracy",
-    "repeatability": "Accuracy",
-    "gantry_width_mm": "Capacity",
-    "crossbeam_to_table_mm": "Capacity",
-    "spindle_center_to_table_mm": "Capacity",
-    "spindle_center_to_column_mm": "Capacity",
-    "door_width_mm": "Capacity",
-    "table_indexing": "Table",
-    "table_drive_power_kw": "Table",
-    "rapid_traverse_xyz_m_min": "Feedrate",
-    "cutting_feed_xyz_m_min": "Feedrate",
-    "axis_motor_power_xyz_kw": "Motor",
-    "rotary_axis_speed_rpm": "Feedrate",
-    "spindle_outer_diameter_mm": "Spindle",
-    "tool_magazine_type": "Automatic tool changer (ATC)",
-    "power_supply_specification": "Power source",
-    "cutting_feed_x_m_min": "Feedrate",
-    "cutting_feed_y_m_min": "Feedrate",
-    "cutting_feed_z_m_min": "Feedrate",
-    "axis_motor_power_x_kw": "Motor",
-    "axis_motor_power_y_kw": "Motor",
-    "axis_motor_power_z_kw": "Motor",
-    "power_supply_voltage_v": "Power source"
-  },
-  "compound_parameters": [
-    {
-      "source_key": "rapid_traverse_xyz_m_min",
-      "axes": "XYZ",
-      "keys": [
-        "rapid_traverse_x_m_min",
-        "rapid_traverse_y_m_min",
-        "rapid_traverse_z_m_min"
-      ],
-      "unit": "m/min",
-      "category": "Feedrate"
-    },
-    {
-      "source_key": "cutting_feed_xyz_m_min",
-      "axes": "XYZ",
-      "keys": [
-        "cutting_feed_x_m_min",
-        "cutting_feed_y_m_min",
-        "cutting_feed_z_m_min"
-      ],
-      "unit": "m/min",
-      "category": "Feedrate"
-    },
-    {
-      "source_key": "axis_motor_power_xyz_kw",
-      "axes": "XYZ",
-      "keys": [
-        "axis_motor_power_x_kw",
-        "axis_motor_power_y_kw",
-        "axis_motor_power_z_kw"
-      ],
-      "unit": "kW",
-      "category": "Motor"
-    },
-    {
-      "source_key": "rotary_axis_speed_rpm",
-      "label_axes": true,
-      "key_template": "rotary_axis_{axis}_speed_rpm",
-      "unit": "rpm",
-      "category": "Feedrate"
-    },
-    {
-      "source_key": "positioning_accuracy",
-      "label_axes": true,
-      "key_template": "positioning_accuracy_{axis}_{unit}",
-      "category": "Accuracy",
-      "units": {
-        "mm": "mm",
-        "″": "arcsec",
-        "′′": "arcsec"
-      }
-    },
-    {
-      "source_key": "repeatability",
-      "label_axes": true,
-      "key_template": "repeatability_{axis}_{unit}",
-      "category": "Accuracy",
-      "units": {
-        "mm": "mm",
-        "″": "arcsec",
-        "′′": "arcsec"
-      }
-    },
-    {
-      "source_key": "power_supply_specification",
-      "value_pattern": "(?P<voltage>\\d+(?:\\.\\d+)?)\\s*V\\s*/\\s*(?P<apparent_power>\\d+(?:\\.\\d+)?)\\s*kVA",
-      "components": [
-        {
-          "group": "voltage",
-          "key": "power_supply_voltage_v",
-          "unit": "V"
-        },
-        {
-          "group": "apparent_power",
-          "key": "power_supply_kva",
-          "unit": "kVA"
-        }
-      ],
-      "category": "Power source"
-    }
-  ],
   "manufacturers": [
     {
-      "pattern": "DN\\s*Solutions",
-      "name": "DN Solutions"
+      "name": "KAIBO CNC",
+      "pattern": "KAIBO\\s*CNC|NINGBO\\s+KAIBO\\s+CNC|宁波市凯博数控机械有限公司"
     },
     {
-      "pattern": "NINGBO\\s+KAIBO|宁波市凯博数控机械有限公司",
-      "name": "Ningbo Kaibo CNC Machinery Co., Ltd."
+      "name": "DN Solutions",
+      "pattern": "DN\\s*Solutions|DN\\s+SOLUTIONS"
     }
-  ]
+  ],
+  "required_any": {
+    "boring": [
+      [
+        "boring_spindle_diameter_mm",
+        "quill_diameter_mm"
+      ]
+    ]
+  },
+  "machine_classes": [
+    {
+      "key": "boring",
+      "machine_type": "Horizontal Boring Machine",
+      "min_score": 6,
+      "features": [
+        {
+          "scope": "cover",
+          "pattern": "\\bhorizontal\\s+boring\\s+machin(?:e|es)\\b",
+          "weight": 15
+        },
+        {
+          "scope": "cover",
+          "pattern": "\\bhorizontal\\s+bor(?:er|ing)\\b",
+          "weight": 9
+        },
+        {
+          "scope": "spec",
+          "pattern": "\\bboring\\s+spindle\\s+diameter\\b",
+          "weight": 5
+        },
+        {
+          "scope": "spec",
+          "pattern": "\\bW[- ]axis\\b",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "key": "turning",
+      "machine_type": "Turning Center",
+      "min_score": 6,
+      "features": [
+        {
+          "scope": "cover",
+          "pattern": "\\b(?:turning\\s+cent(?:er|re)|turn[- ]mill\\s+(?:machine|cent(?:er|re)))\\b",
+          "weight": 14
+        },
+        {
+          "scope": "spec",
+          "pattern": "\\bmax\\.?\\s*turning\\s+diameter\\b",
+          "weight": 4
+        },
+        {
+          "scope": "cover",
+          "pattern": "\\bturning\\s+machine\\b",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "key": "machining",
+      "machine_type": "Machining Center",
+      "min_score": 6,
+      "features": [
+        {
+          "scope": "cover",
+          "pattern": "\\bmachining\\s+cent(?:er|re)s?\\b",
+          "weight": 14
+        },
+        {
+          "scope": "cover",
+          "pattern": "\\b(?:vertical|horizontal)\\s+machining\\b",
+          "weight": 6
+        }
+      ],
+      "subtypes": [
+        {
+          "scope": "cover",
+          "pattern": "\\b(?:5[- ]?axis|five[- ]axis)(?:\\s+\\w+){0,3}\\s+horizontal\\s+machining\\s+cent(?:er|re)|\\bhorizontal\\s+machining\\s+cent(?:er|re)",
+          "machine_type": "5-Axis Horizontal Machining Center"
+        },
+        {
+          "scope": "cover",
+          "pattern": "\\b(?:5[- ]?axis|five[- ]axis)(?:\\s+\\w+){0,3}\\s+vertical\\s+machining\\s+cent(?:er|re)",
+          "machine_type": "5-Axis Vertical Machining Center"
+        },
+        {
+          "scope": "cover",
+          "pattern": "\\bvertical\\s+machining\\s+cent(?:er|re)",
+          "machine_type": "Vertical Machining Center"
+        },
+        {
+          "scope": "cover",
+          "pattern": "\\b(?:5[- ]?axis|five[- ]axis)(?:\\s+\\w+){0,2}\\s+machining\\s+cent(?:er|re)",
+          "machine_type": "5-Axis Machining Center"
+        }
+      ]
+    }
+  ],
+  "classification_min_margin": 2,
+  "shared_text_recovery_keys": [
+    "control_system"
+  ],
+  "shared_text_min_coverage": 0.75,
+  "model_family_rules": [
+    {
+      "id": "dhf8000_family",
+      "pattern": "^(?P<base>DHF\\s+8000)(?P<variant>ST)?$",
+      "base_model": "{base}",
+      "model_variant": "{variant}",
+      "note": "DHF 8000 and DHF 8000ST share a base family. ST remains a physical modification; 30000rpm/PSC remains a configuration."
+    }
+  ],
+  "cover_machine_types": [
+    {
+      "pattern": "\\bhorizontal boring machines?\\b",
+      "class": "boring",
+      "type": "Horizontal Boring Machine"
+    },
+    {
+      "pattern": "\\b(?:simultaneous\\s+)?5[- ]?axis\\s+horizontal\\s+machining\\s+cent(?:er|re)|\\bhorizontal\\s+(?:simultaneous\\s+)?5[- ]?axis\\s+machining\\s+cent(?:er|re)",
+      "class": "machining",
+      "type": "Horizontal 5-Axis Machining Center"
+    },
+    {
+      "pattern": "\\b(?:simultaneous\\s+)?5[- ]?axis\\s+vertical\\s+machining\\s+cent(?:er|re)|\\bvertical\\s+(?:simultaneous\\s+)?5[- ]?axis\\s+machining\\s+cent(?:er|re)",
+      "class": "machining",
+      "type": "Vertical 5-Axis Machining Center"
+    },
+    {
+      "pattern": "\\b(?:5[- ]?axis|five[- ]axis)(?:\\s+\\w+){0,4}\\s+machining\\s+cent(?:er|re)",
+      "class": "machining",
+      "type": "5-Axis Machining Center"
+    },
+    {
+      "pattern": "\\bhorizontal\\s+machining\\s+cent(?:er|re)",
+      "class": "machining",
+      "type": "Horizontal Machining Center"
+    },
+    {
+      "pattern": "\\bvertical\\s+machining\\s+cent(?:er|re)",
+      "class": "machining",
+      "type": "Vertical Machining Center"
+    },
+    {
+      "pattern": "\\bturning\\s+cent(?:er|re)|\\b(?:cnc\\s+)?lathe\\b",
+      "class": "turning",
+      "type": "Turning Center"
+    }
+  ],
+  "machine_taxonomy": [
+    {
+      "class": "machining",
+      "label_ru": "Обрабатывающие центры / фрезерная обработка",
+      "types": [
+        "Vertical Machining Center",
+        "Horizontal Machining Center",
+        "5-Axis Machining Center",
+        "Horizontal 5-Axis Machining Center",
+        "Vertical 5-Axis Machining Center",
+        "Gantry CNC Milling Machine",
+        "CNC Engraving and Milling Machine",
+        "High-speed Precision Machining Center",
+        "Profile Machining Center",
+        "Graphite Machining Center",
+        "Machining Center"
+      ]
+    },
+    {
+      "class": "turning",
+      "label_ru": "Токарные станки и токарные центры",
+      "types": [
+        "Turning Center",
+        "Mill-Turn Center"
+      ]
+    },
+    {
+      "class": "boring",
+      "label_ru": "Расточные станки",
+      "types": [
+        "Horizontal Boring Machine"
+      ]
+    },
+    {
+      "class": "unknown",
+      "label_ru": "Не классифицировано",
+      "types": [
+        "Unclassified machine"
+      ]
+    }
+  ],
+  "parameter_groups": [
+    "Travel",
+    "Table",
+    "Spindle",
+    "Feedrate",
+    "Automatic tool changer (ATC)",
+    "Machine dimensions",
+    "Control",
+    "Capacity",
+    "Turret",
+    "Sub spindle",
+    "Tailstock",
+    "Motor",
+    "Power source",
+    "Accuracy",
+    "Tank capacity",
+    "Machine",
+    "Other"
+  ],
+  "parameter_order": {
+    "Travel": [
+      "travel_x_mm",
+      "travel_y_mm",
+      "travel_z_mm",
+      "travel_w_mm",
+      "travel_a_deg",
+      "travel_b_deg",
+      "travel_c_deg",
+      "spindle_nose_to_table_center_mm",
+      "spindle_nose_to_table_top_mm"
+    ],
+    "Table": [
+      "table_size_mm",
+      "pallet_size_mm",
+      "table_load_kg",
+      "max_workpiece_size_mm",
+      "max_workpiece_swing_mm",
+      "table_rotation_speed_rpm",
+      "table_drive_power_kw"
+    ],
+    "Spindle": [
+      "spindle_speed_rpm",
+      "spindle_taper",
+      "spindle_power_kw",
+      "spindle_torque_nm",
+      "boring_spindle_diameter_mm",
+      "quill_diameter_mm",
+      "tool_shank_type"
+    ],
+    "Feedrate": [
+      "rapid_traverse_x_m_min",
+      "rapid_traverse_y_m_min",
+      "rapid_traverse_z_m_min",
+      "rapid_traverse_w_m_min",
+      "rapid_traverse_xyz_m_min",
+      "cutting_feed_xyz_mm_min",
+      "cutting_feed_xyz_m_min",
+      "rotary_axis_speed_a_rpm",
+      "rotary_axis_speed_b_rpm",
+      "rotary_axis_speed_c_rpm"
+    ],
+    "Automatic tool changer (ATC)": [
+      "tool_capacity",
+      "tool_shank",
+      "tool_max_diameter_mm",
+      "tool_max_length_mm",
+      "tool_max_weight_kg",
+      "tool_max_moment_nm",
+      "tool_change_time_sec",
+      "tool_selection_type"
+    ],
+    "Machine dimensions": [
+      "machine_height_mm",
+      "machine_length_mm",
+      "machine_width_mm",
+      "machine_dimensions_mm",
+      "machine_weight_kg"
+    ],
+    "Control": [
+      "control_system"
+    ]
+  },
+  "parameter_synonym_file": "parameter_synonyms.json",
+  "normalization_file": "normalization.json",
+  "version": "4.8.5.4"
 }

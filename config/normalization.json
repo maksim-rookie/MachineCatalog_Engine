@@ -1,0 +1,27 @@
+{
+  "parameter_aliases": {
+    "cutting_feed_xyz_mm_min": "cutting_feed_xyz_m_min",
+    "rapid_traverse_a_rpm": "rotary_axis_speed_a_rpm",
+    "rapid_traverse_b_rpm": "rotary_axis_speed_b_rpm",
+    "rapid_traverse_c_rpm": "rotary_axis_speed_c_rpm"
+  },
+  "canonical_units": {
+    "spindle_speed_rpm": "rpm",
+    "spindle_torque_nm": "N·m",
+    "sub_spindle_torque_nm": "N·m",
+    "tool_capacity": "pcs",
+    "tool_max_moment_nm": "N·m",
+    "cutting_feed_xyz_m_min": "m/min",
+    "rotary_axis_speed_a_rpm": "rpm",
+    "rotary_axis_speed_b_rpm": "rpm",
+    "rotary_axis_speed_c_rpm": "rpm"
+  },
+  "text_aliases": {
+    "tool_shank_type": {
+      "HSK A63": "HSK-A63",
+      "HSK A100": "HSK-A100",
+      "BT 40": "BT40",
+      "BT 50": "BT50"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 """CNC PDF_SEARCH v8.4.2 LOCAL: conservative mass-unit repair and model-field status audit.
 
-Python 3.11+; intended for PyCharm. Source catalogues use the external MachineCatalog Engine data directory.
+Python 3.11+; intended for PyCharm. Source catalogues go to ./pdf.
 
 NO NETWORK / NO GROQ: this version is deliberately local-only.
 OCR_LANG=eng+rus (installed traineddata required).
@@ -26,12 +26,10 @@ from datetime import datetime
 BASE = Path(__file__).resolve().parent
 PROJECT_VERSION = "8.4.2"
 VERSION_ID = "v" + PROJECT_VERSION.replace(".", "_")
-from catalog_engine.paths import data_paths
-_DATA_PATHS = data_paths()
-INPUT = _DATA_PATHS.input
-# Each invocation has its own dated folder in the external data directory.
+INPUT = BASE / "pdf"
+# Each invocation has its own dated folder INSIDE this version of the project.
 # An old output run remains untouched when a new catalogue is processed.
-OUTPUT_BASE = _DATA_PATHS.root / "runs" / VERSION_ID
+OUTPUT_BASE = BASE / "output" / VERSION_ID
 
 
 def new_run_directory(output_root: Path, stamp: str | None = None) -> Path:
@@ -151,7 +149,7 @@ class RunProgress:
         return timing
 # Cache is shared across runs of the same extraction version, not duplicated
 # into each CSV/report folder. Legacy cache location remains compatible.
-CACHE = _DATA_PATHS.root / "cache" / "v8_4_2"
+CACHE = BASE / "output" / "cache_v8_4_2"
 MODE = "local"
 OCR_LANG = os.getenv("OCR_LANG", "eng+rus")
 LOCAL_CELL_OCR = os.getenv("LOCAL_CELL_OCR", "1").strip().lower() not in {"0", "false", "no"}

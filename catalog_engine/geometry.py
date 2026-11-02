@@ -390,3 +390,27 @@ def recover_trailing_rows(page, table: LogicalTable, schema) -> int:
     table.rows.append(new)
     table.bbox=(table.bbox[0],table.bbox[1],table.bbox[2],end)
     return 1
+
+
+def candidate_shared_text_span(row: LogicalRow, headers: list[Cell], parameter: str,
+                               allowed: list[str], min_coverage: float = .75):
+    """Review-only recovery for a *text* value split from one trailing blank.
+
+    Never infer numeric specifications and never interpolate an internal gap.
+    The source table remains immutable; the caller must retain the original
+    cell coordinates and mark derived applicability as unverified.
+    """
+    if parameter not in allowed or len(headers)<4 or len(row.values)!=2:
+        return None
+    first,last=row.values
+    if not norm(first.text) or norm(last.text): return None
+    xmin=headers[0].bbox[0]
+    xmax=headers[-1].bbox[2]
+    total=xmax-xmin
+    if total<=0 or abs(first.bbox[0]-xmin)>1.3 or abs(last.bbox[2]-xmax)>1.3:
+        return None
+    if abs(first.bbox[2]-last.bbox[0])>1.3: return None
+    if (first.bbox[2]-first.bbox[0])/total < min_coverage: return None
+    # The content is from the existing first cell; only applicability to the
+    # far-right header is inferred. Caller must include the warning.
+    return Cell((first.bbox[0],first.bbox[1],last.bbox[2],first.bbox[3]),first.text)

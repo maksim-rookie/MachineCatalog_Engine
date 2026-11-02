@@ -1,0 +1,67 @@
+test_accuracy_components_respect_unit (test_v4851_regression.CoreTests.test_accuracy_components_respect_unit) ... ok
+test_axis_power_components (test_v4851_regression.CoreTests.test_axis_power_components) ... ok
+test_bad_triplet_not_projected (test_v4851_regression.CoreTests.test_bad_triplet_not_projected) ... ok
+test_boring_schema_w_and_quill (test_v4851_regression.CoreTests.test_boring_schema_w_and_quill) ... ok
+test_chinese_model_suffix_kept (test_v4851_regression.CoreTests.test_chinese_model_suffix_kept) ... ok
+test_cli_version (test_v4851_regression.CoreTests.test_cli_version) ... ok
+test_compound_weight_preserves_source (test_v4851_regression.CoreTests.test_compound_weight_preserves_source) ... ok
+test_dimension_order_not_guessed (test_v4851_regression.CoreTests.test_dimension_order_not_guessed) ... ok
+test_kaibo_chinese_header (test_v4851_regression.CoreTests.test_kaibo_chinese_header) ... ok
+test_kaibo_manufacturer_config (test_v4851_regression.CoreTests.test_kaibo_manufacturer_config) ... ok
+test_machine_weight_tonnes_to_kg (test_v4851_regression.CoreTests.test_machine_weight_tonnes_to_kg) ... ok
+test_new_machine_class_from_json_without_parser_code (test_v4851_regression.CoreTests.test_new_machine_class_from_json_without_parser_code) ... ok
+test_no_components_for_not_applicable (test_v4851_regression.CoreTests.test_no_components_for_not_applicable) ... ok
+test_power_supply_pair (test_v4851_regression.CoreTests.test_power_supply_pair) ... ok
+test_t_slot_triple (test_v4851_regression.CoreTests.test_t_slot_triple) ... ok
+test_table_drive_watts_to_kw (test_v4851_regression.CoreTests.test_table_drive_watts_to_kw) ... ok
+test_tool_full_empty_diameters (test_v4851_regression.CoreTests.test_tool_full_empty_diameters) ... ok
+test_unknown_manufacturer_not_fabricated (test_v4851_regression.CoreTests.test_unknown_manufacturer_not_fabricated) ... ok
+test_unsafe_unit_conflict_is_not_normalized (test_v4851_regression.CoreTests.test_unsafe_unit_conflict_is_not_normalized) ... ok
+test_version_and_name (test_v4851_regression.CoreTests.test_version_and_name) ... ok
+test_xyz_rapid_traverse_components (test_v4851_regression.CoreTests.test_xyz_rapid_traverse_components) ... ok
+test_dbc_eight_models_and_cnc (test_v4851_regression.PDFTests.test_dbc_eight_models_and_cnc) ... skipped 'Optional integration PDF not supplied: dbc'
+test_dbc_explicit_power_supply_exception (test_v4851_regression.PDFTests.test_dbc_explicit_power_supply_exception) ... skipped 'Optional integration PDF not supplied: dbc'
+test_dbc_full_fact_coverage (test_v4851_regression.PDFTests.test_dbc_full_fact_coverage) ... skipped 'Optional integration PDF not supplied: dbc'
+test_kaibo_38_models (test_v4851_regression.PDFTests.test_kaibo_38_models) ... skipped 'Optional integration PDF not supplied: kaibo'
+test_kaibo_canonical_values (test_v4851_regression.PDFTests.test_kaibo_canonical_values) ... skipped 'Optional integration PDF not supplied: kaibo'
+test_kaibo_cells_captured_and_raw_intact (test_v4851_regression.PDFTests.test_kaibo_cells_captured_and_raw_intact) ... skipped 'Optional integration PDF not supplied: kaibo'
+test_kaibo_machine_type_scoped_per_page (test_v4851_regression.PDFTests.test_kaibo_machine_type_scoped_per_page) ... skipped 'Optional integration PDF not supplied: kaibo'
+test_kaibo_mentions_are_unassigned (test_v4851_regression.PDFTests.test_kaibo_mentions_are_unassigned) ... skipped 'Optional integration PDF not supplied: kaibo'
+test_kaibo_source_blanks_are_not_cloned (test_v4851_regression.PDFTests.test_kaibo_source_blanks_are_not_cloned) ... skipped 'Optional integration PDF not supplied: kaibo'
+test_axis_order_xyz_not_alpha (test_v4852.GroupingAndIdentityTests.test_axis_order_xyz_not_alpha) ... ok
+test_cnc_synonyms (test_v4852.GroupingAndIdentityTests.test_cnc_synonyms) ... ok
+test_cover_based_hdhf_and_mixed_not_global (test_v4852.GroupingAndIdentityTests.test_cover_based_hdhf_and_mixed_not_global) ... ok
+test_custom_family_rule_from_json (test_v4852.GroupingAndIdentityTests.test_custom_family_rule_from_json) ... ok
+test_dhf_family_from_rule (test_v4852.GroupingAndIdentityTests.test_dhf_family_from_rule) ... ok
+test_family_aggregation_tags_differences (test_v4852.GroupingAndIdentityTests.test_family_aggregation_tags_differences) ... ok
+test_manual_review_requires_provenance_and_preserves_original (test_v4852.GroupingAndIdentityTests.test_manual_review_requires_provenance_and_preserves_original) ... ok
+test_no_unsafe_merging_of_other_models (test_v4852.GroupingAndIdentityTests.test_no_unsafe_merging_of_other_models) ... ok
+test_order_of_parameter_groups (test_v4852.GroupingAndIdentityTests.test_order_of_parameter_groups) ... ok
+test_synonyms_different_vendors_same_key (test_v4852.GroupingAndIdentityTests.test_synonyms_different_vendors_same_key) ... ok
+test_units_do_not_confuse_chinese_cutting_feed (test_v4852.GroupingAndIdentityTests.test_units_do_not_confuse_chinese_cutting_feed) ... ok
+test_unknown_alias_kept_unmapped (test_v4852.GroupingAndIdentityTests.test_unknown_alias_kept_unmapped) ... ok
+test_dbc_same_boring_type_and_no_split_regressions (test_v4852.IntegrationTests.test_dbc_same_boring_type_and_no_split_regressions) ... skipped 'Optional integration PDF missing: dbc'
+test_dhf_all_87_source_facts_retained (test_v4852.IntegrationTests.test_dhf_all_87_source_facts_retained) ... skipped 'Optional integration PDF missing: dhf'
+test_dhf_machine_type (test_v4852.IntegrationTests.test_dhf_machine_type) ... skipped 'Optional integration PDF missing: dhf'
+test_dhf_special_values_not_merged (test_v4852.IntegrationTests.test_dhf_special_values_not_merged) ... skipped 'Optional integration PDF missing: dhf'
+test_kaibo_preserves_source_labels_and_38_models (test_v4852.IntegrationTests.test_kaibo_preserves_source_labels_and_38_models) ... skipped 'Optional integration PDF missing: kaibo'
+test_derived_columns_cannot_blank_axis_specific_sources (test_v4854.ExportReliabilityTests.test_derived_columns_cannot_blank_axis_specific_sources) ... ok
+test_failed_csv_write_preserves_previous_file (test_v4854.ExportReliabilityTests.test_failed_csv_write_preserves_previous_file) ... ok
+test_missing_bbox_does_not_prove_cell_coverage (test_v4854.ExportReliabilityTests.test_missing_bbox_does_not_prove_cell_coverage) ... ok
+test_ambiguous_and_conflicting_values_stay_visible (test_v4854.NormalizationTests.test_ambiguous_and_conflicting_values_stay_visible) ... ok
+test_cnc_text_and_source_are_preserved (test_v4854.NormalizationTests.test_cnc_text_and_source_are_preserved) ... ok
+test_cutting_range_converted_and_broadcast_to_named_axes (test_v4854.NormalizationTests.test_cutting_range_converted_and_broadcast_to_named_axes) ... ok
+test_invalid_fact_is_isolated_and_logged (test_v4854.NormalizationTests.test_invalid_fact_is_isolated_and_logged) ... ok
+test_optional_text_is_not_reported_as_base_equipment (test_v4854.NormalizationTests.test_optional_text_is_not_reported_as_base_equipment) ... ok
+test_private_glyphs_are_normalized_without_changing_raw (test_v4854.NormalizationTests.test_private_glyphs_are_normalized_without_changing_raw) ... ok
+test_rotary_axis_pair_and_rapid_axis_have_the_same_parameter (test_v4854.NormalizationTests.test_rotary_axis_pair_and_rapid_axis_have_the_same_parameter) ... ok
+test_unit_dimensions_do_not_confuse_speed_length_or_torque (test_v4854.NormalizationTests.test_unit_dimensions_do_not_confuse_speed_length_or_torque) ... ok
+test_vector_options_are_not_discarded_when_axes_expand (test_v4854.NormalizationTests.test_vector_options_are_not_discarded_when_axes_expand) ... ok
+test_xyz_and_individual_axes_share_values (test_v4854.NormalizationTests.test_xyz_and_individual_axes_share_values) ... ok
+test_failed_export_leaves_replayable_checkpoint_and_traceback (test_v4854.RunnerRecoveryTests.test_failed_export_leaves_replayable_checkpoint_and_traceback) ... ok
+test_successful_runner_creates_checkpoint_log_and_exports (test_v4854.RunnerRecoveryTests.test_successful_runner_creates_checkpoint_log_and_exports) ... ok
+
+----------------------------------------------------------------------
+Ran 62 tests in 0.218s
+
+OK (skipped=14)

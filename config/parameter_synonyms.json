@@ -1,0 +1,275 @@
+{
+  "version": "4.8.5.2",
+  "synonyms": [
+    {
+      "key": "travel_x_mm",
+      "category": "Travel",
+      "unit": "mm",
+      "labels": [
+        "X-axis",
+        "X axis",
+        "X轴行程",
+        "X 轴行程"
+      ],
+      "section": "^(?:travels?|capacity|加工范围)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "travel_y_mm",
+      "category": "Travel",
+      "unit": "mm",
+      "labels": [
+        "Y-axis",
+        "Y axis",
+        "Y轴行程",
+        "Y 轴行程"
+      ],
+      "section": "^(?:travels?|capacity|加工范围)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "travel_z_mm",
+      "category": "Travel",
+      "unit": "mm",
+      "labels": [
+        "Z-axis",
+        "Z axis",
+        "Z轴行程",
+        "Z 轴行程"
+      ],
+      "section": "^(?:travels?|capacity|加工范围)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "travel_w_mm",
+      "category": "Travel",
+      "unit": "mm",
+      "labels": [
+        "W-axis",
+        "W axis",
+        "W轴行程"
+      ],
+      "section": "^(?:travels?|capacity|加工范围)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "table_size_mm",
+      "category": "Table",
+      "unit": "mm",
+      "labels": [
+        "Table size",
+        "工作台尺寸"
+      ],
+      "section": "^table$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "table_load_kg",
+      "category": "Table",
+      "unit": "kg",
+      "labels": [
+        "Max. table loading capacity",
+        "Maximum workpiece weight",
+        "Max. work load",
+        "最大工作负重"
+      ],
+      "section": "^table$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "pallet_size_mm",
+      "category": "Table",
+      "unit": "mm",
+      "labels": [
+        "Pallet size",
+        "托盘尺寸"
+      ],
+      "section": "^table$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "spindle_speed_rpm",
+      "category": "Spindle",
+      "unit": "r/min",
+      "labels": [
+        "Max. spindle speed",
+        "Maximum spindle speed",
+        "主轴最高转速"
+      ],
+      "section": "^(?:spindle|motor)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "spindle_power_kw",
+      "category": "Spindle",
+      "unit": "kW",
+      "labels": [
+        "Max. spindle motor power",
+        "Spindle motor",
+        "Spindle power",
+        "主轴功率"
+      ],
+      "section": "^(?:spindle|motor)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "spindle_torque_nm",
+      "category": "Spindle",
+      "unit": "N.m",
+      "labels": [
+        "Max. spindle torque",
+        "Spindle torque",
+        "主轴扭矩"
+      ],
+      "section": "^(?:spindle|motor)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "spindle_taper",
+      "category": "Spindle",
+      "unit": "",
+      "labels": [
+        "Taper",
+        "Tool taper"
+      ],
+      "section": "^(?:spindle|motor)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "rapid_traverse_xyz_m_min",
+      "category": "Feedrate",
+      "unit": "m/min",
+      "labels": [
+        "X/Y/Z Rapid traverse",
+        "X/Y/Z 快速移动速度 G00"
+      ],
+      "section": "^feedrates?$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "cutting_feed_xyz_mm_min",
+      "category": "Feedrate",
+      "unit": "mm/min",
+      "labels": [
+        "X/Y/Z Cutting feedrate"
+      ],
+      "section": "^feedrates?$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "tool_capacity",
+      "category": "Automatic tool changer (ATC)",
+      "unit": "ea",
+      "labels": [
+        "Tool storage capacity",
+        "Tool magazine capacity",
+        "刀库容量"
+      ],
+      "section": "^(?:automatic tool changer \\(atc\\)|atc)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "tool_max_length_mm",
+      "category": "Automatic tool changer (ATC)",
+      "unit": "mm",
+      "labels": [
+        "Max. tool length",
+        "最大刀具长度"
+      ],
+      "section": "^(?:automatic tool changer \\(atc\\)|atc)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "tool_max_weight_kg",
+      "category": "Automatic tool changer (ATC)",
+      "unit": "kg",
+      "labels": [
+        "Max. tool weight",
+        "最大刀具重量"
+      ],
+      "section": "^(?:automatic tool changer \\(atc\\)|atc)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "machine_height_mm",
+      "category": "Machine dimensions",
+      "unit": "mm",
+      "labels": [
+        "Height",
+        "Machine height"
+      ],
+      "section": "^(?:machine dimensions|machine)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "machine_length_mm",
+      "category": "Machine dimensions",
+      "unit": "mm",
+      "labels": [
+        "Length",
+        "Machine length"
+      ],
+      "section": "^(?:machine dimensions|machine)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "machine_width_mm",
+      "category": "Machine dimensions",
+      "unit": "mm",
+      "labels": [
+        "Width",
+        "Machine width"
+      ],
+      "section": "^(?:machine dimensions|machine)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "machine_weight_kg",
+      "category": "Machine dimensions",
+      "unit": "kg",
+      "labels": [
+        "Weight",
+        "Machine weight",
+        "机床重量"
+      ],
+      "section": "^(?:machine dimensions|machine)$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "control_system",
+      "category": "Control",
+      "unit": "",
+      "labels": [
+        "NC system",
+        "CNC system",
+        "Control system",
+        "Numerical control",
+        "数控系统",
+        "控制系统"
+      ],
+      "section": "^(?:control|cnc|nc system|machine)?$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "cutting_feed_xyz_m_min",
+      "category": "Feedrate",
+      "unit": "m/min",
+      "labels": [
+        "X/Y/Z 最大切削速度 G01"
+      ],
+      "section": "^feedrates?$",
+      "source": "cross_vendor_dn_kaibo"
+    },
+    {
+      "key": "tool_shank_type",
+      "category": "Spindle",
+      "unit": "",
+      "labels": [
+        "刀具规格"
+      ],
+      "section": "^(?:spindle|motor)$",
+      "source": "cross_vendor_dn_kaibo",
+      "note": "KAIBO tool/collet specification is not forcibly equated with spindle taper; verify physical interface."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "original_facts_preserved": 3187,
+  "original_fields_checked": [
+    "value",
+    "value_raw",
+    "source_quote",
+    "source_page",
+    "source_file",
+    "cell_bbox"
+  ],
+  "source_cells_nonempty": 2310,
+  "source_cells_not_extracted": 0,
+  "recovered_source_cells": 3,
+  "recovered_model_facts": 6,
+  "legacy_wide_cells_restored": 156,
+  "normalization": {
+    "wide_rows": 95,
+    "wide_parameter_columns": 111,
+    "source_facts": 3193,
+    "normalized_records": 3869,
+    "facts_without_export": 0,
+    "populated_source_records_without_display": 0,
+    "status_counts": {
+      "CANONICAL_SCALAR": 1621,
+      "COMPOUND_PRESERVED": 154,
+      "CANONICAL_WITH_OPTIONS": 141,
+      "CANONICAL_VECTOR": 801,
+      "TEXT_PRESERVED": 309,
+      "BLOCKED_REVIEW": 124,
+      "CANONICAL_RANGE": 137,
+      "CANONICAL_DIMENSIONS": 113,
+      "UNIT_REVIEW": 2,
+      "NOT_APPLICABLE": 242,
+      "OPTIONAL_ONLY": 203,
+      "SOURCE_BLANK": 22
+    },
+    "discrepancy_parameters": 83,
+    "normalization_errors": 0
+  },
+  "tests_passed": 48,
+  "pdf_tests_skipped": 14,
+  "pdf_extraction_repeated": false
+}

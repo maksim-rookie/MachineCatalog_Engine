@@ -128,3 +128,28 @@ def select_footnote(value: str, model: str, rules: dict) -> tuple[str,str]:
             return pm.group(2 if model in targets else 1),'model_only_footnote'
         return value,'footnote_applicability_unresolved'
     return value,''
+
+
+def select_named_model_exception(value: str, model_base: str,
+                                 applicable_models: list[str]) -> tuple[str,str]:
+    """Select an explicitly named exception inside a shared specification cell.
+
+    Example: ``70kVA, DBC 130S : 75kVA`` -> 70kVA for other grouped
+    models, 75kVA for DBC 130S. No values are inferred by proximity, and
+    anything more complex stays entirely raw for review.
+    """
+    parts=split_top_level_commas(norm(value))
+    if len(parts)!=2: return value,''
+    name_value=re.fullmatch(r'([A-Za-z][A-Za-z-]{1,14}\s*[- ]?\s*\d{3,5}(?:/[0-9]{2,3})?[A-Za-z]{0,7})\s*:\s*(.+)',parts[1],re.I)
+    if not name_value: return value,''
+    refs=parse_header(name_value.group(1))
+    if len(refs)!=1 or not re.fullmatch(r'[-+]?\d+(?:\.\d+)?\s*[A-Za-z%]*',parts[0]):
+        return value,'named_model_exception_unresolved'
+    named=refs[0].model_base
+    allowed=set(applicable_models)
+    if named not in allowed:
+        return value,'named_model_exception_unresolved'
+    override=norm(name_value.group(2))
+    if not re.fullmatch(r'[-+]?\d+(?:\.\d+)?\s*[A-Za-z%]*',override):
+        return value,'named_model_exception_unresolved'
+    return (override if model_base==named else parts[0]),'named_model_exception_from_source'

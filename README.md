@@ -1,27 +1,29 @@
-# MachineCatalog Engine 8.4.5.1
+# MachineCatalog Engine 4.8.5.4
 
-[**Скачать MachineCatalog Engine 8.4.5.1 (ZIP)**](https://github.com/maksim-rookie/PDF_SEARCH_v8_4_4_LOCAL/raw/refs/heads/downloads/machinecatalog-8.4.5.1/releases/MachineCatalog_Engine_8.4.5.1.zip)
+[**Скачать исходники 4.8.5.4 (ZIP)**](https://github.com/maksim-rookie/PDF_SEARCH_v8_4_4_LOCAL/raw/refs/heads/downloads/machinecatalog-4.8.5.4/releases/MachineCatalog_Engine_4.8.5.4_source.zip)
 
-SHA-256: `81baea10237389a9eb4d1e6969c07f00f241b533bd273627da0ee53dba7ef94f`
+Обновлено из пользовательского архива `MachineCatalog_Engine_v4_8_5_4_UPDATED.zip`. Номер версии сохранён из исходников.
 
-Локальное извлечение характеристик станков из PDF и проверяемая проекция в CSV.
+В GitHub-поставку входят код, JSON-настройки, тесты и документация. Каталог `output` и CSV аудита конкретного пользовательского запуска исключены. Полный присланный архив сохранён в рабочей среде. Отчёты в `analysis` относятся к исходному пользовательскому архиву.
 
-- [Установка, запуск и новая структура папок](README_RU.md)
-- [Разбор пропусков в Kaibo и исправления](docs/ANALYSIS_KAIBO_8_4_5_1.md)
-- [Изменения версии](docs/CHANGELOG_8_4_5_1.md)
-- [Проверка версии](docs/VALIDATION_REPORT_8_4_5_1.md)
+- [Установка](INSTALL_PYCHARM_PY311.md)
+- [Описание и запуск](README_RU.md)
+- [Изменения версии](CHANGELOG_v4_8_5_4.md)
 
-В проекте находятся только код, настройки, тесты и документация. Входные PDF, результаты и кэш хранятся во внешней папке `MachineCatalog_Engine_data` рядом с проектом. В архив версии эти данные не включаются.
+## Данные вне проекта
 
-Быстрый старт:
+Пример запуска с внешними папками:
 
 ```bash
 python -m venv .venv
-# Linux: .venv/bin/python; Windows: .venv\Scripts\python.exe
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python main.py --init-data
-# Поместите свои PDF в указанную программой внешнюю папку input.
-.venv/bin/python main.py --no-cache
+.venv/bin/python main.py --input ../MachineCatalog_Engine_data/input --output ../MachineCatalog_Engine_data/runs/v4_8_5_4 --cache ../MachineCatalog_Engine_data/cache/v4_8_5_4 --no-cache
 ```
 
-Результаты требуют ручной проверки. Данные и типизированные компоненты сохраняют исходные ячейки, страницы и связь с родительским фактом.
+В Windows используйте `.venv\Scripts\python.exe`. Входные PDF добавьте самостоятельно во внешнюю папку `input`. При запуске без аргументов используются пути, заданные в присланном `main.py`.
+
+## Проверка публикации
+
+`python -m unittest discover -s tests -v`: 62 теста обнаружено, 48 прошли, 14 проверок реальных PDF явно пропущены из-за отсутствия дополнительных контрольных файлов в исходной поставке. При публикации логика приложения не изменялась.
+
+Все результаты извлечения требуют проверки; успешное завершение обработки не подтверждает корректность каждой характеристики.

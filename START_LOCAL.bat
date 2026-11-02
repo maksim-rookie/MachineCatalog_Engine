@@ -4,7 +4,7 @@ setlocal
 cd /d "%~dp0"
 set PYTHONUTF8=1
 if not exist ".venv\Scripts\python.exe" goto setup
-if exist ".venv\installed_8_4_5_1.ok" goto run
+if exist ".venv\installed_4_8_5_4.ok" goto run
 :setup
 call INSTALL_DEPS.bat
 if errorlevel 1 (

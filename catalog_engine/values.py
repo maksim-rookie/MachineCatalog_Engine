@@ -95,51 +95,14 @@ def option_parts(value: str, key: str):
     return base,options,availability
 
 
-def unit_family(unit: str):
-    s=norm(unicodedata.normalize('NFKC',unit)).lower().replace(' ','')
-    if not s or s in {'-','asa','mt'}: return ''
-    if s in {'t','ton','tonne','吨','噸','g'} or s.startswith('kg'): return 'mass'
-    if s in {'w','mw'} or s.startswith('kw'): return 'power'
-    if s in {'cm','m','毫米','厘米','米'} or s.startswith('mm'): return 'length'
-    if s.startswith('inch'): return 'inch'
-    if s.startswith('kg'): return 'mass'
-    if s.startswith('m/min'): return 'linear_speed'
-    if s.startswith(('r/min','rpm')): return 'rotation_speed'
-    if s.startswith('kva'): return 'apparent_power'
-    if s in {'v','volt','volts'}: return 'voltage'
-    if s.startswith('kw'): return 'power'
-    if s.startswith(('n\u00b7m','n*m','n.m','nm')): return 'torque'
-    if s.startswith('mpa'): return 'pressure'
-    if s.startswith('sec') or s=='s': return 'time'
-    if s in {'″','′','\u2032\u2032','arcsec','arcmin','度'} or s.startswith(('deg','\u00b0')): return 'angle'
-    if s in {'个','個','把','支','axes'} or s.startswith(('ea','pcs','st')): return 'count'
-    if s.startswith('l'): return 'volume'
-    return ''
+# Public compatibility exports; all unit logic lives in units.py.
+from .units import unit_family, unit_multiplier
 
 
 def range_bounds(value):
     s=unicodedata.normalize('NFKC',norm(value)).replace('−','-').replace('–','-').replace('—','-').replace('〜','~')
     match=re.fullmatch(r'([+-]?\d+(?:\.\d+)?)\s*(?:~|-|至|to)\s*([+-]?\d+(?:\.\d+)?)',s,re.I)
     return tuple(map(float,match.groups())) if match else None
-
-
-def unit_multiplier(source,expected):
-    """Convert only explicitly supported, dimensionally compatible units."""
-    clean=lambda s: unicodedata.normalize('NFKC',s).lower().replace(' ','')
-    a,b=clean(source),clean(expected)
-    if not a or not b:return None
-    if a==b:return 1.0
-    scales={'kg':1.,'t':1000.,'ton':1000.,'tonne':1000.,'吨':1000.,'噸':1000.,'g':.001,
-            'mm':1.,'cm':10.,'m':1000.,'毫米':1.,'厘米':10.,'米':1000.,
-            'kw':1.,'w':.001,'mw':1000.,'deg':1.,'°':1.,'度':1.,'′′':1/3600,'arcsec':1/3600,
-            'rpm':1.,'r/min':1.,'pcs':1.,'ea':1.,'个':1.,'個':1.,'把':1.,'支':1.,'m/min':1.}
-    # The parenthesis in a printed unit specifies an imperial equivalent, not
-    # a scaling of the primary metric value.
-    a=a.split('(',1)[0];b=b.split('(',1)[0]
-    if a==b:return 1.0
-    if unit_family(a)!=unit_family(b):return None
-    if a in scales and b in scales:return scales[a]/scales[b]
-    return None
 
 
 def value_warnings(value: str, expected: str, source_unit: str, key: str):

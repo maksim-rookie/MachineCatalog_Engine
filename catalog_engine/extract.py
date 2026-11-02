@@ -7,13 +7,14 @@ import json
 import re
 import time
 import pymupdf as fitz
-from .geometry import extract_tables, plumber_fallback, recover_trailing_rows, norm
-from .models import parse_header, select_square_variant, footnote_rules, select_footnote
+from .geometry import extract_tables, plumber_fallback, recover_trailing_rows, candidate_shared_text_span, norm
+from .models import parse_header, select_square_variant, footnote_rules, select_footnote, select_named_model_exception
 from .schema import Schema
 from .values import split_embedded_conditions, option_parts, value_warnings
 from . import ENGINE_VERSION
 from .identity import table_identity
-from .normalization import enrich_document
+from .families import resolve_family
+from .classification import document_identity
 
 
 def page_kind(text: str) -> str:
@@ -26,10 +27,10 @@ def page_kind(text: str) -> str:
     return 'supplemental'
 
 
-def machine_identity(pages):
+def machine_identity(pages, schema):
     beginning=' '.join(p['text'] for p in pages[:3])
     alltext=' '.join(p['text'] for p in pages)
-    manufacturer='DN Solutions' if re.search(r'DN\s*Solutions',alltext,re.I) else ''
+    manufacturer=schema.identify_manufacturer(pages)
     if re.search(r'turning cent(?:er|re)|turn[- ]mill',beginning,re.I):
         return manufacturer,'turning','Turning Center'
     if re.search(r'machining cent(?:er|re)',beginning,re.I):
@@ -63,8 +64,8 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
             if progress: progress(.30*(i+1)/total,'Reading native PDF',f'page {i+1}/{total}')
         read_elapsed=time.perf_counter()-started
         extraction_started=time.perf_counter()
-        manufacturer,machine_class,machine_type=machine_identity(result['source_pages'])
-        manufacturer=schema.manufacturer_for(' '.join(p['text'] for p in result['source_pages'])) or manufacturer
+        manufacturer,machine_class,machine_type=machine_identity(result['source_pages'],schema)
+        cover_identity=document_identity(result['source_pages'],schema)
         result.update(manufacturer=manufacturer,machine_class=machine_class,machine_type=machine_type)
         alltext=norm(' '.join(p['text'] for p in result['source_pages']))
         long_legend=bool(re.search(r'\[\s*\]\s*:?\s*long bed',alltext,re.I))
@@ -104,7 +105,7 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
             result['spec_pages'].append(pi+1)
             fnrules=footnote_rules(sourcepage['text']+'\n'+page.get_text('text'))
             for ti,table in enumerate(tables,1):
-                table_class,table_type,class_evidence=table_identity(page,table,schema)
+                table_class,table_type,class_evidence=table_identity(page,table,schema,fallback=cover_identity)
                 # A duplicate identity in distinct header columns must never
                 # silently merge values from different physical machines.
                 header_identities={}
@@ -131,7 +132,9 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
                     for ref in refs:
                         model_class,model_type,evidence=table_identity(page,table,schema,header.text,
                                                                       (table_class,table_type,class_evidence))
+                        family,variant,family_rule=resolve_family(ref.model,schema)
                         meta=result['registry'].setdefault(ref.model,{'model':ref.model,'model_base':ref.model_base,
+                            'base_model':family,'model_variant':variant,'model_family_rule':family_rule,
                             'generation':ref.generation,'manufacturer':manufacturer,'machine_class':model_class,
                             'machine_type':model_type,'class_evidence':evidence,'evidence':'explicit_specification_header','headers':[],
                             'configurations':[],'header_qualifiers':[]})
@@ -154,7 +157,19 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
                         result['unmapped_fields'].append({'source_file':path.name,'source_page':pi+1,'source_table':ti,
                             'source_row':row.row_index,'source_label':' / '.join(row.labels),'unit_source':row.unit,
                             'cells':[{"value_raw":c.text,"bbox":c.bbox} for c in row.values]})
-                    for cell in row.values:
+                    inferred=candidate_shared_text_span(row,table.headers,
+                        rule['key'] if rule else '',
+                        schema.config.get('shared_text_recovery_keys',[]),
+                        schema.config.get('shared_text_min_coverage',.75))
+                    cell_iter=[(cell,'') for cell in row.values]
+                    if inferred:
+                        cell_iter=[(inferred,'shared_text_span_inferred')]
+                        result['review'].append(issue(path.name,pi+1,'shared_text_span_inferred',
+                            parameter=rule['key'],source_row_id=f'{pi+1}:{ti}:{row.row_index}',
+                            source_cell_bbox=list(row.values[0].bbox),
+                            blank_cell_bbox=list(row.values[-1].bbox),
+                            instruction='An existing text value appears to span the last model; review applicability.'))
+                    for cell,scope_recovery in cell_iter:
                         # The overlapping *cell span* determines applicability,
                         # never just the nearest text centre.
                         assignments=[]
@@ -169,21 +184,32 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
                             model_meta=result['registry'][ref.model]
                             rowid=f'{pi+1}:{ti}:{row.row_index}'
                             record={'source_file':path.name,'source_page':pi+1,'source_table':ti,'source_row':row.row_index,
-                                'source_row_id':rowid,'model':ref.model,'model_base':ref.model_base,'generation':ref.generation,
+                                'source_row_id':rowid,'model':ref.model,'model_base':ref.model_base,
+                                'base_model':model_meta['base_model'],'model_variant':model_meta['model_variant'],
+                                'model_family_rule':model_meta['model_family_rule'],'generation':ref.generation,
                                 'configuration':ref.configuration,'source_label':' / '.join(row.labels),
                                 'unit_source':row.unit,'value_raw':cell.text,'cell_bbox':list(cell.bbox),
                                 'source_header':ref.header_raw,'header_qualifiers':list(ref.header_qualifiers),
                                 'manufacturer':manufacturer,'machine_type':model_meta['machine_type'],'machine_class':model_meta['machine_class'],
                                 'method':table.method,'scope':'explicit_specification_cell',
                                 'recovery_note':getattr(row,'recovery','')}
+                            original_cells = [c for c in row.values if c.text == cell.text and c.text.strip()]
+                            if scope_recovery and len(original_cells) == 1:
+                                record['source_cell_bbox'] = list(original_cells[0].bbox)
                             if not rule:
                                 result['cell_statuses'].append({**record,'parameter':'','status':'UNMAPPED_LABEL'})
                                 continue
                             key=rule['key']
-                            record.update(parameter=key,category=rule['category'],unit_expected=rule['unit'])
-                            selected,transform=select_square_variant(cell.text,ref.square_variant,long_legend)
+                            record.update(parameter=key,parameter_normalized=key,
+                                          category=schema.parameter_group(key,rule['category']),
+                                          source_group=' / '.join(row.labels[:-1]),
+                                          matched_synonym=rule.get('_matched_synonym',''),
+                                          unit_expected=rule['unit'])
+                            applicable=[r.model_base for _,refs in header_refs for r in refs]
+                            named_value,named_transform=select_named_model_exception(cell.text,ref.model_base,applicable)
+                            selected,transform=select_square_variant(named_value,ref.square_variant,long_legend)
                             selected,fntransform=select_footnote(selected,ref.model_base,fnrules)
-                            transformations=[x for x in [transform,fntransform] if x]
+                            transformations=[x for x in [named_transform,transform,fntransform] if x]
                             # A numeric speed explicitly present in the header AND
                             # in the shared speed cell defines this configuration.
                             hs=re.match(r'(\d+)rpm',ref.configuration)
@@ -197,6 +223,7 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
                                     base='';options=list(dict.fromkeys(options+[val]));availability='optional_only'
                                 warnings=value_warnings(val,rule['unit'],row.unit,key)
                                 warnings.extend(row.warnings)
+                                if scope_recovery:warnings.append(scope_recovery)
                                 if optional: warnings.append('optional_equipment')
                                 if rule.get('_schema_warning'): warnings.append(rule['_schema_warning'])
                                 if getattr(row,'recovery','')=='below_geometric_table_edge': warnings.append('geometric_tail_row_recovered')
@@ -212,6 +239,7 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
                                 if not val:
                                     result['review'].append(issue(path.name,pi+1,'empty_source_cell',model=ref.model,configuration=ref.configuration,parameter=key,source_row_id=rowid,cell_bbox=list(cell.bbox)))
                                     continue
+                                if scope_recovery:record['recovery_note']= '; '.join(x for x in (record['recovery_note'],scope_recovery) if x)
                                 fact={**record,'value':val,'base_value':base,'options':options,
                                     'availability':availability,'option_kind':'section_optional' if optional else 'brace_options' if options else '',
                                     'condition':'; '.join(f'{k}={v}' for k,v in sorted(cond.items())),
@@ -235,4 +263,4 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
         result['review'].append(issue(path.name,0,'no_supported_specification_table',instruction='No model measurements were guessed. Inspect SOURCE_PAGES.jsonl and add a geometry/schema adapter.'))
     result['native_timings']={'read_seconds':round(read_elapsed,6),'extract_seconds':round(time.perf_counter()-extraction_started,6)}
     if progress: progress(1,'Extraction finished',f'{len(result["registry"])} models, {len(result["facts"])} records')
-    return enrich_document(result,schema)
+    return result

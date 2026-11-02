@@ -1,13 +1,58 @@
 {
   "rules": [
     {
-      "key": "spindle_bore_mm",
-      "pattern": "through spindle hole|spindle through[- ]hole",
+      "key": "grinding_wheel_diameter_mm",
+      "pattern": "grinding wheel diameter",
       "unit": "mm",
-      "category": "Spindle",
-      "section": "^(main )?spindle"
+      "category": "Grinding",
+      "section": ""
     }
   ],
+  "machine_classes": [
+    {
+      "key": "grinding",
+      "machine_type": "Surface Grinding Machine",
+      "min_score": 4,
+      "features": [
+        {
+          "scope": "cover",
+          "pattern": "surface grinding machine",
+          "weight": 7
+        }
+      ]
+    }
+  ],
+  "machine_types": [
+    {
+      "pattern": "surface grinding machine",
+      "class": "grinding",
+      "type": "Surface Grinding Machine"
+    }
+  ],
+  "required_fields": {
+    "grinding": [
+      "travel_x_mm"
+    ]
+  },
   "label_aliases": {},
-  "required_fields": {}
+  "model_family_rules": [
+    {
+      "id": "demo_family",
+      "pattern": "^(?P<base>EXAMPLE\\s+1000)(?P<variant>ST)?$",
+      "base_model": "{base}",
+      "model_variant": "{variant}"
+    }
+  ],
+  "parameter_synonyms": [
+    {
+      "key": "travel_x_mm",
+      "category": "Travel",
+      "unit": "mm",
+      "labels": [
+        "X movement example alias"
+      ],
+      "section": "^travels?$",
+      "source": "example_user_override"
+    }
+  ]
 }
