@@ -136,7 +136,7 @@ class ExportReliabilityTests(unittest.TestCase):
                 raise ValueError('simulated mid-export failure')
             with self.assertRaises(ArtifactWriteError):
                 write_csv(path, broken_rows(), ['value'])
-            self.assertEqual(path.read_text(), 'previous complete export')
+            self.assertEqual(path.read_text(encoding='utf-8'), 'previous complete export')
             self.assertEqual(list(Path(directory).glob('*.tmp')), [])
 
     def test_missing_bbox_does_not_prove_cell_coverage(self):
@@ -173,8 +173,8 @@ class RunnerRecoveryTests(unittest.TestCase):
                     run(settings)
             output = captured.exception.run_directory
             self.assertTrue((output / 'documents' / 'axis_report.json').is_file())
-            self.assertIn('simulated export failure', (output / 'RUN_ABORTED.json').read_text())
-            self.assertIn('Traceback', (output / 'RUN_DEBUG.log').read_text())
+            self.assertIn('simulated export failure', (output / 'RUN_ABORTED.json').read_text(encoding='utf-8'))
+            self.assertIn('Traceback', (output / 'RUN_DEBUG.log').read_text(encoding='utf-8'))
 
 
 if __name__ == '__main__':

@@ -103,4 +103,4 @@ class GroupRulesTests(unittest.TestCase):
             self.assertEqual(result['[Other] rare_kept'],'0')
             for k,v in tools.items():self.assertEqual(result['[Automatic tool changer (ATC)] '+k],v)
             self.assertIn('[Feedrate] '+CUT,cols);self.assertIn('[Table] '+TABLE,cols)
-            self.assertEqual(len(json.loads((root/'HIDDEN_PARAMETERS_ARCHIVE.json').read_text())),8)
+            self.assertEqual(len(json.loads((root/'HIDDEN_PARAMETERS_ARCHIVE.json').read_text(encoding='utf-8'))),8)

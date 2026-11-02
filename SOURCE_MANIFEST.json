@@ -1,10 +1,11 @@
 {
   "version": "4.8.5.4",
-  "revision": "grouped-parameters-presentation-policy",
+  "revision": "grouped-parameters-presentation-policy-utf8",
   "validation": {
-    "passed": 101,
+    "passed": 102,
     "skipped_optional_pdf": 14,
-    "failed": 0
+    "failed": 0,
+    "cp1251_regression": "passed"
   },
   "files": [
     {
@@ -74,6 +75,10 @@
     {
       "path": "VALIDATION_REPORT_v4_8_5_2.md",
       "sha256": "ff5739cb73355888f4563dd89af31adb31ed8d25fff62ada56947e0e9bec19fb"
+    },
+    {
+      "path": "WINDOWS_ENCODING_FIX.md",
+      "sha256": "8df889a0b4f95c618dcd6d2ee0d722d293e2f5649cfa4f59e38e0a6337769bcb"
     },
     {
       "path": "analysis/ANALYSIS_run_20261102_104154.md",
@@ -253,11 +258,11 @@
     },
     {
       "path": "tests/test_logical_fields.py",
-      "sha256": "4cb35efee60eff8d1ed4b662d592f3c0d5566be64186c79469df83e68b56c4a2"
+      "sha256": "0256b11aea6fac15233bea8a99afdb4929d5129b6ab03c9cc35d2a69abeebad9"
     },
     {
       "path": "tests/test_presentation_policy.py",
-      "sha256": "ba19fb79f924d80a8d9b4a96f94a60b7f91132820eb296369a65328e2710ac67"
+      "sha256": "11e58a124c7f00546213358b2dce2961505027e0a561dceb0ea8500c46901f64"
     },
     {
       "path": "tests/test_v4851_regression.py",
@@ -269,7 +274,11 @@
     },
     {
       "path": "tests/test_v4854.py",
-      "sha256": "9b98f2c926fde989d14f3d145bfd99a3ebf88e93abc99d03f5eea83ea326ca0a"
+      "sha256": "17266e5374d8760285e2d6ac74c3be1e74cfca76cd8fd54bf8b35553946d2e4d"
+    },
+    {
+      "path": "tests/test_windows_encoding.py",
+      "sha256": "84cc4f0b7ca5a2f53008830458cf493f66a57768d43ed301d9db35f5bf7c0af2"
     }
   ]
 }

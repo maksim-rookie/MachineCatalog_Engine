@@ -78,4 +78,4 @@ class CompatibilityTests(unittest.TestCase):
             self.assertEqual(row[FEED_COLUMN],'X: 30/ Y: 30/ Z: 24 м/мин')
             self.assertEqual(row[COLUMN],'2500 × !- × !- мм');self.assertEqual(row['other'],'!-')
             self.assertFalse(any(c.endswith(('rapid_traverse_x_m_min','rapid_traverse_y_m_min','rapid_traverse_z_m_min','machine_dimension_1_mm')) for c in cols))
-            self.assertEqual(json.loads((p/'FIELD_DISPLAY.json').read_text())['legend'],LEGEND)
+            self.assertEqual(json.loads((p/'FIELD_DISPLAY.json').read_text(encoding='utf-8'))['legend'],LEGEND)
