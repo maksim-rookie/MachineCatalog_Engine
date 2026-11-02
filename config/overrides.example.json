@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "key": "spindle_bore_mm",
+      "pattern": "through spindle hole|spindle through[- ]hole",
+      "unit": "mm",
+      "category": "Spindle",
+      "section": "^(main )?spindle"
+    }
+  ],
+  "label_aliases": {},
+  "required_fields": {}
+}

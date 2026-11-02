@@ -1,0 +1,75 @@
+[--------------------]   0.0% | Start |  |  | elapsed 00:00:00
+MachineCatalog Engine 8.4.5.1 | files: 5 | cache: False | local only
+[--------------------]   0.0% | Opening file | dhf-8000-series.pdf | file 0%:  | elapsed 00:00:00
+[--------------------]   0.2% | Reading native PDF | dhf-8000-series.pdf | file 1%: page 1/24 | elapsed 00:00:00
+[--------------------]   2.4% | Reading native PDF | dhf-8000-series.pdf | file 14%: page 11/24 | elapsed 00:00:00
+[--------------------]   4.6% | Reading native PDF | dhf-8000-series.pdf | file 26%: page 21/24 | elapsed 00:00:01
+[#-------------------]   5.8% | Classifying pages | dhf-8000-series.pdf | file 33%: page 1/24: supplemental | elapsed 00:00:01
+[#-------------------]   8.1% | Classifying pages | dhf-8000-series.pdf | file 46%: page 6/24: supplemental | elapsed 00:00:01
+[##------------------]  10.5% | Classifying pages | dhf-8000-series.pdf | file 60%: page 11/24: controller_specifications | elapsed 00:00:01
+[##------------------]  12.9% | Classifying pages | dhf-8000-series.pdf | file 73%: page 16/24: drawing_or_accessory | elapsed 00:00:01
+[##------------------]  14.3% | Extracting specification cells | dhf-8000-series.pdf | file 81%: page 19/24 | elapsed 00:00:01
+[##------------------]  14.8% | Classifying pages | dhf-8000-series.pdf | file 84%: page 20/24: supplemental | elapsed 00:00:01
+[###-----------------]  17.6% | Extraction finished | dhf-8000-series.pdf | file 100%: 2 models, 87 records | elapsed 00:00:01
+[###-----------------]  17.6% | File extracted | dhf-8000-series.pdf | file 100%:  | elapsed 00:00:01
+[###-----------------]  17.6% | Opening file | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 0%:  | elapsed 00:00:01
+[###-----------------]  17.9% | Reading native PDF | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 2%: page 1/20 | elapsed 00:00:01
+[###-----------------]  20.0% | Reading native PDF | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 13%: page 9/20 | elapsed 00:00:01
+[####----------------]  22.1% | Reading native PDF | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 26%: page 17/20 | elapsed 00:00:01
+[####----------------]  23.5% | Classifying pages | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 33%: page 1/20: supplemental | elapsed 00:00:01
+[#####---------------]  25.7% | Classifying pages | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 46%: page 5/20: supplemental | elapsed 00:00:01
+[#####---------------]  28.0% | Classifying pages | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 59%: page 9/20: controller_specifications | elapsed 00:00:03
+[######--------------]  30.3% | Classifying pages | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 72%: page 13/20: power_torque_diagrams | elapsed 00:00:03
+[######--------------]  32.6% | Classifying pages | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 85%: page 17/20: drawing_or_accessory | elapsed 00:00:03
+[######--------------]  33.2% | Extracting specification cells | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 88%: page 18/20 | elapsed 00:00:04
+[######--------------]  33.7% | Classifying pages | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 92%: page 19/20: supplemental | elapsed 00:00:04
+[#######-------------]  35.2% | Extraction finished | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 100%: 7 models, 315 records | elapsed 00:00:04
+[#######-------------]  35.2% | File extracted | dn-solutions-vertical-machining-center-mynx-ii-series.pdf | file 100%:  | elapsed 00:00:04
+[#######-------------]  35.2% | Opening file | DVF_5000.pdf | file 0%:  | elapsed 00:00:04
+[#######-------------]  35.4% | Reading native PDF | DVF_5000.pdf | file 1%: page 1/24 | elapsed 00:00:04
+[#######-------------]  37.6% | Reading native PDF | DVF_5000.pdf | file 14%: page 11/24 | elapsed 00:00:04
+[#######-------------]  39.8% | Reading native PDF | DVF_5000.pdf | file 26%: page 21/24 | elapsed 00:00:04
+[########------------]  41.0% | Classifying pages | DVF_5000.pdf | file 33%: page 1/24: supplemental | elapsed 00:00:04
+[########------------]  43.3% | Classifying pages | DVF_5000.pdf | file 46%: page 6/24: supplemental | elapsed 00:00:04
+[#########-----------]  45.7% | Classifying pages | DVF_5000.pdf | file 60%: page 11/24: drawing_or_accessory | elapsed 00:00:05
+[#########-----------]  48.1% | Classifying pages | DVF_5000.pdf | file 73%: page 16/24: controller_specifications | elapsed 00:00:05
+[##########----------]  50.5% | Extracting specification cells | DVF_5000.pdf | file 87%: page 21/24 | elapsed 00:00:05
+[##########----------]  51.0% | Classifying pages | DVF_5000.pdf | file 90%: page 22/24: supplemental | elapsed 00:00:05
+[##########----------]  52.8% | Extraction finished | DVF_5000.pdf | file 100%: 1 models, 50 records | elapsed 00:00:05
+[##########----------]  52.8% | File extracted | DVF_5000.pdf | file 100%:  | elapsed 00:00:05
+[##########----------]  52.8% | Opening file | lynx-2100-2600-series-new.pdf | file 0%:  | elapsed 00:00:05
+[##########----------]  52.9% | Reading native PDF | lynx-2100-2600-series-new.pdf | file 1%: page 1/36 | elapsed 00:00:05
+[###########---------]  55.0% | Reading native PDF | lynx-2100-2600-series-new.pdf | file 12%: page 15/36 | elapsed 00:00:05
+[###########---------]  57.1% | Reading native PDF | lynx-2100-2600-series-new.pdf | file 24%: page 29/36 | elapsed 00:00:06
+[###########---------]  58.4% | Classifying pages | lynx-2100-2600-series-new.pdf | file 32%: page 1/36: supplemental | elapsed 00:00:06
+[############--------]  60.6% | Classifying pages | lynx-2100-2600-series-new.pdf | file 44%: page 8/36: supplemental | elapsed 00:00:06
+[############--------]  62.8% | Classifying pages | lynx-2100-2600-series-new.pdf | file 57%: page 15/36: drawing_or_accessory | elapsed 00:00:06
+[#############-------]  65.1% | Classifying pages | lynx-2100-2600-series-new.pdf | file 70%: page 22/36: drawing_or_accessory | elapsed 00:00:06
+[#############-------]  67.3% | Classifying pages | lynx-2100-2600-series-new.pdf | file 82%: page 29/36: drawing_or_accessory | elapsed 00:00:06
+[#############-------]  68.2% | Extracting specification cells | lynx-2100-2600-series-new.pdf | file 88%: page 32/36 | elapsed 00:00:06
+[#############-------]  68.9% | Classifying pages | lynx-2100-2600-series-new.pdf | file 91%: page 34/36: supplemental | elapsed 00:00:06
+[##############------]  70.4% | Extraction finished | lynx-2100-2600-series-new.pdf | file 100%: 15 models, 664 records | elapsed 00:00:06
+[##############------]  70.4% | File extracted | lynx-2100-2600-series-new.pdf | file 100%:  | elapsed 00:00:06
+[##############------]  70.4% | Opening file | 凯博数控电子样本2025.pdf | file 0%:  | elapsed 00:00:06
+[##############------]  70.7% | Reading native PDF | 凯博数控电子样本2025.pdf | file 2%: page 1/19 | elapsed 00:00:06
+[##############------]  72.9% | Reading native PDF | 凯博数控电子样本2025.pdf | file 14%: page 9/19 | elapsed 00:00:06
+[###############-----]  75.1% | Reading native PDF | 凯博数控电子样本2025.pdf | file 27%: page 17/19 | elapsed 00:00:06
+[###############-----]  76.3% | Classifying pages | 凯博数控电子样本2025.pdf | file 33%: page 1/19: supplemental | elapsed 00:00:06
+[###############-----]  78.7% | Extracting specification cells | 凯博数控电子样本2025.pdf | file 47%: page 5/19 | elapsed 00:00:07
+[################----]  81.1% | Extracting specification cells | 凯博数控电子样本2025.pdf | file 61%: page 9/19 | elapsed 00:00:08
+[################----]  83.5% | Extracting specification cells | 凯博数控电子样本2025.pdf | file 74%: page 13/19 | elapsed 00:00:10
+[#################---]  85.9% | Extracting specification cells | 凯博数控电子样本2025.pdf | file 88%: page 17/19 | elapsed 00:00:11
+[#################---]  86.5% | Classifying pages | 凯博数控电子样本2025.pdf | file 92%: page 18/19: supplemental | elapsed 00:00:11
+[#################---]  88.0% | Extraction finished | 凯博数控电子样本2025.pdf | file 100%: 38 models, 1059 records | elapsed 00:00:11
+[#################---]  88.0% | File extracted | 凯博数控电子样本2025.pdf | file 100%:  | elapsed 00:00:11
+[#################---]  88.8% | Checking extraction quality | dhf-8000-series.pdf |  | elapsed 00:00:11
+[##################--]  91.2% | Checking extraction quality | lynx-2100-2600-series-new.pdf |  | elapsed 00:00:11
+[##################--]  92.0% | Exporting CSV and provenance |  |  | elapsed 00:00:11
+[###################-]  98.0% | Writing run manifest |  |  | elapsed 00:00:12
+[####################] 100.0% | Completed; quality review required |  |  | elapsed 00:00:12
+
+Models: 63; measurements: 2623; explicit N/A: 198
+Elapsed: 00:00:12 (12.047 s); cache hits: 0/5
+Extraction gate passed: False; quality passed: False
+All extracted values remain UNVERIFIED until human review.
+Results: /workspace/MachineCatalog_Engine_data/runs/v8_4_5_1/run_20261101_201803_939789

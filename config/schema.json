@@ -1,0 +1,828 @@
+{
+  "schema_version": "8.4.5.1",
+  "label_aliases": {
+    "moter": "motor",
+    "spdinel": "spindle",
+    "ratary": "rotary",
+    "seletion": "selection",
+    "continous": "continuous",
+    "tiling angle": "tilting angle",
+    "contrel": "control",
+    "controll": "control",
+    "lenght": "length",
+    "capasity": "capacity"
+  },
+  "rules": [
+    {
+      "key": "swing_over_bed_mm",
+      "pattern": "swing over bed",
+      "unit": "mm",
+      "category": "Capacity",
+      "section": ""
+    },
+    {
+      "key": "swing_over_saddle_mm",
+      "pattern": "swing over (?:saddle|cross slide)",
+      "unit": "mm",
+      "category": "Capacity",
+      "section": ""
+    },
+    {
+      "key": "recommended_turning_diameter_mm",
+      "pattern": "recommended turning (?:diameter|dia)",
+      "unit": "mm",
+      "category": "Capacity",
+      "section": ""
+    },
+    {
+      "key": "max_turning_diameter_mm",
+      "pattern": "max(?:imum)?\\.? turning (?:diameter|dia)",
+      "unit": "mm",
+      "category": "Capacity",
+      "section": ""
+    },
+    {
+      "key": "max_turning_length_mm",
+      "pattern": "max(?:imum)?\\.? turning length",
+      "unit": "mm",
+      "category": "Capacity",
+      "section": ""
+    },
+    {
+      "key": "bar_working_diameter_mm",
+      "pattern": "bar (?:working|capacity|work).*?(?:diameter|dia)|bar capacity",
+      "unit": "mm",
+      "category": "Capacity",
+      "section": ""
+    },
+    {
+      "key": "chuck_size_inch",
+      "pattern": "chuck (?:size|diameter)",
+      "unit": "inch",
+      "category": "Spindle",
+      "section": ""
+    },
+    {
+      "key": "travel_x_mm",
+      "pattern": "\\bx[- ]?axis\\b",
+      "unit": "mm",
+      "category": "Travel",
+      "section": "^(?:travels?|travel distance|stroke)\\b"
+    },
+    {
+      "key": "rapid_traverse_x_m_min",
+      "pattern": "\\bx[- ]?axis\\b",
+      "unit": "m/min",
+      "category": "Feedrate",
+      "section": "^(?:feedrates?|rapid traverse)\\b"
+    },
+    {
+      "key": "travel_x_mm",
+      "pattern": "\\bx[- ]?axis\\b.*(?:tilt|range|travel)",
+      "unit": "mm",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "travel_y_mm",
+      "pattern": "\\by[- ]?axis\\b",
+      "unit": "mm",
+      "category": "Travel",
+      "section": "^(?:travels?|travel distance|stroke)\\b"
+    },
+    {
+      "key": "rapid_traverse_y_m_min",
+      "pattern": "\\by[- ]?axis\\b",
+      "unit": "m/min",
+      "category": "Feedrate",
+      "section": "^(?:feedrates?|rapid traverse)\\b"
+    },
+    {
+      "key": "travel_y_mm",
+      "pattern": "\\by[- ]?axis\\b.*(?:tilt|range|travel)",
+      "unit": "mm",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "travel_z_mm",
+      "pattern": "\\bz[- ]?axis\\b",
+      "unit": "mm",
+      "category": "Travel",
+      "section": "^(?:travels?|travel distance|stroke)\\b"
+    },
+    {
+      "key": "rapid_traverse_z_m_min",
+      "pattern": "\\bz[- ]?axis\\b",
+      "unit": "m/min",
+      "category": "Feedrate",
+      "section": "^(?:feedrates?|rapid traverse)\\b"
+    },
+    {
+      "key": "travel_z_mm",
+      "pattern": "\\bz[- ]?axis\\b.*(?:tilt|range|travel)",
+      "unit": "mm",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "travel_a_deg",
+      "pattern": "\\ba[- ]?axis\\b",
+      "unit": "deg",
+      "category": "Travel",
+      "section": "^(?:travels?|travel distance|stroke)\\b"
+    },
+    {
+      "key": "rapid_traverse_a_rpm",
+      "pattern": "\\ba[- ]?axis\\b",
+      "unit": "rpm",
+      "category": "Feedrate",
+      "section": "^(?:feedrates?|rapid traverse)\\b"
+    },
+    {
+      "key": "travel_a_deg",
+      "pattern": "\\ba[- ]?axis\\b.*(?:tilt|range|travel)",
+      "unit": "deg",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "travel_b_deg",
+      "pattern": "\\bb[- ]?axis\\b",
+      "unit": "deg",
+      "category": "Travel",
+      "section": "^(?:travels?|travel distance|stroke)\\b"
+    },
+    {
+      "key": "rapid_traverse_b_rpm",
+      "pattern": "\\bb[- ]?axis\\b",
+      "unit": "rpm",
+      "category": "Feedrate",
+      "section": "^(?:feedrates?|rapid traverse)\\b"
+    },
+    {
+      "key": "travel_b_deg",
+      "pattern": "\\bb[- ]?axis\\b.*(?:tilt|range|travel)",
+      "unit": "deg",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "travel_c_deg",
+      "pattern": "\\bc[- ]?axis\\b",
+      "unit": "deg",
+      "category": "Travel",
+      "section": "^(?:travels?|travel distance|stroke)\\b"
+    },
+    {
+      "key": "rapid_traverse_c_rpm",
+      "pattern": "\\bc[- ]?axis\\b",
+      "unit": "rpm",
+      "category": "Feedrate",
+      "section": "^(?:feedrates?|rapid traverse)\\b"
+    },
+    {
+      "key": "travel_c_deg",
+      "pattern": "\\bc[- ]?axis\\b.*(?:tilt|range|travel)",
+      "unit": "deg",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "table_rotation_speed_rpm",
+      "pattern": "\\b[abc][- ]?axis rotating speed",
+      "unit": "rpm",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "spindle_nose_to_table_center_mm",
+      "pattern": "spindle nose to table cent[er]+",
+      "unit": "mm",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "spindle_nose_to_table_top_mm",
+      "pattern": "distance from spindle nose to table top",
+      "unit": "mm",
+      "category": "Travel",
+      "section": ""
+    },
+    {
+      "key": "table_load_kg",
+      "pattern": "table loading capacity|maximum workpiece weight|max\\.? workpiece weight|max(?:imum)?\\.? weight on table",
+      "unit": "kg",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "table_size_mm",
+      "pattern": "table size",
+      "unit": "mm",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "max_workpiece_size_mm",
+      "pattern": "workpiece size",
+      "unit": "mm",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "pallet_size_mm",
+      "pattern": "pallet size",
+      "unit": "mm",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "pallet_change_time_sec",
+      "pattern": "pallet change time",
+      "unit": "sec",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "table_t_slot",
+      "pattern": "table surface type|t[- ]?slot",
+      "unit": "",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "table_work_inertia_nm2",
+      "pattern": "work inertia",
+      "unit": "N*m2",
+      "category": "Table",
+      "section": ""
+    },
+    {
+      "key": "sub_spindle_speed_rpm",
+      "pattern": "(?:spindle.*speed|max\\.? speed)",
+      "unit": "rpm",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_power_kw",
+      "pattern": "(?:spindle.*power|max\\.? power)",
+      "unit": "kW",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_torque_nm",
+      "pattern": "torque",
+      "unit": "N*m",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_nose",
+      "pattern": "spindle nose",
+      "unit": "",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_bearing_diameter_mm",
+      "pattern": "spindle bearing diameter",
+      "unit": "mm",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_bore_mm",
+      "pattern": "spindle (?:inner diameter|bore|through hole)",
+      "unit": "mm",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_c_index_deg",
+      "pattern": "c[- ]?axis.*index",
+      "unit": "deg",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "sub_spindle_taper",
+      "pattern": "taper",
+      "unit": "",
+      "category": "Sub spindle",
+      "section": "^sub[- ]?spindle\\b"
+    },
+    {
+      "key": "spindle_speed_rpm",
+      "pattern": "(?:spindle.*speed|max\\.? speed)",
+      "unit": "rpm",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_power_kw",
+      "pattern": "(?:spindle.*power|max\\.? power)",
+      "unit": "kW",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_torque_nm",
+      "pattern": "torque",
+      "unit": "N*m",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_nose",
+      "pattern": "spindle nose",
+      "unit": "",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_bearing_diameter_mm",
+      "pattern": "spindle bearing diameter",
+      "unit": "mm",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_bore_mm",
+      "pattern": "spindle (?:inner diameter|bore|through hole)",
+      "unit": "mm",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_c_index_deg",
+      "pattern": "c[- ]?axis.*index",
+      "unit": "deg",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "spindle_taper",
+      "pattern": "taper",
+      "unit": "",
+      "category": "Spindle",
+      "section": "^(?:main )?spindle\\b"
+    },
+    {
+      "key": "turret_station_count",
+      "pattern": "(?:no\\.?\\s*of|number of).*tool stations|number of stations",
+      "unit": "pcs",
+      "category": "Turret",
+      "section": ""
+    },
+    {
+      "key": "turret_od_tool_size_mm",
+      "pattern": "od tool size",
+      "unit": "mm",
+      "category": "Turret",
+      "section": ""
+    },
+    {
+      "key": "turret_max_id_tool_mm",
+      "pattern": "(?:max\\.?)?\\s*id tool size",
+      "unit": "mm",
+      "category": "Turret",
+      "section": ""
+    },
+    {
+      "key": "turret_indexing_time_sec",
+      "pattern": "turret indexing time",
+      "unit": "sec",
+      "category": "Turret",
+      "section": ""
+    },
+    {
+      "key": "driven_tool_speed_rpm",
+      "pattern": "rotary tool speed|driven tool speed",
+      "unit": "rpm",
+      "category": "Turret",
+      "section": ""
+    },
+    {
+      "key": "driven_tool_power_kw",
+      "pattern": "(?:rotary|driven) tool motor power",
+      "unit": "kW",
+      "category": "Turret",
+      "section": ""
+    },
+    {
+      "key": "tailstock_travel_mm",
+      "pattern": "tail stock travel|tailstock travel",
+      "unit": "mm",
+      "category": "Tailstock",
+      "section": ""
+    },
+    {
+      "key": "tailstock_quill_taper",
+      "pattern": "quill taper",
+      "unit": "",
+      "category": "Tailstock",
+      "section": ""
+    },
+    {
+      "key": "tool_capacity",
+      "pattern": "tool storage capa|tool capacity|magazine capacity",
+      "unit": "pcs",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_max_diameter_mm",
+      "pattern": "(?:max\\.?\\s*tool\\s*(?:diameter|dia\\.?)|maximum tool diameter)",
+      "unit": "mm",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_max_length_mm",
+      "pattern": "max(?:imum)?\\.? tool length",
+      "unit": "mm",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_max_weight_kg",
+      "pattern": "max(?:imum)?\\.? tool weight",
+      "unit": "kg",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_max_moment_nm",
+      "pattern": "max(?:imum)?\\.? tool moment",
+      "unit": "N*m",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_shank_type",
+      "pattern": "tool shank",
+      "unit": "",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_pull_stud",
+      "pattern": "pull stud",
+      "unit": "",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_selection_type",
+      "pattern": "tool selection",
+      "unit": "",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "tool_change_time_sec",
+      "pattern": "tool change time|tool\\s*(?:-|to)\\s*tool|chip\\s*(?:-|to)\\s*chip|t-t-t|c-t-c",
+      "unit": "sec",
+      "category": "Automatic tool changer (ATC)",
+      "section": ""
+    },
+    {
+      "key": "power_supply_kva",
+      "pattern": "power consumption|electric power supply|electricity supply|power supply",
+      "unit": "kVA",
+      "category": "Power source",
+      "section": ""
+    },
+    {
+      "key": "air_pressure_mpa",
+      "pattern": "compressed air supply|air pressure",
+      "unit": "MPa",
+      "category": "Power source",
+      "section": ""
+    },
+    {
+      "key": "coolant_pump_motor_power_kw",
+      "pattern": "coolant pump motor power",
+      "unit": "kW",
+      "category": "Motor",
+      "section": "^motor"
+    },
+    {
+      "key": "coolant_tank_l",
+      "pattern": "coolant tank(?:\\s+capacity)?\\b",
+      "unit": "L",
+      "category": "Tank capacity",
+      "section": ""
+    },
+    {
+      "key": "machine_dimensions_mm",
+      "pattern": "length\\s*[x\\u00d7]\\s*width|dimensions?\\s*\\(l\\s*[x\\u00d7]\\s*w\\)",
+      "unit": "mm",
+      "category": "Machine dimensions",
+      "section": "^machine"
+    },
+    {
+      "key": "machine_height_mm",
+      "pattern": "\\bheight\\b",
+      "unit": "mm",
+      "category": "Machine dimensions",
+      "section": "^machine"
+    },
+    {
+      "key": "machine_width_mm",
+      "pattern": "\\bwidth\\b",
+      "unit": "mm",
+      "category": "Machine dimensions",
+      "section": "^machine"
+    },
+    {
+      "key": "machine_length_mm",
+      "pattern": "\\blength\\b",
+      "unit": "mm",
+      "category": "Machine dimensions",
+      "section": "^machine"
+    },
+    {
+      "key": "machine_weight_kg",
+      "pattern": "\\bweight\\b",
+      "unit": "kg",
+      "category": "Machine dimensions",
+      "section": "^machine"
+    },
+    {
+      "key": "control_system",
+      "pattern": "\\b(?:nc|cnc) system|control system",
+      "unit": "",
+      "category": "Control",
+      "section": "^control"
+    },
+    {
+      "key": "controlled_axes",
+      "pattern": "(?<!simultaneously )controlled (?:axis|axes)",
+      "unit": "axes",
+      "category": "Control",
+      "section": "^controlled|^control"
+    },
+    {
+      "key": "simultaneously_controlled_axes",
+      "pattern": "simultaneously controlled (?:axis|axes)",
+      "unit": "axes",
+      "category": "Control",
+      "section": ""
+    },
+    {
+      "key": "axis_acceleration_xyz_g",
+      "pattern": "acceleration|acc\\.?/dec",
+      "unit": "G",
+      "category": "Feedrate",
+      "section": ""
+    },
+    {
+      "key": "positioning_accuracy",
+      "pattern": "positioning accuracy",
+      "unit": "",
+      "category": "Accuracy",
+      "section": ""
+    },
+    {
+      "key": "repeatability",
+      "pattern": "repeatability|repeat positioning",
+      "unit": "",
+      "category": "Accuracy",
+      "section": ""
+    }
+  ],
+  "required_fields": {
+    "turning": [
+      "travel_x_mm",
+      "travel_z_mm",
+      "spindle_speed_rpm",
+      "max_turning_diameter_mm",
+      "max_turning_length_mm",
+      "bar_working_diameter_mm",
+      "turret_station_count",
+      "machine_weight_kg",
+      "control_system"
+    ],
+    "machining": [
+      "travel_x_mm",
+      "travel_y_mm",
+      "travel_z_mm",
+      "spindle_speed_rpm",
+      "tool_capacity",
+      "machine_weight_kg",
+      "control_system"
+    ]
+  },
+  "hidden_wide_parameters": [],
+  "section_unit_rules": [
+    {
+      "section": "^table\\b",
+      "pattern": "(?:tool\\s+)?storage\\s+capacity",
+      "unit_family": "mass",
+      "key": "table_load_kg",
+      "category": "Table",
+      "unit": "kg",
+      "note": "Section and physical unit override inconsistent printed label; requires human review."
+    }
+  ],
+  "dictionary_files": [
+    "dictionaries/en.json",
+    "dictionaries/zh.json",
+    "dictionaries/ru.json"
+  ],
+  "parameter_categories": {
+    "swing_over_bed_mm": "Capacity",
+    "swing_over_saddle_mm": "Capacity",
+    "recommended_turning_diameter_mm": "Capacity",
+    "max_turning_diameter_mm": "Capacity",
+    "max_turning_length_mm": "Capacity",
+    "bar_working_diameter_mm": "Capacity",
+    "chuck_size_inch": "Spindle",
+    "travel_x_mm": "Travel",
+    "rapid_traverse_x_m_min": "Feedrate",
+    "travel_y_mm": "Travel",
+    "rapid_traverse_y_m_min": "Feedrate",
+    "travel_z_mm": "Travel",
+    "rapid_traverse_z_m_min": "Feedrate",
+    "travel_a_deg": "Travel",
+    "rapid_traverse_a_rpm": "Feedrate",
+    "travel_b_deg": "Travel",
+    "rapid_traverse_b_rpm": "Feedrate",
+    "travel_c_deg": "Travel",
+    "rapid_traverse_c_rpm": "Feedrate",
+    "table_rotation_speed_rpm": "Table",
+    "spindle_nose_to_table_center_mm": "Travel",
+    "spindle_nose_to_table_top_mm": "Travel",
+    "table_load_kg": "Table",
+    "table_size_mm": "Table",
+    "max_workpiece_size_mm": "Table",
+    "pallet_size_mm": "Table",
+    "pallet_change_time_sec": "Table",
+    "table_t_slot": "Table",
+    "table_work_inertia_nm2": "Table",
+    "sub_spindle_speed_rpm": "Sub spindle",
+    "sub_spindle_power_kw": "Sub spindle",
+    "sub_spindle_torque_nm": "Sub spindle",
+    "sub_spindle_nose": "Sub spindle",
+    "sub_spindle_bearing_diameter_mm": "Sub spindle",
+    "sub_spindle_bore_mm": "Sub spindle",
+    "sub_spindle_c_index_deg": "Sub spindle",
+    "sub_spindle_taper": "Sub spindle",
+    "spindle_speed_rpm": "Spindle",
+    "spindle_power_kw": "Spindle",
+    "spindle_torque_nm": "Spindle",
+    "spindle_nose": "Spindle",
+    "spindle_bearing_diameter_mm": "Spindle",
+    "spindle_bore_mm": "Spindle",
+    "spindle_c_index_deg": "Spindle",
+    "spindle_taper": "Spindle",
+    "turret_station_count": "Turret",
+    "turret_od_tool_size_mm": "Turret",
+    "turret_max_id_tool_mm": "Turret",
+    "turret_indexing_time_sec": "Turret",
+    "driven_tool_speed_rpm": "Turret",
+    "driven_tool_power_kw": "Turret",
+    "tailstock_travel_mm": "Tailstock",
+    "tailstock_quill_taper": "Tailstock",
+    "tool_capacity": "Automatic tool changer (ATC)",
+    "tool_max_diameter_mm": "Automatic tool changer (ATC)",
+    "tool_max_length_mm": "Automatic tool changer (ATC)",
+    "tool_max_weight_kg": "Automatic tool changer (ATC)",
+    "tool_max_moment_nm": "Automatic tool changer (ATC)",
+    "tool_shank_type": "Automatic tool changer (ATC)",
+    "tool_pull_stud": "Automatic tool changer (ATC)",
+    "tool_selection_type": "Automatic tool changer (ATC)",
+    "tool_change_time_sec": "Automatic tool changer (ATC)",
+    "power_supply_kva": "Power source",
+    "air_pressure_mpa": "Power source",
+    "coolant_pump_motor_power_kw": "Motor",
+    "coolant_tank_l": "Tank capacity",
+    "machine_dimensions_mm": "Machine dimensions",
+    "machine_height_mm": "Machine dimensions",
+    "machine_width_mm": "Machine dimensions",
+    "machine_length_mm": "Machine dimensions",
+    "machine_weight_kg": "Machine dimensions",
+    "control_system": "Control",
+    "controlled_axes": "Control",
+    "simultaneously_controlled_axes": "Control",
+    "axis_acceleration_xyz_g": "Feedrate",
+    "positioning_accuracy": "Accuracy",
+    "repeatability": "Accuracy",
+    "gantry_width_mm": "Capacity",
+    "crossbeam_to_table_mm": "Capacity",
+    "spindle_center_to_table_mm": "Capacity",
+    "spindle_center_to_column_mm": "Capacity",
+    "door_width_mm": "Capacity",
+    "table_indexing": "Table",
+    "table_drive_power_kw": "Table",
+    "rapid_traverse_xyz_m_min": "Feedrate",
+    "cutting_feed_xyz_m_min": "Feedrate",
+    "axis_motor_power_xyz_kw": "Motor",
+    "rotary_axis_speed_rpm": "Feedrate",
+    "spindle_outer_diameter_mm": "Spindle",
+    "tool_magazine_type": "Automatic tool changer (ATC)",
+    "power_supply_specification": "Power source",
+    "cutting_feed_x_m_min": "Feedrate",
+    "cutting_feed_y_m_min": "Feedrate",
+    "cutting_feed_z_m_min": "Feedrate",
+    "axis_motor_power_x_kw": "Motor",
+    "axis_motor_power_y_kw": "Motor",
+    "axis_motor_power_z_kw": "Motor",
+    "power_supply_voltage_v": "Power source"
+  },
+  "compound_parameters": [
+    {
+      "source_key": "rapid_traverse_xyz_m_min",
+      "axes": "XYZ",
+      "keys": [
+        "rapid_traverse_x_m_min",
+        "rapid_traverse_y_m_min",
+        "rapid_traverse_z_m_min"
+      ],
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "source_key": "cutting_feed_xyz_m_min",
+      "axes": "XYZ",
+      "keys": [
+        "cutting_feed_x_m_min",
+        "cutting_feed_y_m_min",
+        "cutting_feed_z_m_min"
+      ],
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "source_key": "axis_motor_power_xyz_kw",
+      "axes": "XYZ",
+      "keys": [
+        "axis_motor_power_x_kw",
+        "axis_motor_power_y_kw",
+        "axis_motor_power_z_kw"
+      ],
+      "unit": "kW",
+      "category": "Motor"
+    },
+    {
+      "source_key": "rotary_axis_speed_rpm",
+      "label_axes": true,
+      "key_template": "rotary_axis_{axis}_speed_rpm",
+      "unit": "rpm",
+      "category": "Feedrate"
+    },
+    {
+      "source_key": "positioning_accuracy",
+      "label_axes": true,
+      "key_template": "positioning_accuracy_{axis}_{unit}",
+      "category": "Accuracy",
+      "units": {
+        "mm": "mm",
+        "″": "arcsec",
+        "′′": "arcsec"
+      }
+    },
+    {
+      "source_key": "repeatability",
+      "label_axes": true,
+      "key_template": "repeatability_{axis}_{unit}",
+      "category": "Accuracy",
+      "units": {
+        "mm": "mm",
+        "″": "arcsec",
+        "′′": "arcsec"
+      }
+    },
+    {
+      "source_key": "power_supply_specification",
+      "value_pattern": "(?P<voltage>\\d+(?:\\.\\d+)?)\\s*V\\s*/\\s*(?P<apparent_power>\\d+(?:\\.\\d+)?)\\s*kVA",
+      "components": [
+        {
+          "group": "voltage",
+          "key": "power_supply_voltage_v",
+          "unit": "V"
+        },
+        {
+          "group": "apparent_power",
+          "key": "power_supply_kva",
+          "unit": "kVA"
+        }
+      ],
+      "category": "Power source"
+    }
+  ],
+  "manufacturers": [
+    {
+      "pattern": "DN\\s*Solutions",
+      "name": "DN Solutions"
+    },
+    {
+      "pattern": "NINGBO\\s+KAIBO|宁波市凯博数控机械有限公司",
+      "name": "Ningbo Kaibo CNC Machinery Co., Ltd."
+    }
+  ]
+}

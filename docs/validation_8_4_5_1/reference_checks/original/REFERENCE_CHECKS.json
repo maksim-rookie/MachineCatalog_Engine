@@ -1,0 +1,3689 @@
+{
+  "summary": {
+    "PASS": 265,
+    "FAIL": 0,
+    "SOURCE_NOT_IN_RUN": 0,
+    "checks": 265,
+    "note": "Reference checks only. Not full-catalogue accuracy and not human verification of all extracted facts."
+  },
+  "results": [
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "340",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "340 (13.4)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "350",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "350 (13.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "330",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "330 (13.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "51",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "51 (2.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12{10}"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3100",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3100 (6834.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "350",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "350 (13.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "550",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "550 (21.7)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "51",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "51 (2.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12{10}"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3400",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3400 (7495.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "340",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "340 (13.4)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "290",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "290 (11.4)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "51",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "51 (2.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3170",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3170 (6988.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "510",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "510 (20.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "51",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "51 (2.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3480",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3480 (7672.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "560"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "510",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "510 (20.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "51",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "51 (2.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3600",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3600 (7936.5)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSA",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "340",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "340 (13.4)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4500",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "4500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "350",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "350 (13.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "330",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "330 (13.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "67",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "67 (2.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12{10}"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3100",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3100 (6834.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4500",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "4500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "350",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "350 (13.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "550",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "550 (21.7)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "67",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "67 (2.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12{10}"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3400",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3400 (7495.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "340",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "340 (13.4)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4500",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "4500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "290",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "290 (11.4)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "67",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "67 (2.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3170",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3170 (6988.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MB",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4500",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "4500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "510",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "510 (20.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "67",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "67 (2.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3480",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3480 (7672.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMB",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4500",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "4500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "510",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "510 (20.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "67",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "67 (2.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "3500 (7716.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "6000",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "350",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "350 (13.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "537",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "537 (21.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "81",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "81 (3.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "12{10}"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3450",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3450 (7605.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LC",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "497",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "497 (19.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "81",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "81 (3.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3500 (7716.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMC",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "205",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "205 (8.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "560",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "560 (22.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "497",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "497 (19.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "81",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "81 (3.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4100",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "4100 (9038.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "6000",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "6000"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "255",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "255 (10.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "680",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "680 (26.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "460",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "460 (18.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "658",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "658 (25.9)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "81",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "81 (3.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "10",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "10{12}"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4750",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "4750 (10471.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "255",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "255 (10.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "680",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "680 (26.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3500",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "3500"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "max_turning_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "380",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "380 (15.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "max_turning_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "610",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "610 (24.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "bar_working_diameter_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "81",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "81 (3.2)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "turret_station_count",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "12"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "4800",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "4800 (10582.0)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "sub_spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "-",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "-"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100A",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "360",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "360 (14.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LA",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "580",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "580 (22.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100MA",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "360",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "360 (14.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMA",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "580",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "580 (22.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100B",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "360",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "360 (14.1)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LB",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "580",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "580 (22.8)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "700",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "700 (938.7)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "tailstock_travel_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "700",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "700 (938.7)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "driven_tool_speed_rpm",
+      "condition_contains": "",
+      "comparison": "missing",
+      "expected": "",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": []
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=FANUC",
+      "comparison": "primary_number",
+      "expected": "169",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "169 (124.6)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSB",
+      "configuration": "base",
+      "parameter": "sub_spindle_torque_nm",
+      "condition_contains": "controller=FANUC",
+      "comparison": "primary_number",
+      "expected": "47",
+      "source_page": "32",
+      "result": "PASS",
+      "actual": [
+        "47 (34.7)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2600M",
+      "configuration": "base",
+      "parameter": "driven_tool_power_kw",
+      "condition_contains": "controller=FANUC",
+      "comparison": "contains",
+      "expected": "5.5/2.2",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "5.5/2.2 (7.4/3.0) (S3 25%/S1 Cont.)"
+      ]
+    },
+    {
+      "source_file": "lynx-2100-2600-series-new.pdf",
+      "model": "LYNX 2100LMSC",
+      "configuration": "base",
+      "parameter": "power_supply_kva",
+      "condition_contains": "controller=SIEMENS",
+      "comparison": "exact",
+      "expected": "(T.B.D)",
+      "source_page": "33",
+      "result": "PASS",
+      "actual": [
+        "(T.B.D)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "650",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "650 (25.6)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "520",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "520 (20.5)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "480",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "480 (18.9)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "travel_c_deg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "360",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "360"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "table_load_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "400",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "400 (881.8)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "15000",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "15000 {20000}"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "30 {40, 60, 120}"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "tool_max_length_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "300",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "300 (11.8)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "tool_max_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "8",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "8 (17.6)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "machine_height_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "3100",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "3100 (122.0)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "coolant_tank_l",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "500",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "500 (132.1)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "rapid_traverse_x_m_min",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "42",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "42 (1653.5)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "rapid_traverse_y_m_min",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "42",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "42 (1653.5)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "rapid_traverse_z_m_min",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "42",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "42 (1653.5)"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "rapid_traverse_b_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "25",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "25"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "rapid_traverse_c_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "25",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "25"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "tool_change_time_sec",
+      "condition_contains": "change=tool_to_tool; frequency_hz=60",
+      "comparison": "exact",
+      "expected": "1.3",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "1.3"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "tool_change_time_sec",
+      "condition_contains": "change=chip_to_chip; frequency_hz=50",
+      "comparison": "exact",
+      "expected": "4.3",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "4.3"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=CUFOS; drive=direct; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "18.5/11",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "18.5/11"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=CUFOS; drive=built-in; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "30/18.5",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "30/18.5"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=CUFOS; drive=built-in; spindle_rpm=20000",
+      "comparison": "exact",
+      "expected": "37/18.5",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "37/18.5"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=CUFOS; drive=direct; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "118",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "118"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=CUFOS; drive=built-in; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "230",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "230"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=CUFOS; drive=built-in; spindle_rpm=20000",
+      "comparison": "exact",
+      "expected": "221",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "221"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=TNC7; drive=direct; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "17/10",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "17/10"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=TNC7; drive=built-in; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "30/18.5",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "30/18.5"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=TNC7; drive=built-in; spindle_rpm=20000",
+      "comparison": "exact",
+      "expected": "30/24",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "30/24"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=TNC7; drive=direct; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "108",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "108"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=TNC7; drive=built-in; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "230",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "230"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=TNC7; drive=built-in; spindle_rpm=20000",
+      "comparison": "exact",
+      "expected": "155",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "155"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=Sinumerik One; drive=direct; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "16.5/11",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "16.5/11"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=Sinumerik One; drive=built-in; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "30/18.5",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "30/18.5"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_power_kw",
+      "condition_contains": "controller=Sinumerik One; drive=built-in; spindle_rpm=20000",
+      "comparison": "exact",
+      "expected": "30/24",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "30/24"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=Sinumerik One; drive=direct; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "79",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "79"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=Sinumerik One; drive=built-in; spindle_rpm=15000",
+      "comparison": "exact",
+      "expected": "230",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "230"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "spindle_torque_nm",
+      "condition_contains": "controller=Sinumerik One; drive=built-in; spindle_rpm=20000",
+      "comparison": "exact",
+      "expected": "155",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "155"
+      ]
+    },
+    {
+      "source_file": "DVF_5000.pdf",
+      "model": "DVF 5000 2nd Gen.",
+      "configuration": "base",
+      "parameter": "control_system",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "CUFOS, TNC640/TNC7, Sinumerik One",
+      "source_page": "21",
+      "result": "PASS",
+      "actual": [
+        "CUFOS, TNC640/TNC7, Sinumerik One"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1450",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1450 (57.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1200",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1200 (47.2)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1500",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1500 (59.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "table_load_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "2000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "2000 (4409.2)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "31000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "31000 (68342.3)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "60",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "60 {90, 120, 150, 196 ~ 376}*"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "tool_max_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "30 (66.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "table_rotation_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "8",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "8"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1450",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1450 (57.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1200",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1200 (47.2)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1500",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1500 (59.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "table_load_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "2000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "2000 (4409.2)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "31000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "31000 (68342.3)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "60",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "60 {90, 120, 150, 196 ~ 376}*"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "tool_max_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "30 (66.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "table_rotation_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "500",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "500"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1450",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1450 (57.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1200",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1200 (47.2)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1500",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "1500 (59.1)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "table_load_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "2000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "2000 (4409.2)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "31000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "31000 (68342.3)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "80",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "80 {120, 171, 275}*"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "tool_max_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "12",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "12 (26.5)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "table_rotation_speed_rpm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "8",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "8"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "30000rpm / PSC",
+      "parameter": "spindle_speed_rpm",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "30000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "30000"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "pallet_size_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1000",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "ø1000 (ø39.4)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000",
+      "configuration": "base",
+      "parameter": "pallet_size_mm",
+      "condition_contains": "",
+      "comparison": "contains",
+      "expected": "800 x 800",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "800 x 800 (31.5 x 31.5)"
+      ]
+    },
+    {
+      "source_file": "dhf-8000-series.pdf",
+      "model": "DHF 8000ST",
+      "configuration": "base",
+      "parameter": "max_workpiece_size_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1600",
+      "source_page": "19",
+      "result": "PASS",
+      "actual": [
+        "Ø1600 x H1400 (Ø63.0 x H55.1)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400II",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1020",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1020 (40.2)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400II",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "550",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "550 (21.7)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400II",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "530",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "530 (20.9)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400II",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "30 {40}"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400II",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "7000",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "7000 (15432.1)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400/50II",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1020",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1020 (40.2)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400/50II",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "550",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "550 (21.7)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400/50II",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "530",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "530 (20.9)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400/50II",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "24",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "24"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400/50II",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "7500",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "7500 (16534.4)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500II",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1270",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1270 (50.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500II",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "670",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "670 (26.4)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500II",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "625",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "625 (24.6)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500II",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "30 {40}"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500II",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "9000",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "9000 (19841.3)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500/50II",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1270",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1270 (50.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500/50II",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "670",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "670 (26.4)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500/50II",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "625",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "625 (24.6)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500/50II",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "24",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "24 {30}"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 6500/50II",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "9500",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "9500 (20943.6)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500II",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1525",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1525 (60.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500II",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "770",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "770 (30.3)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500II",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "625",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "625 (24.6)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500II",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "30 {40}"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500II",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "13500",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "13500 (29762.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500/50II",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "1525",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1525 (60.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500/50II",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "770",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "770 (30.3)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500/50II",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "625",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "625 (24.6)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500/50II",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "24",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "24 {40}"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 7500/50II",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "13500",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "13500 (29762.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 9500",
+      "configuration": "base",
+      "parameter": "travel_x_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "2500",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "2500 (98.4)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 9500",
+      "configuration": "base",
+      "parameter": "travel_y_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "950",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "950 (37.4)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 9500",
+      "configuration": "base",
+      "parameter": "travel_z_mm",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "850",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "850 (33.5)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 9500",
+      "configuration": "base",
+      "parameter": "tool_capacity",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "30",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "30 {40}"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 9500",
+      "configuration": "base",
+      "parameter": "machine_weight_kg",
+      "condition_contains": "",
+      "comparison": "primary_number",
+      "expected": "23000",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "23000 (50705.6)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 5400II",
+      "configuration": "base",
+      "parameter": "table_load_kg",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "1000 (1341.0)",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "1000 (1341.0)"
+      ]
+    },
+    {
+      "source_file": "dn-solutions-vertical-machining-center-mynx-ii-series.pdf",
+      "model": "MYNX 9500",
+      "configuration": "base",
+      "parameter": "rapid_traverse_z_m_min",
+      "condition_contains": "",
+      "comparison": "exact",
+      "expected": "16 (11.8)",
+      "source_page": "18",
+      "result": "PASS",
+      "actual": [
+        "16 (11.8)"
+      ]
+    }
+  ]
+}

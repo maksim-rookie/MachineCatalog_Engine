@@ -1,0 +1,161 @@
+﻿model,category,label,parameter,condition,reference_value,observed_v83,comparison_status,reference_page,source_row_id
+NHP 4000,Travel,X-axis,travel_x_mm,,560 (22.0),560 (22.0),Совпадает по фото,17,17:2:1
+NHP 5000,Travel,X-axis,travel_x_mm,,730 (28.7),730 (28.7),Совпадает по фото,17,17:2:1
+NHP 5000S,Travel,X-axis,travel_x_mm,,730 (28.7),730 (28.7),Совпадает по фото,17,17:2:1
+NHP 4000,Travel,Y-axis,travel_y_mm,,640 (25.2),640 (25.2),Совпадает по фото,17,17:2:2
+NHP 5000,Travel,Y-axis,travel_y_mm,,730 (28.7),730 (28.7),Совпадает по фото,17,17:2:2
+NHP 5000S,Travel,Y-axis,travel_y_mm,,730 (28.7),730 (28.7),Совпадает по фото,17,17:2:2
+NHP 4000,Travel,Z-axis,travel_z_mm,,660 (26.0),660 (26.0),Совпадает по фото,17,17:2:3
+NHP 5000,Travel,Z-axis,travel_z_mm,,880 (34.6),880 (34.6),Совпадает по фото,17,17:2:3
+NHP 5000S,Travel,Z-axis,travel_z_mm,,880 (34.6),880 (34.6),Совпадает по фото,17,17:2:3
+NHP 4000,Travel,Distance from spindle nose to table top,spindle_nose_to_table_top_mm,,80 ~ 720 (3.1 ~ 28.3),80 ~ 720 (3.1 ~ 28.3),Совпадает по фото,17,17:2:4
+NHP 5000,Travel,Distance from spindle nose to table top,spindle_nose_to_table_top_mm,,80 ~ 810 (3.1 ~ 31.9),80 ~ 810 (3.1 ~ 31.9),Совпадает по фото,17,17:2:4
+NHP 5000S,Travel,Distance from spindle nose to table top,spindle_nose_to_table_top_mm,,130 ~ 860 (5.1 ~ 35.4),130 ~ 860 (5.1 ~ 35.4),Противоречие источника,17,17:2:4
+NHP 4000,Travel,Spindle nose to table center,spindle_nose_to_table_center_mm,,80 ~ 740 (3.1 ~ 29.1),80 ~ 740 (3.1 ~ 29.1),Совпадает по фото,17,17:2:5
+NHP 5000,Travel,Spindle nose to table center,spindle_nose_to_table_center_mm,,100 ~ 980 (3.9 ~ 38.6),100 ~ 980 (3.9 ~ 38.6),Совпадает по фото,17,17:2:5
+NHP 5000S,Travel,Spindle nose to table center,spindle_nose_to_table_center_mm,,100 ~ 980 (3.9 ~ 38.6),100 ~ 980 (3.9 ~ 38.6),Совпадает по фото,17,17:2:5
+NHP 4000,Table,Pallet size,pallet_size_mm,,400 x 400 (15.7 x 15.7),400 x 400 (15.7 x 15.7),Совпадает по фото,17,17:2:6
+NHP 5000,Table,Pallet size,pallet_size_mm,,500 x 500 (19.7 x 19.7),500 x 500 (19.7 x 19.7),Совпадает по фото,17,17:2:6
+NHP 5000S,Table,Pallet size,pallet_size_mm,,500 x 600 (19.7 x 19.7),500 x 600 (19.7 x 19.7),Противоречие источника,17,17:2:6
+NHP 4000,Table,Workpiece size,max_workpiece_size_mm,,ø630 x 900h (ø24.8 x 35.4h),ø630 x 900h,Частично,17,17:2:7
+NHP 5000,Table,Workpiece size,max_workpiece_size_mm,,ø800 x 1000h (ø31.5 x 39.4h),ø800 x 1000h,Частично,17,17:2:7
+NHP 5000S,Table,Workpiece size,max_workpiece_size_mm,,ø800 x 1000h (ø31.5 x 39.4h),ø800 x 1000h,Частично,17,17:2:7
+NHP 4000,Table,Нагрузка стола? Строка фото: Tool storage capacity (kg),table_load_kg,,400 (881.8),,Не извлечено,17,
+NHP 5000,Table,Нагрузка стола? Строка фото: Tool storage capacity (kg),table_load_kg,,500 (1102.3) {700 (1543.2)}*,,Не извлечено,17,
+NHP 5000S,Table,Нагрузка стола? Строка фото: Tool storage capacity (kg),table_load_kg,,500 (1102.3) {700 (1543.2)}*,,Не извлечено,17,
+NHP 4000,Table,Work inertia,table_work_inertia_nm2,,108,108,Совпадает по фото,17,17:2:9
+NHP 5000,Table,Work inertia,table_work_inertia_nm2,,294,294,Восстановлено — проверить,17,17:2:9
+NHP 5000S,Table,Work inertia,table_work_inertia_nm2,,294,294,Восстановлено — проверить,17,17:2:9
+NHP 4000,Spindle,Max. spindle speed,spindle_speed_rpm,,15000 {20000}*,15000 {20000}*,Совпадает по фото,17,17:2:10
+NHP 5000,Spindle,Max. spindle speed,spindle_speed_rpm,,15000 {20000}*,15000 {20000}*,Совпадает по фото,17,17:2:10
+NHP 5000S,Spindle,Max. spindle speed,spindle_speed_rpm,,15000 {20000}*,15000 {20000}*,Совпадает по фото,17,17:2:10
+NHP 4000,Spindle,Taper,spindle_taper,,ISO #40,ISO #40,Совпадает по фото,17,17:2:11
+NHP 5000,Spindle,Taper,spindle_taper,,ISO #40,ISO #40,Совпадает по фото,17,17:2:11
+NHP 5000S,Spindle,Taper,spindle_taper,,ISO #40,ISO #40,Совпадает по фото,17,17:2:11
+NHP 4000,Spindle,Spindle power (S3/Cont.),spindle_power_kw,,"30/18.5 (40.2/24.8) {37/22 (49.6/29.5), 37/18.5 (49.6/24.8)}*","30/18.5 (40.2/24.8) {37/22 (49.6/29.5), 37/18.5 (49.6/24.8)}*",Совпадает по фото,17,17:2:12
+NHP 5000,Spindle,Spindle power (S3/Cont.),spindle_power_kw,,"30/18.5 (40.2/24.8) {37/22 (49.6/29.5), 37/18.5 (49.6/24.8)}*","30/18.5 (40.2/24.8) {37/22 (49.6/29.5), 37/18.5 (49.6/24.8)}*",Совпадает по фото,17,17:2:12
+NHP 5000S,Spindle,Spindle power (S3/Cont.),spindle_power_kw,,"30/18.5 (40.2/24.8) {37/22 (49.6/29.5), 37/18.5 (49.6/24.8)}*","30/18.5 (40.2/24.8) {37/22 (49.6/29.5), 37/18.5 (49.6/24.8)}*",Совпадает по фото,17,17:2:12
+NHP 4000,Spindle,Max. spindle torque,spindle_torque_nm,,"230 (169.7) {303, 221 (223.6, 163.1)}*","230 (169.7) {303, 221 (223.6, 163.1)}*",Совпадает по фото,17,17:2:13
+NHP 5000,Spindle,Max. spindle torque,spindle_torque_nm,,"230 (169.7) {303, 221 (223.6, 163.1)}*","230 (169.7) {303, 221 (223.6, 163.1)}*",Совпадает по фото,17,17:2:13
+NHP 5000S,Spindle,Max. spindle torque,spindle_torque_nm,,"230 (169.7) {303, 221 (223.6, 163.1)}*","230 (169.7) {303, 221 (223.6, 163.1)}*",Совпадает по фото,17,17:2:13
+NHP 4000,Feedrate,Rapid traverse X,rapid_traverse_x_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:14
+NHP 5000,Feedrate,Rapid traverse X,rapid_traverse_x_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:14
+NHP 5000S,Feedrate,Rapid traverse X,rapid_traverse_x_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:14
+NHP 4000,Feedrate,Rapid traverse Y,rapid_traverse_y_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:15
+NHP 5000,Feedrate,Rapid traverse Y,rapid_traverse_y_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:15
+NHP 5000S,Feedrate,Rapid traverse Y,rapid_traverse_y_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:15
+NHP 4000,Feedrate,Rapid traverse Z,rapid_traverse_z_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:16
+NHP 5000,Feedrate,Rapid traverse Z,rapid_traverse_z_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:16
+NHP 5000S,Feedrate,Rapid traverse Z,rapid_traverse_z_m_min,,60 (2362.2),60 (2362.2),Совпадает по фото,17,17:2:16
+NHP 4000,Feedrate,Acceleration / Deceleration X / Y / Z,axis_acceleration_xyz_g,,1 / 1 / 1,1 / 1 / 1,Совпадает по фото,17,17:2:17
+NHP 5000,Feedrate,Acceleration / Deceleration X / Y / Z,axis_acceleration_xyz_g,,0.9 / 0.8 / 0.8,0.9 / 0.8 / 0.8,Совпадает по фото,17,17:2:17
+NHP 5000S,Feedrate,Acceleration / Deceleration X / Y / Z,axis_acceleration_xyz_g,,0.9 / 0.8 / 0.8,0.9 / 0.8 / 0.8,Совпадает по фото,17,17:2:17
+NHP 4000,ATC,Type of tool shank,tool_shank_type,,BT 40 {CAT 40 / DIN / HSK 63A}*,BT 40 {CAT 40 / DIN / HSK 63A}*,Совпадает по фото,17,17:2:18
+NHP 5000,ATC,Type of tool shank,tool_shank_type,,BT 40 {CAT 40 / DIN / HSK 63A}*,BT 40 {CAT 40 / DIN / HSK 63A}*,Совпадает по фото,17,17:2:18
+NHP 5000S,ATC,Type of tool shank,tool_shank_type,,BT 40 {CAT 40 / DIN / HSK 63A}*,BT 40 {CAT 40 / DIN / HSK 63A}*,Совпадает по фото,17,17:2:18
+NHP 4000,ATC,Pull stud,tool_pull_stud,,"PS806 (Modified DIN,DIN 69872 #40)","PS806 (Modified DIN,DIN 69872 #40)",Совпадает по фото,17,17:2:19
+NHP 5000,ATC,Pull stud,tool_pull_stud,,"PS806 (Modified DIN,DIN 69872 #40)","PS806 (Modified DIN,DIN 69872 #40)",Совпадает по фото,17,17:2:19
+NHP 5000S,ATC,Pull stud,tool_pull_stud,,"PS806 (Modified DIN,DIN 69872 #40)","PS806 (Modified DIN,DIN 69872 #40)",Совпадает по фото,17,17:2:19
+NHP 4000,ATC,Tool storage capacity (ATC),tool_capacity,,"40 {60, 80, 120, 171, 275}*","40 {60, 80, 120, 171, 275}*",Совпадает по фото,17,17:2:20
+NHP 5000,ATC,Tool storage capacity (ATC),tool_capacity,,"40 {60, 80, 120, 171, 275}*","40 {60, 80, 120, 171, 275}*",Совпадает по фото,17,17:2:20
+NHP 5000S,ATC,Tool storage capacity (ATC),tool_capacity,,"40 {60, 80, 120, 171, 275}*","40 {60, 80, 120, 171, 275}*",Совпадает по фото,17,17:2:20
+NHP 4000,ATC,Max tool diameter / Continuous,tool_max_diameter_mm,continuous_adjacent_tools,75 (3.0),75 (3.0),Совпадает по фото,17,17:2:21
+NHP 5000,ATC,Max tool diameter / Continuous,tool_max_diameter_mm,continuous_adjacent_tools,75 (3.0),75 (3.0),Совпадает по фото,17,17:2:21
+NHP 5000S,ATC,Max tool diameter / Continuous,tool_max_diameter_mm,continuous_adjacent_tools,75 (3.0),75 (3.0),Совпадает по фото,17,17:2:21
+NHP 4000,ATC,Max tool diameter / Without adjacent tools,tool_max_diameter_mm,without_adjacent_tools,170 (6.7),170 (6.7),Совпадает по фото,17,17:2:22
+NHP 5000,ATC,Max tool diameter / Without adjacent tools,tool_max_diameter_mm,without_adjacent_tools,170 (6.7),170 (6.7),Совпадает по фото,17,17:2:22
+NHP 5000S,ATC,Max tool diameter / Without adjacent tools,tool_max_diameter_mm,without_adjacent_tools,170 (6.7),170 (6.7),Совпадает по фото,17,17:2:22
+NHP 4000,ATC,Max. tool length,tool_max_length_mm,,450 (17.7),450 (17.7),Совпадает по фото,17,17:2:23
+NHP 5000,ATC,Max. tool length,tool_max_length_mm,,550 (21.7),550 (21.7),Совпадает по фото,17,17:2:23
+NHP 5000S,ATC,Max. tool length,tool_max_length_mm,,550 (21.7),550 (21.7),Совпадает по фото,17,17:2:23
+NHP 4000,ATC,Max. tool weight,tool_max_weight_kg,,12 (26.5),12 (26.5),Совпадает по фото,17,17:2:24
+NHP 5000,ATC,Max. tool weight,tool_max_weight_kg,,12 (26.5),12 (26.5),Совпадает по фото,17,17:2:24
+NHP 5000S,ATC,Max. tool weight,tool_max_weight_kg,,12 (26.5),12 (26.5),Совпадает по фото,17,17:2:24
+NHP 4000,ATC,Max. tool moment,tool_max_moment_nm,,11.8 (8.7),11.8 (8.7),Совпадает по фото,17,17:2:25
+NHP 5000,ATC,Max. tool moment,tool_max_moment_nm,,11.8 (8.7),11.8 (8.7),Совпадает по фото,17,17:2:25
+NHP 5000S,ATC,Max. tool moment,tool_max_moment_nm,,11.8 (8.7),11.8 (8.7),Совпадает по фото,17,17:2:25
+NHP 4000,ATC,Tool change time (Tool-to-tool),tool_change_time_sec,tool_to_tool,0.9,0.9,Совпадает по фото,17,17:2:26
+NHP 5000,ATC,Tool change time (Tool-to-tool),tool_change_time_sec,tool_to_tool,0.9,0.9,Совпадает по фото,17,17:2:26
+NHP 5000S,ATC,Tool change time (Tool-to-tool),tool_change_time_sec,tool_to_tool,0.9,0.9,Совпадает по фото,17,17:2:26
+NHP 4000,Other,Coolant tank capacity,coolant_tank_l,,570 (150.6) {760 (200.8)},570 (150.6) {760 (200.8)},Совпадает по фото,17,17:2:27
+NHP 5000,Other,Coolant tank capacity,coolant_tank_l,,570 (150.6) {760 (200.8)},570 (150.6) {760 (200.8)},Совпадает по фото,17,17:2:27
+NHP 5000S,Other,Coolant tank capacity,coolant_tank_l,,570 (150.6) {760 (200.8)},570 (150.6) {760 (200.8)},Совпадает по фото,17,17:2:27
+NHP 4000,Other,Machine height,machine_height_mm,,2690 (105.9),2690 (105.9),Совпадает по фото,17,17:2:28
+NHP 5000,Other,Machine height,machine_height_mm,,2880 (113.4),2880 (113.4),Совпадает по фото,17,17:2:28
+NHP 5000S,Other,Machine height,machine_height_mm,,2880 (113.4),2880 (113.4),Совпадает по фото,17,17:2:28
+NHP 4000,Other,Machine length / w Chip Conveyor,machine_length_mm,,4950 (194.9),4950 (194.9),Совпадает по фото,17,17:2:29
+NHP 5000,Other,Machine length / w Chip Conveyor,machine_length_mm,,5450 (214.6),5450 (214.6),Совпадает по фото,17,17:2:29
+NHP 5000S,Other,Machine length / w Chip Conveyor,machine_length_mm,,4600 (181.1),4600 (181.1),Совпадает по фото,17,17:2:29
+NHP 4000,Other,Machine width,machine_width_mm,,2300 (90.6),2300 (90.6),Совпадает по фото,17,17:2:30
+NHP 5000,Other,Machine width,machine_width_mm,,2680 (105.5),2680 (105.5),Совпадает по фото,17,17:2:30
+NHP 5000S,Other,Machine width,machine_width_mm,,2680 (105.5),2680 (105.5),Совпадает по фото,17,17:2:30
+NHP 4000,Other,Machine weight,machine_weight_kg,,9700 (21384.5),9700 (21384.5),Совпадает по фото,17,17:2:31
+NHP 5000,Other,Machine weight,machine_weight_kg,,11500 (25352.8),11500 (25352.8),Совпадает по фото,17,17:2:31
+NHP 5000S,Other,Machine weight,machine_weight_kg,,11500 (25352.8),11500 (25352.8),Совпадает по фото,17,17:2:31
+NHP 4000,Control,NC system,control_system,,"Fanuc 31i Plus {CUFOS, Siemens}*","Fanuc 31i Plus {CUFOS, Siemens}*",Совпадает по фото,17,17:2:32
+NHP 5000,Control,NC system,control_system,,"Fanuc 31i Plus {CUFOS, Siemens}*","Fanuc 31i Plus {CUFOS, Siemens}*",Совпадает по фото,17,17:2:32
+NHP 5000S,Control,NC system,control_system,,"Fanuc 31i Plus {CUFOS, Siemens}*","Fanuc 31i Plus {CUFOS, Siemens}*",Совпадает по фото,17,17:2:32
+SVM 4100,Travel,X-axis,travel_x_mm,,770 (30.3),"770 (30,3)",Формат OCR,16,16:1:2
+SVM 5100L,Travel,X-axis,travel_x_mm,,1270 (50.0),1270 (50.0),Совпадает по фото,16,16:1:2
+SVM 4100,Travel,Y-axis,travel_y_mm,,410 (16.1),410 (16.1),Совпадает по фото,16,16:1:3
+SVM 5100L,Travel,Y-axis,travel_y_mm,,510 (20.1),510 (20.1),Совпадает по фото,16,16:1:3
+SVM 4100,Travel,Z-axis,travel_z_mm,,510 (20.1),510 (20.1),Совпадает по фото,16,16:1:4
+SVM 5100L,Travel,Z-axis,travel_z_mm,,510 (20.1),510 (20.1),Совпадает по фото,16,16:1:4
+SVM 4100,Travel,Distance from spindle nose to table top,spindle_nose_to_table_top_mm,,100~610 (3.9~24.0),100-610,Частично,16,16:1:5
+SVM 5100L,Travel,Distance from spindle nose to table top,spindle_nose_to_table_top_mm,,100~610 (3.9~24.0),100~610,Частично,16,16:1:5
+SVM 4100,Table,Table size,table_size_mm,,920 x 410 (36.2 x 16.1),920 x 410 (36.2 x 16.1),Совпадает по фото,16,16:1:6
+SVM 5100L,Table,Table size,table_size_mm,,1320 x 510 (52.0 x 20.1),1320 X 510 (52.0x 20.1),Совпадает по фото,16,16:1:6
+SVM 4100,Table,Table loading capacity,table_load_kg,,600 (1322.8),600 (1322.8),Совпадает по фото,16,16:1:7
+SVM 5100L,Table,Table loading capacity,table_load_kg,,800 (1763.7),800 (1763.7),Совпадает по фото,16,16:1:7
+SVM 4100,Table,Table surface type,table_t_slot,,T-SLOT (3-125 x 18H8),T-SLOT (3-125 x 18H8),Совпадает по фото,16,16:1:8
+SVM 5100L,Table,Table surface type,table_t_slot,,T-SLOT (4-125 x 18H8),T-SLOT (4-125 x 18H8),Совпадает по фото,16,16:1:8
+SVM 4100,Spindle,Max. spindle speed,spindle_speed_rpm,,12000,12000,Совпадает по фото,16,16:1:9
+SVM 5100L,Spindle,Max. spindle speed,spindle_speed_rpm,,12000,12000,Совпадает по фото,16,16:1:9
+SVM 4100,Spindle,Taper,spindle_taper,,ISO #40,,Не извлечено,16,
+SVM 5100L,Spindle,Taper,spindle_taper,,ISO #40,ISO #40,Совпадает по фото,16,16:1:10
+SVM 4100,Spindle,Max. spindle torque,spindle_torque_nm,,95.5 (70.5),95.5 (70.5),Совпадает по фото,16,16:1:11
+SVM 5100L,Spindle,Max. spindle torque,spindle_torque_nm,,95.5 (70.5),95.5 (70.5),Совпадает по фото,16,16:1:11
+SVM 4100,Spindle,Max. spindle power (S3/continuous),spindle_power_kw,,18.5/5.5 (24.8/7.4),18.5/5.5 (24.8/7.4),Совпадает по фото,16,16:1:12
+SVM 5100L,Spindle,Max. spindle power (S3/continuous),spindle_power_kw,,18.5/5.5 (24.8/7.4),18.5/5.5 (24.8/7.4),Совпадает по фото,16,16:1:12
+SVM 4100,Feedrate,Rapid traverse X,rapid_traverse_x_m_min,,36 (1417.3),36 (1417.3),Восстановлено — проверить,16,16:1:13
+SVM 5100L,Feedrate,Rapid traverse X,rapid_traverse_x_m_min,,36 (1417.3),36 (1417.3),Восстановлено — проверить,16,16:1:13
+SVM 4100,Feedrate,Rapid traverse Y,rapid_traverse_y_m_min,,36 (1417.3),36 (1417.3),Восстановлено — проверить,16,16:1:15
+SVM 5100L,Feedrate,Rapid traverse Y,rapid_traverse_y_m_min,,36 (1417.3),36 (1417.3),Восстановлено — проверить,16,16:1:15
+SVM 4100,Feedrate,Rapid traverse Z,rapid_traverse_z_m_min,,36 (1417.3),36 (1417.3),Восстановлено — проверить,16,16:1:17
+SVM 5100L,Feedrate,Rapid traverse Z,rapid_traverse_z_m_min,,36 (1417.3),36 (1417.3),Восстановлено — проверить,16,16:1:17
+SVM 4100,ATC,Type of tool shank,tool_shank_type,,BT 40 {CAT / DIN},BT 40 {CAT/ DIN},Совпадает по фото,16,16:1:18
+SVM 5100L,ATC,Type of tool shank,tool_shank_type,,BT 40 {CAT / DIN},BT 40 {CAT/ DIN},Совпадает по фото,16,16:1:18
+SVM 4100,ATC,Tool storage capacity,tool_capacity,,30,30 ea,Противоречие источника,16,8:1:5
+SVM 5100L,ATC,Tool storage capacity,tool_capacity,,30,,Не извлечено,16,
+SVM 4100,ATC,Max. tool diameter / Continuous,tool_max_diameter_mm,continuous_adjacent_tools,80 (3.1),80 (3.1),Совпадает по фото,16,16:1:21
+SVM 5100L,ATC,Max. tool diameter / Continuous,tool_max_diameter_mm,continuous_adjacent_tools,80 (3.1),80(3.1),Совпадает по фото,16,16:1:21
+SVM 4100,ATC,Max. tool diameter / Without adjacent tools,tool_max_diameter_mm,without_adjacent_tools,125 (4.9),125 (4.9),Совпадает по фото,16,16:1:23
+SVM 5100L,ATC,Max. tool diameter / Without adjacent tools,tool_max_diameter_mm,without_adjacent_tools,125 (4.9),125 (4.9),Совпадает по фото,16,16:1:23
+SVM 4100,ATC,Max. tool length,tool_max_length_mm,,300 (11.8),300 (11.8),Совпадает по фото,16,16:1:24
+SVM 5100L,ATC,Max. tool length,tool_max_length_mm,,300 (11.8),300 (11.8),Совпадает по фото,16,16:1:24
+SVM 4100,ATC,Max. tool weight,tool_max_weight_kg,,6 (13.2),6 (13.2),Совпадает по фото,16,16:1:25
+SVM 5100L,ATC,Max. tool weight,tool_max_weight_kg,,6 (13.2),6 (13.2),Совпадает по фото,16,16:1:25
+SVM 4100,ATC,Tool selection,tool_selection_type,,MEMORY RANDOM,MEMORY RANDOM,Совпадает по фото,16,16:1:26
+SVM 5100L,ATC,Tool selection,tool_selection_type,,MEMORY RANDOM,MEMORY RANDOM,Совпадает по фото,16,16:1:26
+SVM 4100,ATC,Tool change time (Tool-to-tool),tool_change_time_sec,tool_to_tool,1.3,,Не извлечено,16,
+SVM 5100L,ATC,Tool change time (Tool-to-tool),tool_change_time_sec,tool_to_tool,1.3,,Не извлечено,16,
+SVM 4100,ATC,Tool change time (Chip-to-chip),tool_change_time_sec,chip_to_chip,3.3,3.3,Совпадает по фото,16,16:1:28
+SVM 5100L,ATC,Tool change time (Chip-to-chip),tool_change_time_sec,chip_to_chip,3.3,3.3,Совпадает по фото,16,16:1:28
+SVM 4100,Motor,Coolant pump motor power,coolant_pump_motor_power_kw,,1.1 (1.5),,Не извлечено,16,
+SVM 5100L,Motor,Coolant pump motor power,coolant_pump_motor_power_kw,,0.4 (0.54),0.4 (0.54),Совпадает по фото,16,16:1:29
+SVM 4100,Power source,Electric power supply (rated capacity),power_supply_kva,,24.8,24.8,Совпадает по фото,16,16:1:30
+SVM 5100L,Power source,Electric power supply (rated capacity),power_supply_kva,,28.5,28.5,Совпадает по фото,16,16:1:30
+SVM 4100,Power source,Compressed air supply,air_pressure_mpa,,0.54,0.54,Совпадает по фото,16,16:1:32
+SVM 5100L,Power source,Compressed air supply,air_pressure_mpa,,0.54,0.54,Совпадает по фото,16,16:1:32
+SVM 4100,Other,Coolant tank capacity,coolant_tank_l,,240 (63.4),240 (63.4),Совпадает по фото,16,16:1:33
+SVM 5100L,Other,Coolant tank capacity,coolant_tank_l,,380 (100.4),380 (100.4),Совпадает по фото,16,16:1:33
+SVM 4100,Other,Machine height,machine_height_mm,,2661 (104.8),2661 (104.8),Совпадает по фото,16,16:1:34
+SVM 5100L,Other,Machine height,machine_height_mm,,2681 (105.6),2681 (105.6),Совпадает по фото,16,16:1:34
+SVM 4100,Other,Machine length,machine_length_mm,,2390 (94),2390 (94),Совпадает по фото,16,16:1:36
+SVM 5100L,Other,Machine length,machine_length_mm,,2410 (95),2410 (95),Совпадает по фото,16,16:1:36
+SVM 4100,Other,Machine width,machine_width_mm,,2250 (88.6),2250 (88.6),Совпадает по фото,16,16:1:37
+SVM 5100L,Other,Machine width,machine_width_mm,,3100 (122.0),3100,Частично,16,16:1:37
+SVM 4100,Other,Machine weight,machine_weight_kg,,3850 (8487.7),3850 (8487.7),Совпадает по фото,16,16:1:38
+SVM 5100L,Other,Machine weight,machine_weight_kg,,6500 (14329.8),6500 (14329.8),Совпадает по фото,16,16:1:38
+SVM 4100,Control,NC system,control_system,,DN Solutions CNC D300,DN Solutions CNC D300,Совпадает по фото,16,16:1:39
+SVM 5100L,Control,NC system,control_system,,DN Solutions CNC D300,DN Solutions CNC D300,Совпадает по фото,16,16:1:39

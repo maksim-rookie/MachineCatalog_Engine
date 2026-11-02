@@ -1,0 +1,73 @@
+{
+  "language": "ru",
+  "table_headers": {
+    "description": [
+      "Параметр",
+      "Наименование",
+      "Характеристика"
+    ],
+    "unit": [
+      "Ед.",
+      "Единица",
+      "Ед. изм."
+    ]
+  },
+  "optional_pattern": "опциональн|опция|по заказу",
+  "sections": {},
+  "machine_types": [
+    {
+      "pattern": "токарн",
+      "class": "turning",
+      "type": "Turning Center"
+    },
+    {
+      "pattern": "фрезерн|обрабатывающий центр",
+      "class": "machining",
+      "type": "Machining Center"
+    }
+  ],
+  "rules": [
+    {
+      "key": "travel_x_mm",
+      "pattern": "ход.*(?:оси|по) x|перемещение.*x",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_y_mm",
+      "pattern": "ход.*(?:оси|по) y|перемещение.*y",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "travel_z_mm",
+      "pattern": "ход.*(?:оси|по) z|перемещение.*z",
+      "unit": "mm",
+      "category": "Capacity"
+    },
+    {
+      "key": "spindle_speed_rpm",
+      "pattern": "частота вращения шпинделя|скорость шпинделя",
+      "unit": "rpm",
+      "category": "Spindle"
+    },
+    {
+      "key": "machine_weight_kg",
+      "pattern": "масса станка|вес станка",
+      "unit": "kg",
+      "category": "Machine"
+    },
+    {
+      "key": "tool_capacity",
+      "pattern": "ёмкость магазина|емкость магазина|количество инструментов",
+      "unit": "pcs",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "control_system",
+      "pattern": "система чпу",
+      "unit": "",
+      "category": "Control"
+    }
+  ]
+}

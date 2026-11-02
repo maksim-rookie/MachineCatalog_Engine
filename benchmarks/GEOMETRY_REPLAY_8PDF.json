@@ -1,0 +1,79 @@
+{
+  "status": "GEOMETRY_REPLAY_ONLY_NOT_PDF_RECOGNITION",
+  "tables": 9,
+  "rows": 319,
+  "models": 42,
+  "models_by_source": {
+    "DVF_5000.pdf": [
+      "DVF 5000 2nd Gen."
+    ],
+    "NHP_4000_5000.pdf": [
+      "NHP 4000",
+      "NHP 5000",
+      "NHP 5000S"
+    ],
+    "SVM-series.pdf": [
+      "SVM 4100",
+      "SVM 5100L"
+    ],
+    "dhf-8000-series.pdf": [
+      "DHF 8000",
+      "DHF 8000ST"
+    ],
+    "dn-solutions-vertical-machining-center-mynx-ii-series.pdf": [
+      "MYNX 5400/50II",
+      "MYNX 5400II",
+      "MYNX 6500/50II",
+      "MYNX 6500II",
+      "MYNX 7500/50II",
+      "MYNX 7500II",
+      "MYNX 9500"
+    ],
+    "dnm-series-4th-gen-1.pdf": [
+      "DNM 4500",
+      "DNM 4500L",
+      "DNM 5700",
+      "DNM 5700L",
+      "DNM 6700",
+      "DNM 6700L"
+    ],
+    "dvf_6500-8000-8000t.pdf": [
+      "DVF 6500",
+      "DVF 6500T",
+      "DVF 8000",
+      "DVF 8000/50",
+      "DVF 8000T",
+      "DVF 8000T/50"
+    ],
+    "lynx-2100-2600-series-new.pdf": [
+      "LYNX 2100A",
+      "LYNX 2100B",
+      "LYNX 2100LA",
+      "LYNX 2100LB",
+      "LYNX 2100LC",
+      "LYNX 2100LMA",
+      "LYNX 2100LMB",
+      "LYNX 2100LMC",
+      "LYNX 2100LMSA",
+      "LYNX 2100LMSB",
+      "LYNX 2100LMSC",
+      "LYNX 2100MA",
+      "LYNX 2100MB",
+      "LYNX 2600",
+      "LYNX 2600M"
+    ]
+  },
+  "findings": [
+    {
+      "source_file": "NHP_4000_5000.pdf",
+      "source_page": 17,
+      "kind": "source_label_unit_context_disagreement",
+      "source_label": "Table / Tool storage capacity",
+      "unit": "kg (lb)",
+      "mapped_parameter": "table_load_kg"
+    }
+  ],
+  "finding_counts": {
+    "source_label_unit_context_disagreement": 1
+  }
+}

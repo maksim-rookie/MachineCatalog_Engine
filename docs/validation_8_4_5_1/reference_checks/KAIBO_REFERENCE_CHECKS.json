@@ -1,0 +1,2860 @@
+{
+  "summary": {
+    "checks": 190,
+    "PASS": 190,
+    "FAIL": 0,
+    "note": "Source-transcribed reference cells only; not full-catalogue accuracy or human verification of all facts."
+  },
+  "results": [
+    {
+      "source_page": "5",
+      "model": "GV-3020-5H",
+      "parameter": "travel_x_mm",
+      "expected": "3000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "3000",
+          "unit_source": "mm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-3020-5H",
+      "parameter": "travel_y_mm",
+      "expected": "2000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2000",
+          "unit_source": "mm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-3020-5H",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-3020-5H",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-3020-5H",
+      "parameter": "machine_weight_kg",
+      "expected": "36",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "36",
+          "unit_source": "t",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-4025-5H",
+      "parameter": "travel_x_mm",
+      "expected": "4000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4000",
+          "unit_source": "mm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-4025-5H",
+      "parameter": "travel_y_mm",
+      "expected": "2500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2500",
+          "unit_source": "mm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-4025-5H",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-4025-5H",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "5",
+      "model": "GV-4025-5H",
+      "parameter": "machine_weight_kg",
+      "expected": "50",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "50",
+          "unit_source": "t",
+          "source_page": "5"
+        }
+      ]
+    },
+    {
+      "source_page": "6",
+      "model": "BM-3022-5H",
+      "parameter": "travel_x_mm",
+      "expected": "3000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "3000",
+          "unit_source": "mm",
+          "source_page": "6"
+        }
+      ]
+    },
+    {
+      "source_page": "6",
+      "model": "BM-3022-5H",
+      "parameter": "travel_y_mm",
+      "expected": "2200",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2200",
+          "unit_source": "mm",
+          "source_page": "6"
+        }
+      ]
+    },
+    {
+      "source_page": "6",
+      "model": "BM-3022-5H",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "6"
+        }
+      ]
+    },
+    {
+      "source_page": "6",
+      "model": "BM-3022-5H",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "6"
+        }
+      ]
+    },
+    {
+      "source_page": "6",
+      "model": "BM-3022-5H",
+      "parameter": "machine_weight_kg",
+      "expected": "35",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "35",
+          "unit_source": "t",
+          "source_page": "6"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ550-5T",
+      "parameter": "travel_x_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ550-5T",
+      "parameter": "travel_y_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ550-5T",
+      "parameter": "travel_z_mm",
+      "expected": "400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "400",
+          "unit_source": "mm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ550-5T",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ550-5T",
+      "parameter": "machine_weight_kg",
+      "expected": "6",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6",
+          "unit_source": "t",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ630-5T",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ630-5T",
+      "parameter": "travel_y_mm",
+      "expected": "450",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "450",
+          "unit_source": "mm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ630-5T",
+      "parameter": "travel_z_mm",
+      "expected": "400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "400",
+          "unit_source": "mm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ630-5T",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "7",
+      "model": "GJ630-5T",
+      "parameter": "machine_weight_kg",
+      "expected": "6",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6",
+          "unit_source": "t",
+          "source_page": "7"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040A",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040A",
+      "parameter": "travel_y_mm",
+      "expected": "400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "400",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040A",
+      "parameter": "travel_z_mm",
+      "expected": "140",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "140",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040A",
+      "parameter": "spindle_speed_rpm",
+      "expected": "24000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "24000",
+          "unit_source": "rpm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040A",
+      "parameter": "machine_weight_kg",
+      "expected": "2",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2",
+          "unit_source": "t",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040D",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040D",
+      "parameter": "travel_y_mm",
+      "expected": "400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "400",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040D",
+      "parameter": "travel_z_mm",
+      "expected": "170",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "170",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040D",
+      "parameter": "spindle_speed_rpm",
+      "expected": "21000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "21000",
+          "unit_source": "rpm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6040D",
+      "parameter": "machine_weight_kg",
+      "expected": "2",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2",
+          "unit_source": "t",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6050A",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6050A",
+      "parameter": "travel_y_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6050A",
+      "parameter": "travel_z_mm",
+      "expected": "170",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "170",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6050A",
+      "parameter": "spindle_speed_rpm",
+      "expected": "21000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "21000",
+          "unit_source": "rpm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "DC-6050A",
+      "parameter": "machine_weight_kg",
+      "expected": "2.5",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2.5",
+          "unit_source": "t",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "GV-6050",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "GV-6050",
+      "parameter": "travel_y_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "GV-6050",
+      "parameter": "travel_z_mm",
+      "expected": "260",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "260",
+          "unit_source": "mm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "GV-6050",
+      "parameter": "spindle_speed_rpm",
+      "expected": "24000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "24000",
+          "unit_source": "rpm",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "8",
+      "model": "GV-6050",
+      "parameter": "machine_weight_kg",
+      "expected": "3",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "3",
+          "unit_source": "t",
+          "source_page": "8"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060A",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060A",
+      "parameter": "travel_y_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060A",
+      "parameter": "travel_z_mm",
+      "expected": "260",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "260",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060A",
+      "parameter": "spindle_speed_rpm",
+      "expected": "24000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "24000",
+          "unit_source": "rpm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060A",
+      "parameter": "machine_weight_kg",
+      "expected": "4.2",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4.2",
+          "unit_source": "t",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060T",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060T",
+      "parameter": "travel_y_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060T",
+      "parameter": "travel_z_mm",
+      "expected": "350",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "350",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060T",
+      "parameter": "spindle_speed_rpm",
+      "expected": "24000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "24000",
+          "unit_source": "rpm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6060T",
+      "parameter": "machine_weight_kg",
+      "expected": "4.2",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4.2",
+          "unit_source": "t",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6070",
+      "parameter": "travel_x_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6070",
+      "parameter": "travel_y_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6070",
+      "parameter": "travel_z_mm",
+      "expected": "350",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "350",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6070",
+      "parameter": "spindle_speed_rpm",
+      "expected": "24000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "24000",
+          "unit_source": "rpm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-6070",
+      "parameter": "machine_weight_kg",
+      "expected": "4.2",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4.2",
+          "unit_source": "t",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-8070A",
+      "parameter": "travel_x_mm",
+      "expected": "800",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "800",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-8070A",
+      "parameter": "travel_y_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-8070A",
+      "parameter": "travel_z_mm",
+      "expected": "380",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "380",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-8070A",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-8070A",
+      "parameter": "machine_weight_kg",
+      "expected": "4.6",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4.6",
+          "unit_source": "t",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-1090A",
+      "parameter": "travel_x_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-1090A",
+      "parameter": "travel_y_mm",
+      "expected": "900",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "900",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-1090A",
+      "parameter": "travel_z_mm",
+      "expected": "400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "400",
+          "unit_source": "mm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-1090A",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "9",
+      "model": "DC-1090A",
+      "parameter": "machine_weight_kg",
+      "expected": "5.4",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "5.4",
+          "unit_source": "t",
+          "source_page": "9"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1113",
+      "parameter": "travel_x_mm",
+      "expected": "1300",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1300",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1113",
+      "parameter": "travel_y_mm",
+      "expected": "1100",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1100",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1113",
+      "parameter": "travel_z_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1113",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1113",
+      "parameter": "machine_weight_kg",
+      "expected": "7.5",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "7.5",
+          "unit_source": "t",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1317",
+      "parameter": "travel_x_mm",
+      "expected": "1700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1700",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1317",
+      "parameter": "travel_y_mm",
+      "expected": "1300",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1300",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1317",
+      "parameter": "travel_z_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1317",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1317",
+      "parameter": "machine_weight_kg",
+      "expected": "12",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12",
+          "unit_source": "t",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1417",
+      "parameter": "travel_x_mm",
+      "expected": "1700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1700",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1417",
+      "parameter": "travel_y_mm",
+      "expected": "1400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1400",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1417",
+      "parameter": "travel_z_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1417",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1417",
+      "parameter": "machine_weight_kg",
+      "expected": "13",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "13",
+          "unit_source": "t",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1520",
+      "parameter": "travel_x_mm",
+      "expected": "2000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2000",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1520",
+      "parameter": "travel_y_mm",
+      "expected": "1500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1500",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1520",
+      "parameter": "travel_z_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1520",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "10",
+      "model": "DC-1520",
+      "parameter": "machine_weight_kg",
+      "expected": "17",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "17",
+          "unit_source": "t",
+          "source_page": "10"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-2518",
+      "parameter": "travel_x_mm",
+      "expected": "2500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2500",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-2518",
+      "parameter": "travel_y_mm",
+      "expected": "1800",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1800",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-2518",
+      "parameter": "travel_z_mm",
+      "expected": "750",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "750",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-2518",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-2518",
+      "parameter": "machine_weight_kg",
+      "expected": "23",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "23",
+          "unit_source": "t",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-3020",
+      "parameter": "travel_x_mm",
+      "expected": "3000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "3000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-3020",
+      "parameter": "travel_y_mm",
+      "expected": "2000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-3020",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-3020",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-3020",
+      "parameter": "machine_weight_kg",
+      "expected": "34",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "34",
+          "unit_source": "t",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-4020",
+      "parameter": "travel_x_mm",
+      "expected": "4000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-4020",
+      "parameter": "travel_y_mm",
+      "expected": "2000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-4020",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-4020",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-4020",
+      "parameter": "machine_weight_kg",
+      "expected": "44",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "44",
+          "unit_source": "t",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-5025",
+      "parameter": "travel_x_mm",
+      "expected": "5000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "5000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-5025",
+      "parameter": "travel_y_mm",
+      "expected": "2500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2500",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-5025",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-5025",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-5025",
+      "parameter": "machine_weight_kg",
+      "expected": "58",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "58",
+          "unit_source": "t",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-6025",
+      "parameter": "travel_x_mm",
+      "expected": "6000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-6025",
+      "parameter": "travel_y_mm",
+      "expected": "2500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2500",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-6025",
+      "parameter": "travel_z_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-6025",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "11",
+      "model": "GV-6025",
+      "parameter": "machine_weight_kg",
+      "expected": "65",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "65",
+          "unit_source": "t",
+          "source_page": "11"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ8070",
+      "parameter": "travel_x_mm",
+      "expected": "800",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "800",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ8070",
+      "parameter": "travel_y_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ8070",
+      "parameter": "travel_z_mm",
+      "expected": "380",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "380",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ8070",
+      "parameter": "spindle_speed_rpm",
+      "expected": "30000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "30000",
+          "unit_source": "rpm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ8070",
+      "parameter": "machine_weight_kg",
+      "expected": "4.6",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4.6",
+          "unit_source": "t",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1311",
+      "parameter": "travel_x_mm",
+      "expected": "1300",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1300",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1311",
+      "parameter": "travel_y_mm",
+      "expected": "1100",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1100",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1311",
+      "parameter": "travel_z_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1311",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1311",
+      "parameter": "machine_weight_kg",
+      "expected": "9.5",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "9.5",
+          "unit_source": "t",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1714",
+      "parameter": "travel_x_mm",
+      "expected": "1700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1700",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1714",
+      "parameter": "travel_y_mm",
+      "expected": "1400",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1400",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1714",
+      "parameter": "travel_z_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1714",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ1714",
+      "parameter": "machine_weight_kg",
+      "expected": "20",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "20",
+          "unit_source": "t",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ2015",
+      "parameter": "travel_x_mm",
+      "expected": "2000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2000",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ2015",
+      "parameter": "travel_y_mm",
+      "expected": "1500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1500",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ2015",
+      "parameter": "travel_z_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ2015",
+      "parameter": "spindle_speed_rpm",
+      "expected": "18000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18000",
+          "unit_source": "rpm",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "12",
+      "model": "GJ2015",
+      "parameter": "machine_weight_kg",
+      "expected": "22",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "22",
+          "unit_source": "t",
+          "source_page": "12"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-850L",
+      "parameter": "travel_x_mm",
+      "expected": "800",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "800",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-850L",
+      "parameter": "travel_y_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-850L",
+      "parameter": "travel_z_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-850L",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-850L",
+      "parameter": "machine_weight_kg",
+      "expected": "4.5",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4.5",
+          "unit_source": "t",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-855L",
+      "parameter": "travel_x_mm",
+      "expected": "850",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "850",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-855L",
+      "parameter": "travel_y_mm",
+      "expected": "550",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "550",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-855L",
+      "parameter": "travel_z_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-855L",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-855L",
+      "parameter": "machine_weight_kg",
+      "expected": "6",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6",
+          "unit_source": "t",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1160L",
+      "parameter": "travel_x_mm",
+      "expected": "1100",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1100",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1160L",
+      "parameter": "travel_y_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1160L",
+      "parameter": "travel_z_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1160L",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1160L",
+      "parameter": "machine_weight_kg",
+      "expected": "7.5",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "7.5",
+          "unit_source": "t",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1370L",
+      "parameter": "travel_x_mm",
+      "expected": "1300",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1300",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1370L",
+      "parameter": "travel_y_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1370L",
+      "parameter": "travel_z_mm",
+      "expected": "650",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "650",
+          "unit_source": "mm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1370L",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "13",
+      "model": "FH-1370L",
+      "parameter": "machine_weight_kg",
+      "expected": "9",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "9",
+          "unit_source": "t",
+          "source_page": "13"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1580L",
+      "parameter": "travel_x_mm",
+      "expected": "1500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1500",
+          "unit_source": "mm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1580L",
+      "parameter": "travel_y_mm",
+      "expected": "800",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "800",
+          "unit_source": "mm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1580L",
+      "parameter": "travel_z_mm",
+      "expected": "700",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "700",
+          "unit_source": "mm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1580L",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1580L",
+      "parameter": "machine_weight_kg",
+      "expected": "10",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "10",
+          "unit_source": "t",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1890L",
+      "parameter": "travel_x_mm",
+      "expected": "1800",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1800",
+          "unit_source": "mm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1890L",
+      "parameter": "travel_y_mm",
+      "expected": "900",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "900",
+          "unit_source": "mm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1890L",
+      "parameter": "travel_z_mm",
+      "expected": "900",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "900",
+          "unit_source": "mm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1890L",
+      "parameter": "spindle_speed_rpm",
+      "expected": "6000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "6000",
+          "unit_source": "rpm",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "14",
+      "model": "FH-1890L",
+      "parameter": "machine_weight_kg",
+      "expected": "17",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "17",
+          "unit_source": "t",
+          "source_page": "14"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-630",
+      "parameter": "travel_x_mm",
+      "expected": "1050",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1050",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-630",
+      "parameter": "travel_y_mm",
+      "expected": "750",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "750",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-630",
+      "parameter": "travel_z_mm",
+      "expected": "900",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "900",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-630",
+      "parameter": "spindle_speed_rpm",
+      "expected": "8000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "8000",
+          "unit_source": "rpm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-630",
+      "parameter": "machine_weight_kg",
+      "expected": "12",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12",
+          "unit_source": "t",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-800",
+      "parameter": "travel_x_mm",
+      "expected": "2000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2000",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-800",
+      "parameter": "travel_y_mm",
+      "expected": "1000",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1000",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-800",
+      "parameter": "travel_z_mm",
+      "expected": "1100",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1100",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-800",
+      "parameter": "spindle_speed_rpm",
+      "expected": "8000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "8000",
+          "unit_source": "rpm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-800",
+      "parameter": "machine_weight_kg",
+      "expected": "18",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18",
+          "unit_source": "t",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-1000",
+      "parameter": "travel_x_mm",
+      "expected": "2200",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "2200",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-1000",
+      "parameter": "travel_y_mm",
+      "expected": "1100",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1100",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-1000",
+      "parameter": "travel_z_mm",
+      "expected": "900",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "900",
+          "unit_source": "mm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-1000",
+      "parameter": "spindle_speed_rpm",
+      "expected": "8000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "8000",
+          "unit_source": "rpm",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "15",
+      "model": "KWJ-1000",
+      "parameter": "machine_weight_kg",
+      "expected": "19",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "19",
+          "unit_source": "t",
+          "source_page": "15"
+        }
+      ]
+    },
+    {
+      "source_page": "16",
+      "model": "DC600-4500-2Z",
+      "parameter": "travel_x_mm",
+      "expected": "1600-4500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "1600-4500",
+          "unit_source": "mm",
+          "source_page": "16"
+        }
+      ]
+    },
+    {
+      "source_page": "16",
+      "model": "DC600-4500-2Z",
+      "parameter": "travel_y_mm",
+      "expected": "450",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "450",
+          "unit_source": "mm",
+          "source_page": "16"
+        }
+      ]
+    },
+    {
+      "source_page": "16",
+      "model": "DC600-4500-2Z",
+      "parameter": "travel_z_mm",
+      "expected": "500",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "500",
+          "unit_source": "mm",
+          "source_page": "16"
+        }
+      ]
+    },
+    {
+      "source_page": "16",
+      "model": "DC600-4500-2Z",
+      "parameter": "spindle_speed_rpm",
+      "expected": "12000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "12000",
+          "unit_source": "rpm",
+          "source_page": "16"
+        }
+      ]
+    },
+    {
+      "source_page": "16",
+      "model": "DC600-4500-2Z",
+      "parameter": "machine_weight_kg",
+      "expected": "18",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "18",
+          "unit_source": "t",
+          "source_page": "16"
+        }
+      ]
+    },
+    {
+      "source_page": "17",
+      "model": "DC-6060 石墨机",
+      "parameter": "travel_x_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "17"
+        }
+      ]
+    },
+    {
+      "source_page": "17",
+      "model": "DC-6060 石墨机",
+      "parameter": "travel_y_mm",
+      "expected": "600",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "600",
+          "unit_source": "mm",
+          "source_page": "17"
+        }
+      ]
+    },
+    {
+      "source_page": "17",
+      "model": "DC-6060 石墨机",
+      "parameter": "travel_z_mm",
+      "expected": "350",
+      "unit_source": "mm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "350",
+          "unit_source": "mm",
+          "source_page": "17"
+        }
+      ]
+    },
+    {
+      "source_page": "17",
+      "model": "DC-6060 石墨机",
+      "parameter": "spindle_speed_rpm",
+      "expected": "24000",
+      "unit_source": "rpm",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "24000",
+          "unit_source": "rpm",
+          "source_page": "17"
+        }
+      ]
+    },
+    {
+      "source_page": "17",
+      "model": "DC-6060 石墨机",
+      "parameter": "machine_weight_kg",
+      "expected": "4",
+      "unit_source": "t",
+      "result": "PASS",
+      "actual": [
+        {
+          "value": "4",
+          "unit_source": "t",
+          "source_page": "17"
+        }
+      ]
+    }
+  ]
+}

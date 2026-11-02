@@ -1,0 +1,64 @@
+{
+  "language": "en",
+  "table_headers": {
+    "description": [
+      "Description",
+      "Item",
+      "Parameter"
+    ],
+    "unit": [
+      "Unit",
+      "Units"
+    ]
+  },
+  "optional_pattern": "\\boptional\\b|\\boption\\b",
+  "sections": {},
+  "machine_types": [
+    {
+      "pattern": "graphite machine",
+      "class": "machining",
+      "type": "Graphite Machining Center"
+    },
+    {
+      "pattern": "profile machining cent(?:er|re)",
+      "class": "machining",
+      "type": "Profile Machining Center"
+    },
+    {
+      "pattern": "gantry (?:cnc )?milling",
+      "class": "machining",
+      "type": "Gantry CNC Milling Machine"
+    },
+    {
+      "pattern": "(?:cnc )?engraving and milling",
+      "class": "machining",
+      "type": "CNC Engraving and Milling Machine"
+    },
+    {
+      "pattern": "(?:5[- ]?axis|five[- ]axis).*machining cent(?:er|re)",
+      "class": "machining",
+      "type": "5-Axis Machining Center"
+    },
+    {
+      "pattern": "horizontal machining cent(?:er|re)",
+      "class": "machining",
+      "type": "Horizontal Machining Center"
+    },
+    {
+      "pattern": "vertical machining cent(?:er|re)",
+      "class": "machining",
+      "type": "Vertical Machining Center"
+    },
+    {
+      "pattern": "turning cent(?:er|re)|turn[- ]mill|\\blathe\\b",
+      "class": "turning",
+      "type": "Turning Center"
+    },
+    {
+      "pattern": "machining cent(?:er|re)",
+      "class": "machining",
+      "type": "Machining Center"
+    }
+  ],
+  "rules": []
+}
