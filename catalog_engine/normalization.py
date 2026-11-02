@@ -65,6 +65,7 @@ def projection(fact: dict):
         'axis_motor_power_xyz_kw':('axis_motor_power','kw'),
     }
     if key in triplet:
+        if key.startswith(('rapid_traverse','cutting_feed')) and not (re.search(r'X\s*/\s*Y\s*/\s*Z',str(fact.get('source_label','')),re.I) or fact.get('applies_to_all_axes') is True):return []
         parts=re.fullmatch(rf'\s*({NUMBER})\s*/\s*({NUMBER})\s*/\s*({NUMBER})\s*',v)
         if parts:
             stem,suffix=triplet[key]

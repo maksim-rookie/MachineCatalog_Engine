@@ -111,7 +111,8 @@ def write_wide_tables(output: Path, records: list[dict], documents: list[dict], 
     # Axis groups retain their original record in the long table; the wide view
     # uses shared per-axis columns instead of a second vendor-specific XYZ column.
     component_ids = {r['source_fact_id'] for r in records if r.get('is_component')}
-    selected = [r for r in records if r.get('is_component') or r['source_fact_id'] not in component_ids]
+    from .logical_fields import REMOVED
+    selected = [r for r in records if (r.get('is_component') or r['source_fact_id'] not in component_ids) and r.get('source_parameter') not in REMOVED and r['canonical_parameter'] not in REMOVED]
     columns = ordered_columns([column_name(r) for r in selected], schema)
     index = defaultdict(list)
     column_units = defaultdict(set)

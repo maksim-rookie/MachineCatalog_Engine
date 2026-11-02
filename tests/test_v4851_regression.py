@@ -49,7 +49,7 @@ class CoreTests(unittest.TestCase):
         self.assertIsNone(canonical_scalar(x))
 
     def test_xyz_rapid_traverse_components(self):
-        x=source_fact(parameter='rapid_traverse_xyz_m_min',value='10/20/20',category='Feedrate')
+        x=source_fact(parameter='rapid_traverse_xyz_m_min',value='10/20/20',category='Feedrate',source_label='X/Y/Z')
         self.assertEqual([(r['parameter'],r['value']) for r in projection(x)],
                          [('rapid_traverse_x_m_min','10'),('rapid_traverse_y_m_min','20'),('rapid_traverse_z_m_min','20')])
 

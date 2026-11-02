@@ -346,5 +346,7 @@ def write_outputs(output:Path,documents:list[dict],schema,qualities:list[dict]):
              'controller_narrative_evidence':len(controller_evidence),
              'normalization': normalization_summary,
              'local_only':True,'network_calls':0,'hidden_wide_parameters':sorted(hidden),'human_verified':False}
+    from .dimensions_view import finalize_wide_tables
+    finalize_wide_tables(output,documents,schema)
     atomic_json(output/'RUN_SUMMARY.json',summary)
     return summary

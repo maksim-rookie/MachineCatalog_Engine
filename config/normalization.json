@@ -1,9 +1,12 @@
 {
   "parameter_aliases": {
-    "cutting_feed_xyz_mm_min": "cutting_feed_xyz_m_min",
     "rapid_traverse_a_rpm": "rotary_axis_speed_a_rpm",
     "rapid_traverse_b_rpm": "rotary_axis_speed_b_rpm",
-    "rapid_traverse_c_rpm": "rotary_axis_speed_c_rpm"
+    "rapid_traverse_c_rpm": "rotary_axis_speed_c_rpm",
+    "cutting_feed_xyz_m_min": "cutting_feed_xyz_mm_min",
+    "cutting_feed_x_m_min": "cutting_feed_x_mm_min",
+    "cutting_feed_y_m_min": "cutting_feed_y_mm_min",
+    "cutting_feed_z_m_min": "cutting_feed_z_mm_min"
   },
   "canonical_units": {
     "spindle_speed_rpm": "rpm",
@@ -14,7 +17,11 @@
     "cutting_feed_xyz_m_min": "m/min",
     "rotary_axis_speed_a_rpm": "rpm",
     "rotary_axis_speed_b_rpm": "rpm",
-    "rotary_axis_speed_c_rpm": "rpm"
+    "rotary_axis_speed_c_rpm": "rpm",
+    "cutting_feed_xyz_mm_min": "mm/min",
+    "cutting_feed_x_mm_min": "mm/min",
+    "cutting_feed_y_mm_min": "mm/min",
+    "cutting_feed_z_mm_min": "mm/min"
   },
   "text_aliases": {
     "tool_shank_type": {
@@ -23,5 +30,64 @@
       "BT 40": "BT40",
       "BT 50": "BT50"
     }
-  }
+  },
+  "logical_fields": {
+    "machine_dimensions_mm": {
+      "label": "Machine dimensions",
+      "unit": "mm",
+      "aliases": [
+        "machine_dimension_1_mm",
+        "machine_dimension_2_mm",
+        "machine_dimension_3_mm"
+      ],
+      "order": "source_sequence"
+    },
+    "rapid_traverse_xyz_m_min": {
+      "label": "Feedrate",
+      "unit": "m/min",
+      "aliases": [
+        "rapid_traverse_x_m_min",
+        "rapid_traverse_y_m_min",
+        "rapid_traverse_z_m_min"
+      ],
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ]
+    },
+    "cutting_feed_xyz_mm_min": {
+      "label": "Рабочая подача",
+      "unit": "mm/min",
+      "aliases": [
+        "cutting_feed_xyz_m_min",
+        "cutting_feed_x_m_min",
+        "cutting_feed_x_mm_min",
+        "cutting_feed_y_m_min",
+        "cutting_feed_y_mm_min",
+        "cutting_feed_z_m_min",
+        "cutting_feed_z_mm_min"
+      ]
+    },
+    "table_pallet_size_mm": {
+      "label": "Размеры стола / паллеты",
+      "unit": "mm",
+      "aliases": [
+        "table_size_mm",
+        "pallet_size_mm",
+        "table_dimension_1_mm",
+        "table_dimension_2_mm"
+      ]
+    }
+  },
+  "presentation_hidden_parameters": [
+    "rapid_traverse_c_rpm",
+    "spindle_nose_to_table_center_mm",
+    "tool_magazine_type",
+    "tool_max_diameter_empty_mm",
+    "tool_max_diameter_full_mm",
+    "travel_a_deg",
+    "travel_b_deg",
+    "travel_c_deg"
+  ]
 }

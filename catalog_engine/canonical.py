@@ -196,6 +196,8 @@ def source_record(fact: dict, source_hash: str) -> dict:
 
 def normalize_fact(fact: dict, catalog: ParameterCatalog, source_hash: str = '') -> list[dict]:
     """Retain the parent fact and add components only for explicit axis groups."""
+    if isinstance(fact.get('value'),(int,float)) and not isinstance(fact['value'],bool):
+        fact={**fact,'value':str(fact['value'])}
     for name in ('fact_id', 'source_file', 'model', 'parameter', 'value'):
         if not isinstance(fact.get(name), str) or not fact[name]:
             raise ValueError(f'Missing/invalid fact field: {name}')
@@ -215,6 +217,7 @@ def normalize_fact(fact: dict, catalog: ParameterCatalog, source_hash: str = '')
     stem = ''
     suffix = ''
     if '_xyz_' in key:
+        if key.startswith(('rapid_traverse','cutting_feed')) and not (re.search(r'X\s*/\s*Y\s*/\s*Z',str(fact.get('source_label','')),re.I) or fact.get('applies_to_all_axes') is True):return records
         stem, suffix = key.split('_xyz_', 1)
         axes = 'xyz'
     elif key in {'positioning_accuracy', 'repeatability'}:

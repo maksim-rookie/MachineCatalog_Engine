@@ -755,16 +755,7 @@
       "control_system"
     ]
   },
-  "hidden_wide_parameters": [
-    "table_work_inertia_nm2",
-    "spindle_taper",
-    "axis_acceleration_xyz_g",
-    "tool_max_moment_nm",
-    "tool_pull_stud",
-    "tool_selection_type",
-    "coolant_pump_motor_power_kw",
-    "air_pressure_mpa"
-  ],
+  "hidden_wide_parameters": [],
   "section_unit_rules": [
     {
       "section": "^table\\b",
@@ -1006,15 +997,10 @@
       "travel_y_mm",
       "travel_z_mm",
       "travel_w_mm",
-      "travel_a_deg",
-      "travel_b_deg",
-      "travel_c_deg",
-      "spindle_nose_to_table_center_mm",
       "spindle_nose_to_table_top_mm"
     ],
     "Table": [
-      "table_size_mm",
-      "pallet_size_mm",
+      "table_pallet_size_mm",
       "table_load_kg",
       "max_workpiece_size_mm",
       "max_workpiece_swing_mm",
@@ -1031,13 +1017,9 @@
       "tool_shank_type"
     ],
     "Feedrate": [
-      "rapid_traverse_x_m_min",
-      "rapid_traverse_y_m_min",
-      "rapid_traverse_z_m_min",
-      "rapid_traverse_w_m_min",
       "rapid_traverse_xyz_m_min",
+      "rapid_traverse_w_m_min",
       "cutting_feed_xyz_mm_min",
-      "cutting_feed_xyz_m_min",
       "rotary_axis_speed_a_rpm",
       "rotary_axis_speed_b_rpm",
       "rotary_axis_speed_c_rpm"

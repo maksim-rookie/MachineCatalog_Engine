@@ -1,29 +1,11 @@
-# MachineCatalog Engine 4.8.5.4
+# MachineCatalog Engine 4.8.5.4 — объединённые параметры
 
-[**Скачать исходники 4.8.5.4 (ZIP)**](https://github.com/maksim-rookie/PDF_SEARCH_v8_4_4_LOCAL/raw/refs/heads/downloads/machinecatalog-4.8.5.4/releases/MachineCatalog_Engine_4.8.5.4_source.zip)
+[**Скачать актуальный проект (ZIP)**](https://github.com/maksim-rookie/PDF_SEARCH_v8_4_4_LOCAL/raw/refs/heads/downloads/machinecatalog-4.8.5.4-grouped/releases/MachineCatalog_Engine_4.8.5.4_grouped_parameters.zip)
 
-Обновлено из пользовательского архива `MachineCatalog_Engine_v4_8_5_4_UPDATED.zip`. Номер версии сохранён из исходников.
+Объединены габариты, быстрые перемещения, рабочая подача и размеры стола/паллеты. Удалены только заданные столбцы. Исходные данные сохраняются, неизвестные значения отмечаются `!-`.
 
-В GitHub-поставку входят код, JSON-настройки, тесты и документация. Каталог `output` и CSV аудита конкретного пользовательского запуска исключены. Полный присланный архив сохранён в рабочей среде. Отчёты в `analysis` относятся к исходному пользовательскому архиву.
+[Правила и отчёт по изменениям](PRESENTATION_POLICY.md) · [Установка](README_RU.md).
 
-- [Установка](INSTALL_PYCHARM_PY311.md)
-- [Описание и запуск](README_RU.md)
-- [Изменения версии](CHANGELOG_v4_8_5_4.md)
+Проверка: 101 тест прошёл, 14 дополнительных PDF-проверок пропущены. Пакет содержит исходники, настройки, тесты и документацию; PDF, результаты обработки и кэш не включены.
 
-## Данные вне проекта
-
-Пример запуска с внешними папками:
-
-```bash
-python -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python main.py --input ../MachineCatalog_Engine_data/input --output ../MachineCatalog_Engine_data/runs/v4_8_5_4 --cache ../MachineCatalog_Engine_data/cache/v4_8_5_4 --no-cache
-```
-
-В Windows используйте `.venv\Scripts\python.exe`. Входные PDF добавьте самостоятельно во внешнюю папку `input`. При запуске без аргументов используются пути, заданные в присланном `main.py`.
-
-## Проверка публикации
-
-`python -m unittest discover -s tests -v`: 62 теста обнаружено, 48 прошли, 14 проверок реальных PDF явно пропущены из-за отсутствия дополнительных контрольных файлов в исходной поставке. При публикации логика приложения не изменялась.
-
-Все результаты извлечения требуют проверки; успешное завершение обработки не подтверждает корректность каждой характеристики.
+SHA-256 архива: `c176ca938888c43715c3839ba05436789470ad7536b920fcd9b6aad4dee2672f`

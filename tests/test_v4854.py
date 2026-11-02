@@ -38,7 +38,7 @@ class NormalizationTests(unittest.TestCase):
         self.catalog = ParameterCatalog(self.schema)
 
     def test_xyz_and_individual_axes_share_values(self):
-        grouped = fact(parameter='rapid_traverse_xyz_m_min', value='45/45/45', unit_source='m/min')
+        grouped = fact(parameter='rapid_traverse_xyz_m_min', value='45/45/45', unit_source='m/min', source_label='X/Y/Z')
         component = normalize_fact(grouped, self.catalog)[1]
         separate = normalize_fact(fact(), self.catalog)[0]
         self.assertEqual(component['canonical_parameter'], separate['canonical_parameter'])
@@ -56,15 +56,15 @@ class NormalizationTests(unittest.TestCase):
 
     def test_cutting_range_converted_and_broadcast_to_named_axes(self):
         item = fact(parameter='cutting_feed_xyz_mm_min', value='1 ~ 6000', base_value='1 ~ 6000',
-                    unit_source='mm/min', unit_expected='mm/min')
+                    unit_source='mm/min', unit_expected='mm/min', source_label='X/Y/Z')
         records = normalize_fact(item, self.catalog)
-        self.assertEqual([r['normalized_value'] for r in records], ['0.001 ~ 6'] * 4)
-        self.assertEqual(records[1]['canonical_parameter'], 'cutting_feed_x_m_min')
-        self.assertTrue(all(r['canonical_unit'] == 'm/min' for r in records))
+        self.assertEqual([r['normalized_value'] for r in records], ['1 ~ 6000'] * 4)
+        self.assertEqual(records[1]['canonical_parameter'], 'cutting_feed_x_mm_min')
+        self.assertTrue(all(r['canonical_unit'] == 'mm/min' for r in records))
 
     def test_vector_options_are_not_discarded_when_axes_expand(self):
         item = fact(parameter='rapid_traverse_xyz_m_min', value='30/30/18 {40/40/24}',
-                    unit_source='m/min', options=['40/40/24'])
+                    unit_source='m/min', options=['40/40/24'], source_label='X/Y/Z')
         records = normalize_fact(item, self.catalog)
         self.assertEqual(records[-1]['display_value'], '18 {24}')
         self.assertEqual(records[-1]['normalized_options'], ['24'])
@@ -121,11 +121,11 @@ class ExportReliabilityTests(unittest.TestCase):
             write_outputs(output, [document([scalar]), document([group])], Schema(), [])
             with (output / 'ALL_MODELS_wide.csv').open(encoding='utf-8-sig') as stream:
                 rows = list(csv.DictReader(stream))
-            self.assertIn('45', rows[0]['[Feedrate] rapid_traverse_x_m_min'])
+            self.assertIn('45', rows[0]['[Feedrate] rapid_traverse_xyz_m_min'])
             with (output / 'ALL_MODELS_NORMALIZED_wide.csv').open(encoding='utf-8-sig') as stream:
                 rows = list(csv.DictReader(stream))
-            self.assertEqual(rows[0]['[Feedrate] rapid_traverse_x_m_min'], '45')
-            self.assertEqual(rows[1]['[Feedrate] rapid_traverse_x_m_min'], '30')
+            self.assertEqual(rows[0]['[Feedrate] rapid_traverse_xyz_m_min'], 'X: 45/ Y: !-/ Z: !- м/мин')
+            self.assertEqual(rows[1]['[Feedrate] rapid_traverse_xyz_m_min'], '!- (общий: 30 / 30 / 18) м/мин')
 
     def test_failed_csv_write_preserves_previous_file(self):
         with tempfile.TemporaryDirectory() as directory:
