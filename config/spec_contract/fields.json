@@ -1,0 +1,1260 @@
+{
+  "review_threshold": 0.7,
+  "machine_types": [
+    "turning",
+    "turn_mill",
+    "vertical_milling",
+    "horizontal_milling",
+    "gantry_milling",
+    "milling_5axis"
+  ],
+  "fields": {
+    "manufacturer": {
+      "id": "manufacturer",
+      "name": {
+        "en": "manufacturer"
+      },
+      "type": "text",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "manufacturer"
+      ],
+      "validation": {}
+    },
+    "series": {
+      "id": "series",
+      "name": {
+        "en": "series"
+      },
+      "type": "text",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "series"
+      ],
+      "validation": {}
+    },
+    "model": {
+      "id": "model",
+      "name": {
+        "en": "model"
+      },
+      "type": "text",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "model"
+      ],
+      "validation": {}
+    },
+    "control_system": {
+      "id": "control_system",
+      "name": {
+        "en": "control system"
+      },
+      "type": "text",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "control system"
+      ],
+      "validation": {}
+    },
+    "machine_type": {
+      "id": "machine_type",
+      "name": {
+        "en": "machine type"
+      },
+      "type": "enum",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "machine type"
+      ],
+      "validation": {},
+      "enum": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ]
+    },
+    "spindle_taper": {
+      "id": "spindle_taper",
+      "name": {
+        "en": "spindle taper"
+      },
+      "type": "enum",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle taper"
+      ],
+      "validation": {},
+      "enum": [
+        "BT30",
+        "BT40",
+        "BT50",
+        "HSK-A40",
+        "HSK-A50",
+        "HSK-A63",
+        "HSK-A100",
+        "CAT40",
+        "CAT50",
+        "ISO40",
+        "ISO50"
+      ]
+    },
+    "spindle_nose": {
+      "id": "spindle_nose",
+      "name": {
+        "en": "spindle nose"
+      },
+      "type": "enum",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle nose"
+      ],
+      "validation": {},
+      "enum": [
+        "A2-4",
+        "A2-5",
+        "A2-6",
+        "A2-8",
+        "A2-11",
+        "A2-15"
+      ]
+    },
+    "tool_holder_type": {
+      "id": "tool_holder_type",
+      "name": {
+        "en": "tool holder type"
+      },
+      "type": "enum",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "tool holder type"
+      ],
+      "validation": {},
+      "enum": [
+        "BT30",
+        "BT40",
+        "BT50",
+        "HSK-A40",
+        "HSK-A50",
+        "HSK-A63",
+        "HSK-A100",
+        "CAT40",
+        "CAT50",
+        "ISO40",
+        "ISO50"
+      ]
+    },
+    "travel_x": {
+      "id": "travel_x",
+      "name": {
+        "en": "travel x"
+      },
+      "type": "range",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "travel x"
+      ],
+      "validation": {}
+    },
+    "travel_y": {
+      "id": "travel_y",
+      "name": {
+        "en": "travel y"
+      },
+      "type": "range",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "travel y"
+      ],
+      "validation": {}
+    },
+    "travel_z": {
+      "id": "travel_z",
+      "name": {
+        "en": "travel z"
+      },
+      "type": "range",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "travel z"
+      ],
+      "validation": {}
+    },
+    "travel_w": {
+      "id": "travel_w",
+      "name": {
+        "en": "travel w"
+      },
+      "type": "range",
+      "unit": "mm",
+      "applies_to": [
+        "gantry_milling"
+      ],
+      "aliases": [
+        "travel w"
+      ],
+      "validation": {}
+    },
+    "a_axis_travel": {
+      "id": "a_axis_travel",
+      "name": {
+        "en": "a axis travel"
+      },
+      "type": "range",
+      "unit": "deg",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "a axis travel"
+      ],
+      "validation": {}
+    },
+    "b_axis_travel": {
+      "id": "b_axis_travel",
+      "name": {
+        "en": "b axis travel"
+      },
+      "type": "range",
+      "unit": "deg",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "b axis travel"
+      ],
+      "validation": {}
+    },
+    "c_axis_travel": {
+      "id": "c_axis_travel",
+      "name": {
+        "en": "c axis travel"
+      },
+      "type": "range",
+      "unit": "deg",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "c axis travel"
+      ],
+      "validation": {}
+    },
+    "year": {
+      "id": "year",
+      "name": {
+        "en": "year"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "year"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "num_axes": {
+      "id": "num_axes",
+      "name": {
+        "en": "num axes"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "num axes"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "spindle_count": {
+      "id": "spindle_count",
+      "name": {
+        "en": "spindle count"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle count"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "tool_capacity": {
+      "id": "tool_capacity",
+      "name": {
+        "en": "tool capacity"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "tool capacity"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "turret_stations": {
+      "id": "turret_stations",
+      "name": {
+        "en": "turret stations"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill"
+      ],
+      "aliases": [
+        "turret stations"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "simultaneous_axes": {
+      "id": "simultaneous_axes",
+      "name": {
+        "en": "simultaneous axes"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "simultaneous axes"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "table_count": {
+      "id": "table_count",
+      "name": {
+        "en": "table count"
+      },
+      "type": "number",
+      "unit": "",
+      "applies_to": [
+        "horizontal_milling"
+      ],
+      "aliases": [
+        "table count"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "table_size_x": {
+      "id": "table_size_x",
+      "name": {
+        "en": "table size x"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "table size x"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "table_size_y": {
+      "id": "table_size_y",
+      "name": {
+        "en": "table size y"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "table size y"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "workpiece_dia_max": {
+      "id": "workpiece_dia_max",
+      "name": {
+        "en": "workpiece dia max"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "workpiece dia max"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "workpiece_length_max": {
+      "id": "workpiece_length_max",
+      "name": {
+        "en": "workpiece length max"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "workpiece length max"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "spindle_bore": {
+      "id": "spindle_bore",
+      "name": {
+        "en": "spindle bore"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle bore"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "machine_length": {
+      "id": "machine_length",
+      "name": {
+        "en": "machine length"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "machine length"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "machine_width": {
+      "id": "machine_width",
+      "name": {
+        "en": "machine width"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "machine width"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "machine_height": {
+      "id": "machine_height",
+      "name": {
+        "en": "machine height"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "machine height"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "max_turning_dia": {
+      "id": "max_turning_dia",
+      "name": {
+        "en": "max turning dia"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill"
+      ],
+      "aliases": [
+        "max turning dia"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "max_turning_length": {
+      "id": "max_turning_length",
+      "name": {
+        "en": "max turning length"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill"
+      ],
+      "aliases": [
+        "max turning length"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "bar_capacity": {
+      "id": "bar_capacity",
+      "name": {
+        "en": "bar capacity"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill"
+      ],
+      "aliases": [
+        "bar capacity"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "gantry_clearance": {
+      "id": "gantry_clearance",
+      "name": {
+        "en": "gantry clearance"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "gantry_milling"
+      ],
+      "aliases": [
+        "gantry clearance"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "gantry_width": {
+      "id": "gantry_width",
+      "name": {
+        "en": "gantry width"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "gantry_milling"
+      ],
+      "aliases": [
+        "gantry width"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "positioning_accuracy": {
+      "id": "positioning_accuracy",
+      "name": {
+        "en": "positioning accuracy"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "positioning accuracy"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "repeatability": {
+      "id": "repeatability",
+      "name": {
+        "en": "repeatability"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "repeatability"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "roundness_accuracy": {
+      "id": "roundness_accuracy",
+      "name": {
+        "en": "roundness accuracy"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill"
+      ],
+      "aliases": [
+        "roundness accuracy"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "rotary_table_dia": {
+      "id": "rotary_table_dia",
+      "name": {
+        "en": "rotary table dia"
+      },
+      "type": "number",
+      "unit": "mm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "rotary table dia"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "table_load_max": {
+      "id": "table_load_max",
+      "name": {
+        "en": "table load max"
+      },
+      "type": "number",
+      "unit": "kg",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "table load max"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "rotary_table_load_max": {
+      "id": "rotary_table_load_max",
+      "name": {
+        "en": "rotary table load max"
+      },
+      "type": "number",
+      "unit": "kg",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "rotary table load max"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "machine_weight": {
+      "id": "machine_weight",
+      "name": {
+        "en": "machine weight"
+      },
+      "type": "number",
+      "unit": "kg",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "machine weight"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "spindle_speed_max": {
+      "id": "spindle_speed_max",
+      "name": {
+        "en": "spindle speed max"
+      },
+      "type": "number",
+      "unit": "rpm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle speed max"
+      ],
+      "validation": {
+        "exclusive_min": 0,
+        "max": 1000000
+      }
+    },
+    "spindle_power": {
+      "id": "spindle_power",
+      "name": {
+        "en": "spindle power"
+      },
+      "type": "number",
+      "unit": "kW",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle power"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "spindle_torque_max": {
+      "id": "spindle_torque_max",
+      "name": {
+        "en": "spindle torque max"
+      },
+      "type": "number",
+      "unit": "Nm",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "spindle torque max"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "feed_rapid_x": {
+      "id": "feed_rapid_x",
+      "name": {
+        "en": "feed rapid x"
+      },
+      "type": "number",
+      "unit": "m/min",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "feed rapid x"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "feed_rapid_y": {
+      "id": "feed_rapid_y",
+      "name": {
+        "en": "feed rapid y"
+      },
+      "type": "number",
+      "unit": "m/min",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "feed rapid y"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "feed_rapid_z": {
+      "id": "feed_rapid_z",
+      "name": {
+        "en": "feed rapid z"
+      },
+      "type": "number",
+      "unit": "m/min",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "feed rapid z"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "feed_cutting_max": {
+      "id": "feed_cutting_max",
+      "name": {
+        "en": "feed cutting max"
+      },
+      "type": "number",
+      "unit": "mm/min",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "feed cutting max"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "tool_change_time": {
+      "id": "tool_change_time",
+      "name": {
+        "en": "tool change time"
+      },
+      "type": "number",
+      "unit": "s",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "tool change time"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "total_power": {
+      "id": "total_power",
+      "name": {
+        "en": "total power"
+      },
+      "type": "number",
+      "unit": "kVA",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "total power"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "air_pressure": {
+      "id": "air_pressure",
+      "name": {
+        "en": "air pressure"
+      },
+      "type": "number",
+      "unit": "bar",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "air pressure"
+      ],
+      "validation": {
+        "min": 0
+      }
+    },
+    "coolant_tank_volume": {
+      "id": "coolant_tank_volume",
+      "name": {
+        "en": "coolant tank volume"
+      },
+      "type": "number",
+      "unit": "L",
+      "applies_to": [
+        "turning",
+        "turn_mill",
+        "vertical_milling",
+        "horizontal_milling",
+        "gantry_milling",
+        "milling_5axis"
+      ],
+      "aliases": [
+        "coolant tank volume"
+      ],
+      "validation": {
+        "min": 0
+      }
+    }
+  },
+  "mapping": {
+    "control_system": "control_system",
+    "controlled_axes": "num_axes",
+    "simultaneously_controlled_axes": "simultaneous_axes",
+    "tool_capacity": "tool_capacity",
+    "positioning_accuracy": "positioning_accuracy",
+    "repeatability": "repeatability",
+    "spindle_taper": "spindle_taper",
+    "tool_shank_type": "tool_holder_type",
+    "spindle_nose": "spindle_nose",
+    "spindle_speed_rpm": "spindle_speed_max",
+    "spindle_power_kw": "spindle_power",
+    "spindle_torque_nm": "spindle_torque_max",
+    "spindle_bore_mm": "spindle_bore",
+    "table_load_kg": "table_load_max",
+    "machine_weight_kg": "machine_weight",
+    "power_supply_kva": "total_power",
+    "air_pressure_mpa": "air_pressure",
+    "coolant_tank_l": "coolant_tank_volume",
+    "max_turning_diameter_mm": "max_turning_dia",
+    "max_turning_length_mm": "max_turning_length",
+    "bar_working_diameter_mm": "bar_capacity",
+    "gantry_width_mm": "gantry_width",
+    "crossbeam_to_table_mm": "gantry_clearance",
+    "turret_station_count": "turret_stations",
+    "tool_change_time_sec": "tool_change_time",
+    "travel_x_mm": "travel_x",
+    "rapid_traverse_x_m_min": "feed_rapid_x",
+    "travel_y_mm": "travel_y",
+    "rapid_traverse_y_m_min": "feed_rapid_y",
+    "travel_z_mm": "travel_z",
+    "rapid_traverse_z_m_min": "feed_rapid_z",
+    "travel_a_deg": "a_axis_travel",
+    "travel_b_deg": "b_axis_travel",
+    "travel_c_deg": "c_axis_travel",
+    "machine_length_mm": "machine_length",
+    "machine_width_mm": "machine_width",
+    "machine_height_mm": "machine_height"
+  },
+  "units": {
+    "mm": {
+      "mm": 1,
+      "мм": 1,
+      "inch": 25.4,
+      "in": 25.4
+    },
+    "kg": {
+      "kg": 1,
+      "кг": 1,
+      "lb": 0.45359237,
+      "lbs": 0.45359237,
+      "t": 1000
+    },
+    "kW": {
+      "kw": 1,
+      "квт": 1,
+      "hp": 0.7456998715822702
+    },
+    "bar": {
+      "bar": 1,
+      "бар": 1,
+      "psi": 0.0689475729317831,
+      "mpa": 10
+    },
+    "mm/min": {
+      "mm/min": 1,
+      "мм/мин": 1,
+      "ipm": 25.4,
+      "m/min": 1000
+    },
+    "m/min": {
+      "m/min": 1,
+      "м/мин": 1,
+      "mm/min": 0.001,
+      "ipm": 0.0254
+    },
+    "rpm": {
+      "rpm": 1,
+      "r/min": 1,
+      "об/мин": 1
+    },
+    "s": {
+      "s": 1,
+      "sec": 1,
+      "с": 1
+    },
+    "Nm": {
+      "nm": 1,
+      "n·m": 1,
+      "n*m": 1
+    },
+    "deg": {
+      "deg": 1,
+      "°": 1
+    },
+    "kVA": {
+      "kva": 1
+    },
+    "L": {
+      "l": 1,
+      "л": 1
+    },
+    "": {
+      "": 1,
+      "pcs": 1,
+      "ea": 1
+    }
+  }
+}

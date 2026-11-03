@@ -1,6 +1,7 @@
 {
   "project_name": "MachineCatalog Engine",
   "version": "4.8.7",
+  "revision": "machine-spec-contract",
   "distribution": "source-only",
   "files": [
     {
@@ -10,8 +11,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2842,
-      "sha256": "7187aa2ab20fb9c25787ce9bbe6dc03bc1a3e2ffc7430356b028297d09949093"
+      "bytes": 3414,
+      "sha256": "ff7691e6f7852dcca648fc2a61f236e4154b3e3b5b941a6bbbbc5f5b426f616f"
     },
     {
       "path": "INSTALL_DEPS.bat",
@@ -20,8 +21,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6548,
-      "sha256": "e84d7f298d02bc7275c2c9c662ed49d504ffb084395b5c92bddb6bf05dfa9dfe"
+      "bytes": 6791,
+      "sha256": "9c1889b9e5acf5f56c350785e5c33aa3e850093d0b5279c765832609419ddcf0"
     },
     {
       "path": "README_RU.md",
@@ -114,6 +115,11 @@
       "sha256": "a4d5688ea272a245c7697530f25a552874f0e7090f1f6080635e825f8ed9489f"
     },
     {
+      "path": "catalog_engine/spec_contract.py",
+      "bytes": 10059,
+      "sha256": "8683f7e46b9cf08c410471805f53df93413f089a003bd26bad80d409cd9aed21"
+    },
+    {
       "path": "catalog_engine/sqlite_demo.py",
       "bytes": 6321,
       "sha256": "f7fbc49d35cc2c7b2e16e23f4a7ad48ab1a487a038226b7f270e3b976b11660c"
@@ -169,9 +175,19 @@
       "sha256": "e462e89933f4dabdc77a8dd8991693d9dcc45b598a63a28248a546c1d9530554"
     },
     {
+      "path": "config/spec_contract/fields.json",
+      "bytes": 25288,
+      "sha256": "67a7bfd0aa2504ca89650c7a86b88ab8afba68a6a27425d32c3a3c1a1e1ac1e4"
+    },
+    {
       "path": "docs/PYCHARM_DEMO.md",
       "bytes": 2500,
       "sha256": "1dcd75d6f7aa4e77a634cd2371c0d86ec1307190fe9377d25444f89088a321b5"
+    },
+    {
+      "path": "docs/SPEC_CONTRACT.md",
+      "bytes": 6160,
+      "sha256": "8c70f2dbbded832626287fdf959b2b5877f1e950bd2e5590ca498cf91b00e464"
     },
     {
       "path": "docs/architecture/SQL_PIPELINE.md",
@@ -217,6 +233,11 @@
       "path": "tests/test_sorting_imports.py",
       "bytes": 8618,
       "sha256": "7c8766407d4ac093491299eada2fc57b674e96960a51f1dc9078fb15297d7085"
+    },
+    {
+      "path": "tests/test_spec_contract.py",
+      "bytes": 2134,
+      "sha256": "b7c794282aa6f19e5906501121786071b1703902d2987e0f18bccf8d4d3501b8"
     },
     {
       "path": "tests/test_sqlite_demo.py",
