@@ -12,7 +12,7 @@ from decimal import Decimal, InvalidOperation
 import logging
 import re
 
-from .values import unit_multiplier
+from .values import metric_text, unit_multiplier
 
 LOG = logging.getLogger(__name__)
 LEGEND = '- — не указано в каталоге; !- — требуется подтверждение'
@@ -40,6 +40,7 @@ class Cell:
     status: str
     numbers: tuple[Decimal, ...] = ()
     audit: tuple[dict, ...] = ()
+    issues: tuple[str, ...] = ()
 
     def render(self):
         if self.status == 'ABSENT':
@@ -74,7 +75,7 @@ def _text(fact):
 
 
 def _scalar(fact, unit):
-    text = _text(fact)
+    text = metric_text(_text(fact), fact.get('unit_source'))
     suffix = re.search(r'\s*(mm/min|m/min|мм/мин|м/мин|mm|мм)\s*$', text, re.I)
     if suffix:
         text = text[:suffix.start()].strip()
@@ -123,7 +124,7 @@ def _group_missing(target, statuses):
 
 
 def _part(facts, statuses, unit):
-    if not facts:
+    if not facts or not any(_text(f) for f in facts):
         return Cell('', _missing(statuses))
     numbers = [_scalar(f, unit) for f in facts]
     distinct = tuple(dict.fromkeys(n for n in numbers if n is not None))
@@ -131,9 +132,12 @@ def _part(facts, statuses, unit):
               or any(f.get('warnings') or f.get('condition') or f.get('options')
                      or f.get('availability') in {'optional_only', 'missing', 'not_applicable'}
                      or f.get('human_verified') is False for f in facts))
-    value = ' || '.join(dict.fromkeys(_fmt(n) if n is not None else _text(f)
+    value = ' || '.join(dict.fromkeys(_fmt(n) if n is not None else f'[не преобразовано: {_text(f)}; {f.get("unit_source") or "единица не указана"}]'
                                      for f, n in zip(facts, numbers)))
-    return Cell(value, 'REVIEW' if review else 'PRESENT', distinct)
+    issues = []
+    if any(n is None for n in numbers): issues.append('unparseable_or_unconvertible_value')
+    if len(distinct) > 1: issues.append('value_conflict')
+    return Cell(value, 'REVIEW' if review else 'PRESENT', distinct, issues=tuple(issues))
 
 
 def _dimensions(groups, statuses):
@@ -144,12 +148,14 @@ def _dimensions(groups, statuses):
     variants = []
     numbers = ()
     review = False
+    issues = []
     for fact in explicit:
         if not _text(fact):
             review = True
             continue
-        text = re.sub(r'\s*(?:mm|мм)$', '', _text(fact), flags=re.I).strip()
-        suffix = _text(fact)[len(text):]
+        primary = metric_text(_text(fact), fact.get('unit_source'))
+        text = re.sub(r'\s*(?:mm|мм)$', '', primary, flags=re.I).strip()
+        suffix = primary[len(text):]
         tokens = re.split(r'\s*[x×*]\s*', text)
         parsed = [_scalar({**fact, 'value': token + suffix}, 'mm') for token in tokens]
         if len(parsed) == 3 and all(n is not None for n in parsed):
@@ -158,6 +164,7 @@ def _dimensions(groups, statuses):
         else:
             variants.append(_text(fact))
             review = True
+            issues.append('unparseable_dimensions')
         review |= bool(fact.get('warnings') or fact.get('condition') or fact.get('options')
                        or fact.get('human_verified') is False)
     if any(groups[k] or statuses[k] for k in GROUPS['machine_dimensions_mm'][1:]):
@@ -165,11 +172,14 @@ def _dimensions(groups, statuses):
         if not numbers:
             numbers = tuple(n for p in parts for n in p.numbers)
         review |= any(p.status != 'PRESENT' for p in parts)
+        if any(not p.value for p in parts): issues.append('partial_dimensions')
+        issues.extend(issue for p in parts for issue in p.issues)
     variants = list(dict.fromkeys(variants))
     if not variants:
         return Cell('', _missing(statuses['machine_dimensions_mm']))
+    if len(variants) > 1: issues.append('dimension_variants_require_confirmation')
     return Cell(' || '.join(variants),
-                'REVIEW' if review or len(variants) > 1 else 'PRESENT', numbers)
+                'REVIEW' if review or len(variants) > 1 else 'PRESENT', numbers, issues=tuple(dict.fromkeys(issues)))
 
 
 def _axes(target, groups, statuses):
@@ -183,17 +193,19 @@ def _axes(target, groups, statuses):
         if '_xyz_' not in key:
             continue
         for fact in groups[key]:
+            if not _text(fact):
+                continue
             # A scalar in an XYZ-named field alone is insufficient evidence.
             axes = str((fact.get('condition_data') or {}).get('axes', ''))
             proof = axes + ' ' + str(fact.get('source_label', ''))
-            ordered = bool(re.search(r'X\s*/\s*Y\s*/\s*Z', proof, re.I))
-            tokens = re.split(r'\s*/\s*', _text(fact))
+            ordered = bool(re.search(r'X\s*[/,]\s*Y\s*[/,]\s*Z', proof, re.I))
+            tokens = re.split(r'\s*/\s*', metric_text(_text(fact), fact.get('unit_source')))
             if ordered and len(tokens) in (1, 3):
                 shared |= len(tokens) == 1
                 for i, a in enumerate('XYZ'):
                     axis_facts[a].append({**fact, 'value': tokens[0 if len(tokens) == 1 else i]})
             else:
-                unresolved.append(_text(fact))
+                unresolved.append(f'{_text(fact)} [{fact.get("unit_source") or "единица не указана"}]')
     if not any(axis_facts.values()) and not unresolved:
         return Cell('', _group_missing(target, statuses))
     parts = [_part(axis_facts[a], statuses[f'{prefix}_{a.lower()}_m_min'], unit) for a in 'XYZ']
@@ -206,19 +218,25 @@ def _axes(target, groups, statuses):
     value += ' ' + label
     if unresolved:
         value += ' || исходная запись: ' + ' || '.join(dict.fromkeys(unresolved))
-    return Cell(value, 'REVIEW' if review else 'PRESENT', tuple(n for p in parts for n in p.numbers))
+    issues = [issue for p in parts for issue in p.issues]
+    if unresolved: issues.append('ambiguous_axis_notation')
+    if any(not p.value for p in parts): issues.append('partial_axes')
+    return Cell(value, 'REVIEW' if review else 'PRESENT', tuple(n for p in parts for n in p.numbers),
+                issues=tuple(dict.fromkeys(issues)))
 
 
 def _table(groups, statuses):
     pieces = []
     review = False
+    issues = []
     for source, name in [('table_size_mm', 'Стол'), ('pallet_size_mm', 'Паллета')]:
         for fact in groups[source]:
             if not _text(fact):
                 review = True
                 continue
-            text = re.sub(r'\s*(?:mm|мм)$', '', _text(fact), flags=re.I).strip()
-            suffix = _text(fact)[len(text):]
+            primary = metric_text(_text(fact), fact.get('unit_source'))
+            text = re.sub(r'\s*(?:mm|мм)$', '', primary, flags=re.I).strip()
+            suffix = primary[len(text):]
             # Unsupported size/unit or conditioned alternatives need
             # review; raw text remains available in the audit.
             tokens = re.split(r'\s*[x×*]\s*', text)
@@ -226,15 +244,20 @@ def _table(groups, statuses):
             valid = len(parsed) in (2, 3) and all(n is not None for n in parsed)
             rendered = ' × '.join(_fmt(n) for n in parsed) + ' мм' if valid else _text(fact)
             pieces.append(f'{name}: {rendered}')
+            if not valid: issues.append('unparseable_table_size')
             review |= (len(tokens) not in (2, 3)
                        or not valid
                        or bool(fact.get('warnings') or fact.get('condition') or fact.get('options'))
                        or fact.get('human_verified') is False)
-        review |= len(set(_text(f) for f in groups[source])) > 1
-    return Cell('; '.join(dict.fromkeys(pieces)), 'REVIEW' if review else 'PRESENT') if pieces else Cell('', _missing(statuses))
+        conflict = len(set(_text(f) for f in groups[source])) > 1
+        review |= conflict
+        if conflict: issues.append('table_variants_require_confirmation')
+    return Cell('; '.join(dict.fromkeys(pieces)), 'REVIEW' if review else 'PRESENT', issues=tuple(dict.fromkeys(issues))) if pieces else Cell('', _missing(statuses))
 
 
 def _general(facts, statuses):
+    if not any(_text(f) for f in facts):
+        return Cell('', _missing(statuses))
     values = list(dict.fromkeys(
         _text(f) + (f' [condition: {f["condition"]}]' if f.get('condition') else '')
         for f in facts))
@@ -242,7 +265,8 @@ def _general(facts, statuses):
                  or f.get('availability') in {'optional_only', 'missing', 'not_applicable'}
                  or _text(f) in {'', '-', '!-', '[НЕ ИЗВЛЕЧЕНО ИЛИ НЕ УКАЗАНО В КАТАЛОГЕ]'}
                  for f in facts)
-    return Cell(' || '.join(values), 'REVIEW' if review or len(values) > 1 else 'PRESENT') if values else Cell('', _missing(statuses))
+    return Cell(' || '.join(values), 'REVIEW' if review or len(values) > 1 else 'PRESENT',
+                issues=('multiple_values_require_confirmation',) if len(values) > 1 else ()) if values else Cell('', _missing(statuses))
 
 
 def project_cells(facts, statuses=(), parameters=()):
@@ -280,5 +304,5 @@ def project_cells(facts, statuses=(), parameters=()):
             cell = _general(groups[key], states[key])
         cell.audit = audit
         result[key] = cell
-    LOG.info('Projected %d parameters; %d need review', len(result), sum(c.status == 'REVIEW' for c in result.values()))
+    LOG.debug('Projected %d parameters; %d require confirmation (includes human verification and unknown absence)', len(result), sum(c.status == 'REVIEW' for c in result.values()))
     return result

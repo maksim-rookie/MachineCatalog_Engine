@@ -14,7 +14,7 @@ def table_identity(page, table, schema, header_text='', fallback=None):
     if fallback is not None:return fallback
     keys={m['key'] for row in table.rows if (m:=schema.match(row.labels,row.unit))}
     turning=bool(keys & {'max_turning_diameter_mm','max_turning_length_mm','bar_working_diameter_mm','turret_station_count'})
-    machining={'travel_x_mm','travel_y_mm','travel_z_mm'}<=keys and bool(keys & {'table_size_mm','table_load_kg','pallet_size_mm'})
+    machining=({'travel_x_mm','travel_y_mm','travel_z_mm'}<=keys or 'travel_xyz_mm' in keys) and bool(keys & {'table_size_mm','table_load_kg','pallet_size_mm'})
     inferred='turning' if turning else 'machining' if machining else 'unknown'
     lines=[]
     for block in page.get_text('dict')['blocks']:

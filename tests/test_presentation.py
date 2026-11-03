@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from catalog_engine.exports import write_outputs, write_typed_measurements
+from catalog_engine.exports import write_outputs, typed_measurements
 from catalog_engine.presentation import (GROUPS, LEGEND, REMOVED, hidden_parameters,
                                          project_cells)
 from catalog_engine.schema import Schema
@@ -184,7 +184,7 @@ class ProjectionTests(unittest.TestCase):
 
 
 class ExportTests(unittest.TestCase):
-    def test_all_wide_exports_share_projection_and_keep_audit(self):
+    def test_json_default_optional_csv_and_audit(self):
         fs = [fact('rapid_traverse_x_m_min', '10', 'm/min'), fact('cutting_feed_x_m_min', '1', 'm/min')]
         fs += [fact(k, '0', 'rpm') for k in REMOVED]
         fs.append(fact('pallet_size_mm', '100x200'))
@@ -193,32 +193,32 @@ class ExportTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp)
             write_outputs(output, [doc], Schema(), [])
-            tables = [output/'ALL_MODELS_wide.csv', output/'ALL_MODELS_wide_values.csv', output/'ALL_CONFIGURATIONS_wide.csv', output/'by_series/MC_models.csv']
-            for path in tables:
-                with path.open(encoding='utf-8-sig') as stream:
-                    reader = csv.DictReader(stream)
-                    row = next(reader)
-                    parameters = {c.split('] ')[-1] for c in reader.fieldnames}
-                self.assertFalse(parameters & REMOVED)
-                self.assertNotIn('pallet_size_mm', parameters)
-                self.assertNotIn('rapid_traverse_x_m_min', parameters)
-                self.assertIn('rapid_traverse_xyz_m_min', parameters)
-                self.assertIn('cutting_feed_xyz_mm_min', parameters)
-                self.assertIn('Паллета: 100 × 200 мм', row['[Table] table_size_mm'])
-            self.assertEqual((output/'DATA_LEGEND.txt').read_text().strip(), LEGEND)
-            self.assertTrue(json.loads((output/'TRANSFORMATION_AUDIT.json').read_text()))
-            with (output/'ALL_MODELS_long.csv').open(encoding='utf-8-sig') as stream:
-                self.assertEqual(len(list(csv.DictReader(stream))), len(fs))
-            # A second export must not change source values or double-convert.
-            write_outputs(output, [doc], Schema(), [])
-            self.assertEqual([f['value'] for f in doc['facts']], [f['value'] for f in before['facts']])
+            self.assertFalse(list(output.rglob('*.csv')))
+            dataset = json.loads((output/'CATALOG.json').read_text())
+            parameters = {c['key'] for c in dataset['columns']}
+            self.assertFalse(parameters & REMOVED)
+            self.assertNotIn('pallet_size_mm', parameters)
+            self.assertNotIn('rapid_traverse_x_m_min', parameters)
+            self.assertIn('rapid_traverse_xyz_m_min', parameters)
+            self.assertIn('cutting_feed_xyz_mm_min', parameters)
+            self.assertEqual(dataset['legend'], LEGEND)
+            self.assertEqual(len(dataset['facts']), len(fs))
+            first = (output/'CATALOG.json').read_bytes()
+            write_outputs(output, [doc], Schema(), [], export_csv_enabled=True)
+            self.assertEqual(first, (output/'CATALOG.json').read_bytes())
+            self.assertEqual([p.name for p in output.rglob('*.csv')], ['CATALOG.csv'])
+            with (output/'CATALOG.csv').open(encoding='utf-8-sig') as stream:
+                row = next(csv.DictReader(stream))
+            self.assertIn('Паллета: 100 × 200 мм', row['[Table] table_size_mm'])
+            self.assertEqual(doc, before)
 
     def test_typed_values_remain_numeric_and_status_separate(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            rows = write_typed_measurements(Path(tmp), [fact('cutting_feed_x_m_min', '0', 'm/min'), fact('cutting_feed_x_m_min', 'bad', 'm/min')])
-        self.assertEqual(rows[0]['numeric_value'], '0')
-        self.assertEqual(rows[1]['numeric_value'], '')
-        self.assertNotIn(rows[1]['numeric_value'], {'-', '!-'})
+        fs = [fact('cutting_feed_x_m_min', '0', 'm/min'), fact('cutting_feed_x_m_min', 'bad', 'm/min')]
+        for index, f in enumerate(fs):
+            f['fact_id'] = str(index)
+        rows = typed_measurements(fs)
+        self.assertEqual(rows[0]['numeric_value'], 0)
+        self.assertIsNone(rows[1]['numeric_value'])
 
 
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.8.6",
+  "schema_version": "4.8.7",
   "label_aliases": {
     "moter": "motor",
     "spdinel": "spindle",
@@ -13,6 +13,62 @@
     "capasity": "capacity"
   },
   "rules": [
+    {
+      "key": "rotary_positioning_accuracy_source",
+      "pattern": "^[abc].*position.*accuracy",
+      "section": "^accuracy",
+      "unit": "",
+      "category": "Accuracy",
+      "_schema_warning": "angular_accuracy_unit_requires_confirmation"
+    },
+    {
+      "key": "rotary_repeatability_source",
+      "pattern": "^[abc].*repeatability",
+      "section": "^accuracy",
+      "unit": "",
+      "category": "Accuracy",
+      "_schema_warning": "angular_accuracy_unit_requires_confirmation"
+    },
+    {
+      "key": "travel_xyz_mm",
+      "pattern": "^x\\s*/\\s*y\\s*/\\s*z(?:\\s*(?:travel|stroke))?$",
+      "section": "^travel",
+      "unit": "mm",
+      "category": "Travel"
+    },
+    {
+      "key": "rapid_traverse_xyz_m_min",
+      "pattern": "x\\s*(?:/|,)\\s*y\\s*(?:/|,)\\s*z\\s*(?:axes?)?.*rapid|rapid.*x\\s*(?:/|,)\\s*y\\s*(?:/|,)\\s*z\\s*(?:axes?)?$",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "cutting_feed_xyz_mm_min",
+      "pattern": "^x\\s*/\\s*y\\s*/\\s*z\\s*(?:cutting\\s*)?feed$",
+      "unit": "mm/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "table_load_kg",
+      "pattern": "^max\\.?\\s*load$",
+      "section": "^table",
+      "unit": "kg",
+      "category": "Table"
+    },
+    {
+      "key": "tool_capacity",
+      "pattern": "^max\\.?\\s*capacity$",
+      "section": "^tool\\s*magazine",
+      "unit": "pcs",
+      "category": "Automatic tool changer (ATC)"
+    },
+    {
+      "key": "positioning_accuracy",
+      "pattern": "(?:position(?:ing)?\\s*accuracy)",
+      "section": "^accuracy",
+      "unit": "mm",
+      "category": "Accuracy"
+    },
     {
       "key": "cutting_feed_x_m_min",
       "pattern": "\\bx[- ]?axis\\b|\\bx\\b",
@@ -693,5 +749,24 @@
     "dictionaries/en.json",
     "dictionaries/zh.json",
     "dictionaries/ru.json"
+  ],
+  "category_order": [
+    "Accuracy",
+    "Travel",
+    "Capacity",
+    "Table",
+    "Feedrate",
+    "Spindle",
+    "Sub spindle",
+    "Automatic tool changer (ATC)",
+    "Turret",
+    "Tailstock",
+    "Machine dimensions",
+    "Machine",
+    "Motor",
+    "Tank capacity",
+    "Power source",
+    "Control",
+    "Other"
   ]
 }

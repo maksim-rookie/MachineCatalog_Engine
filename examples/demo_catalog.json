@@ -1,0 +1,14 @@
+{
+  "notice": "Synthetic test data; not real equipment specifications",
+  "equipment": [
+    {"manufacturer":"DEMO","model":"MC200","configuration":"base","measurements":[
+      {"parameter":"travel_x_mm","value":600,"unit":"mm","status":"confirmed"},
+      {"parameter":"spindle_speed_rpm","value":12000,"unit":"rpm","status":"confirmed"}]},
+    {"manufacturer":"DEMO","model":"MC300","configuration":"base","measurements":[
+      {"parameter":"travel_x_mm","value":400,"unit":"mm","status":"confirmed"},
+      {"parameter":"spindle_speed_rpm","value":0,"unit":"rpm","status":"confirmed"}]},
+    {"manufacturer":"DEMO","model":"MC400","configuration":"base","measurements":[
+      {"parameter":"travel_x_mm","value":800,"unit":"mm","status":"unverified"},
+      {"parameter":"spindle_speed_rpm","value":null,"unit":"rpm","status":"absent"}]}
+  ]
+}

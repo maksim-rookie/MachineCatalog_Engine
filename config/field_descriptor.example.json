@@ -1,0 +1,11 @@
+{
+  "id": "travel_x_mm",
+  "schema_version": "1.0.0",
+  "label_i18n": {"ru": "Перемещение по X", "en": "X-axis travel", "zh": "X轴行程"},
+  "type": "number",
+  "unit": "mm",
+  "aliases": ["X-axis travel", "X轴行程", "Ход по оси X"],
+  "extractor_hint": {"section": "Travel", "axis": "X"},
+  "validation_rules": {"min": 0, "finite": true},
+  "required": {"profiles": ["machining"], "default": false}
+}

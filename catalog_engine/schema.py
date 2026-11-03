@@ -9,7 +9,13 @@ DEFAULT_CONFIG = Path(__file__).resolve().parents[1] / 'config' / 'schema.json'
 
 class Schema:
     def __init__(self, path: Path = DEFAULT_CONFIG, overrides: Path | None = None):
-        self.config=json.loads(path.read_text(encoding='utf-8'))
+        self.config=json.loads(path.read_text(encoding='utf-8-sig'))
+        if not isinstance(self.config,dict) or not isinstance(self.config.get('rules'),list):
+            raise ValueError(f'{path}: schema must be an object with a rules list')
+        for key in ('label_aliases','required_fields'):
+            self.config.setdefault(key,{})
+            if not isinstance(self.config[key],dict):
+                raise ValueError(f'{path}: {key} must be an object')
         # Embed dictionaries in the effective configuration: snapshots and cache
         # fingerprints must change when a translation changes.
         self.config['dictionaries']=[json.loads((path.parent/name).read_text(encoding='utf-8'))
@@ -22,7 +28,9 @@ class Schema:
             self.config['label_aliases'].update(extra.get('label_aliases',{}))
             self.config['required_fields'].update(extra.get('required_fields',{}))
         self.rules=[]
-        for rule in self.config['rules']:
+        for index,rule in enumerate(self.config['rules']):
+            if not isinstance(rule,dict) or any(not isinstance(rule.get(k),str) for k in ('key','pattern','unit','category')):
+                raise ValueError(f'{path}: rule {index} requires string key, pattern, unit and category')
             self.rules.append((rule,re.compile(rule['pattern'],re.I),re.compile(rule.get('section',''),re.I)))
 
     def header_is(self, text, role):
@@ -40,7 +48,7 @@ class Schema:
                    if d.get('optional_pattern'))
 
     def normalize_label(self, label: str):
-        label=norm(unicodedata.normalize('NFKC',label)).lower()
+        label=norm(unicodedata.normalize('NFKC','' if label is None else str(label))).lower()
         # Whitespace between a Latin axis and Chinese characters is layout only.
         label=re.sub(r'\s+(?=[\u3400-\u9fff])','',label)
         for d in self.config['dictionaries']:
@@ -53,6 +61,8 @@ class Schema:
 
     def match(self, labels: list[str], unit: str = ''):
         from .values import unit_family
+        labels = [labels] if isinstance(labels,str) else (labels or [])
+        unit = '' if unit is None else str(unit)
         normalized=[self.normalize_label(x) for x in labels]
         full=' / '.join(normalized)
         leaf=normalized[-1] if normalized else ''
@@ -84,4 +94,4 @@ class Schema:
         return result
 
     def required(self, machine_class):
-        return self.config['required_fields'].get(machine_class,[])
+        return self.config['required_fields'].get(str(machine_class or '').casefold(),[])

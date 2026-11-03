@@ -1,13 +1,7 @@
 {
   "project_name": "MachineCatalog Engine",
-  "version": "4.8.6",
+  "version": "4.8.7",
   "distribution": "source-only",
-  "excluded": [
-    "user PDFs",
-    "generated outputs",
-    "dependency caches",
-    "previous release archives"
-  ],
   "files": [
     {
       "path": ".gitignore",
@@ -16,28 +10,28 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1566,
-      "sha256": "6c5d5a505b01c3dc1b15e56e04821bf9d9c6296a5b0386895ca111ea2a4f650b"
+      "bytes": 2842,
+      "sha256": "7187aa2ab20fb9c25787ce9bbe6dc03bc1a3e2ffc7430356b028297d09949093"
     },
     {
       "path": "INSTALL_DEPS.bat",
       "bytes": 477,
-      "sha256": "f19205d0ad73ee9ea4e59e6cc6577b198f86e779a2f279ad1ea9346851f51e83"
+      "sha256": "bd1dcc3347622a0956c4f1323c2adfa9490c21b91bc7dfc8695a0b3dc31da9d6"
     },
     {
       "path": "README.md",
-      "bytes": 494,
-      "sha256": "23eb68c53be4f75a20cb6b5df459b0e8ee00ca9d98c4528d4d2e90b973915b30"
+      "bytes": 6548,
+      "sha256": "e84d7f298d02bc7275c2c9c662ed49d504ffb084395b5c92bddb6bf05dfa9dfe"
     },
     {
       "path": "README_RU.md",
-      "bytes": 5894,
-      "sha256": "1bcc6a0162bcaad23c347ac955000ca72cdaa929c0098570eff6001bce9841f7"
+      "bytes": 7769,
+      "sha256": "7b73a6bd3b27c78868ed90a782754f7b7a5da026394565d342bd36fa8e776775"
     },
     {
       "path": "START_LOCAL.bat",
       "bytes": 551,
-      "sha256": "a0054984a2f19a2abd5cd556881c5c85fc8e25e18b5c77daae56f835004acf4f"
+      "sha256": "da163241ec852534a72ece45ddb56e489553ebcf6906dcc83d3a37943f26f394"
     },
     {
       "path": "START_NO_CACHE.bat",
@@ -46,18 +40,18 @@
     },
     {
       "path": "catalog_engine/__init__.py",
-      "bytes": 194,
-      "sha256": "407d64ce26dade8fd36c846297b52f28c984441c3822ec8827aa9e6fbea26f05"
+      "bytes": 189,
+      "sha256": "d90f362b28c0cfcdaf4404c5389d3f925f44b11c836e1355a8c4147b37e1d0a4"
     },
     {
       "path": "catalog_engine/exports.py",
-      "bytes": 13573,
-      "sha256": "9fe309d947a62f1d6e29d15d51cd2e5fedd38d91cfb782f19ae01d6d1196aa1b"
+      "bytes": 11488,
+      "sha256": "e0dcfabaf19d621303eb70cdbf0405c4eff9f3c279473fa86b6d16a205d5c283"
     },
     {
       "path": "catalog_engine/extract.py",
-      "bytes": 18062,
-      "sha256": "82467b16d5d37ff7c97c3fe60f5787df0213b196b501643e044ef2cb1bebac0f"
+      "bytes": 17649,
+      "sha256": "6152fd0f25fedd702fedb28d960be3c60523390736c832caf16d140a5cdf589b"
     },
     {
       "path": "catalog_engine/geometry.py",
@@ -65,9 +59,19 @@
       "sha256": "9f3456ba447de1d590ec45cbf44880f8b87b2159c8795edab7354d3b0bbafad9"
     },
     {
+      "path": "catalog_engine/headerless.py",
+      "bytes": 5177,
+      "sha256": "685496cb4846ae4df457f845a7efe84fc6a16a84373b8a23ed4667c0f637d065"
+    },
+    {
       "path": "catalog_engine/identity.py",
-      "bytes": 2440,
-      "sha256": "93c8104f75d81e7df67f17404be9f96694d85f6f860cd26f7d078fbb8584dedc"
+      "bytes": 2469,
+      "sha256": "69d75077f39a6c409f284d8e5ac3232a04c86a64e9214a85db21eab05ba9291c"
+    },
+    {
+      "path": "catalog_engine/imports.py",
+      "bytes": 5156,
+      "sha256": "c078e8caacb01e4e737b147ae6e28ef52eb5807f8b13d20a378f769abc46bf03"
     },
     {
       "path": "catalog_engine/models.py",
@@ -76,38 +80,58 @@
     },
     {
       "path": "catalog_engine/presentation.py",
-      "bytes": 12901,
-      "sha256": "51ab7caca7ce18cb88b6549641afb0c2b4a6729c889b51b574b8bf30ce2c7233"
+      "bytes": 14645,
+      "sha256": "ca868992fc3e37fb6bfb1a8db33b09d10b7e642995d7c1f6689226c2b7e5e027"
     },
     {
       "path": "catalog_engine/progress.py",
       "bytes": 3677,
-      "sha256": "519ba2c744ee8e678ce5957af15cfa2ddd8f819af48f16edc498f18ccd05eb1a"
+      "sha256": "497b9a62b97ac8d836aabed1968aa91e113716543a5a6bd5565f1d3e65379055"
     },
     {
       "path": "catalog_engine/quality.py",
-      "bytes": 5255,
-      "sha256": "a089b03e839ecf97f9ab071d891c1533c12326f4563051cfe9faee90290518fd"
+      "bytes": 5976,
+      "sha256": "9f9d668db5ba084d791609d818edb6380aaab3c4b90cae24aa04e2fbd909245a"
+    },
+    {
+      "path": "catalog_engine/replay.py",
+      "bytes": 5310,
+      "sha256": "88f06c90286547429be40322ef812c6cca55840a890178aa28d30c036ffd8506"
     },
     {
       "path": "catalog_engine/runner.py",
-      "bytes": 11314,
-      "sha256": "7efef844e205a6af097f225dcfae77269452b59c9e6d997cd4b847c50a527223"
+      "bytes": 12885,
+      "sha256": "0fa5a53d919fecfd671c77709157c4783f43feafcaf5f1c6f4dc5ecbd7a23629"
     },
     {
       "path": "catalog_engine/schema.py",
-      "bytes": 4544,
-      "sha256": "95579d43526a344a9e35adbde325f50be2205827ba921e9a15745026cdbc9fc8"
+      "bytes": 5371,
+      "sha256": "dddc31d6f1c00f39c0ff612e11af30b77241e4cd11e9aa2017ebc8a4f8a805a0"
+    },
+    {
+      "path": "catalog_engine/sorting.py",
+      "bytes": 3428,
+      "sha256": "a4d5688ea272a245c7697530f25a552874f0e7090f1f6080635e825f8ed9489f"
+    },
+    {
+      "path": "catalog_engine/sqlite_demo.py",
+      "bytes": 6321,
+      "sha256": "f7fbc49d35cc2c7b2e16e23f4a7ad48ab1a487a038226b7f270e3b976b11660c"
     },
     {
       "path": "catalog_engine/storage.py",
-      "bytes": 1784,
-      "sha256": "02ad84901db26da39b87116a35be2045a2cb4998a4873032c7ec196c50bdd73e"
+      "bytes": 2207,
+      "sha256": "8ca66ad1343488a8e80fad5552c05fbf33fb6227e6042e927a16f339ce7dd38d"
+    },
+    {
+      "path": "catalog_engine/validation.py",
+      "bytes": 9121,
+      "sha256": "698c1ab8f90e70b1f15cf68f85e4514941496fe4e31c4c51c3d31ba8405bd482"
     },
     {
       "path": "catalog_engine/values.py",
-      "bytes": 10133,
-      "sha256": "b22048a4497c1c460cbba84374bfb88c91c29e567edb0ec522aa1c403628b3c8"
+      "bytes": 10899,
+      "sha256": "d26cf4aa338691da05be5fda311cb5ab8903c79d925f85b9502124d757285b55"
     },
     {
       "path": "compat_v842.py",
@@ -130,19 +154,39 @@
       "sha256": "7596b6340353bd300b2321c110ac0ecf84e24c71231ae98a3030584ade882a23"
     },
     {
+      "path": "config/field_descriptor.example.json",
+      "bytes": 428,
+      "sha256": "28083c45d04c0ac1bc8bc4c41202fba88f868fdeb1f64f6e6a22592c94d9e533"
+    },
+    {
       "path": "config/overrides.example.json",
       "bytes": 263,
       "sha256": "528a6b53653d7937e4db058b2235933ff495a1d0cec37ed3bdef181a3ff3277f"
     },
     {
       "path": "config/schema.json",
-      "bytes": 17999,
-      "sha256": "af19a77d73eca88cabc0165239c10153e4794980de69e1410b0d30d11d0c0ab7"
+      "bytes": 19960,
+      "sha256": "e462e89933f4dabdc77a8dd8991693d9dcc45b598a63a28248a546c1d9530554"
+    },
+    {
+      "path": "docs/PYCHARM_DEMO.md",
+      "bytes": 2500,
+      "sha256": "1dcd75d6f7aa4e77a634cd2371c0d86ec1307190fe9377d25444f89088a321b5"
+    },
+    {
+      "path": "docs/architecture/SQL_PIPELINE.md",
+      "bytes": 9516,
+      "sha256": "09203f326909c216a26fe9bc05ad2b5131e7957dd144c7b4368a6236b15b77bb"
+    },
+    {
+      "path": "examples/demo_catalog.json",
+      "bytes": 849,
+      "sha256": "6abf0dd07c19984d5be7c38babc7d0ca8f2d9446cd427c60ec1e0d6e93701c28"
     },
     {
       "path": "main.py",
-      "bytes": 2414,
-      "sha256": "c09cdda1062a691b059ad6cb92bf2648e37c51963bd9e3c7fe779e6700745a1a"
+      "bytes": 3032,
+      "sha256": "e45ffaaa8a0ab1e478a622b050a0b538768b0c0a0b649b2ecc4e36feff53962a"
     },
     {
       "path": "requirements.txt",
@@ -150,14 +194,34 @@
       "sha256": "298dd88c3cc6703ae9fa19588bf609d580cb10b1641a8a02bec34514ff6c05fc"
     },
     {
+      "path": "run_pycharm_demo.py",
+      "bytes": 1254,
+      "sha256": "233233184709bc5446101641be02cce2d5d192af4f23534b1d1a70d6c339e2b1"
+    },
+    {
+      "path": "sql/001_catalog_schema.sql",
+      "bytes": 6670,
+      "sha256": "a332e307dc6bf059d9f5ea8a0a08bb4bbc55deecda6b706a9dec68f9edf60968"
+    },
+    {
       "path": "tests/test_pdf_workflow.py",
-      "bytes": 3274,
-      "sha256": "8d0d1e7bb2938bfa1f4b6d77dff05d50b09edc646adb9ceab01fb8eb20b0b8eb"
+      "bytes": 6510,
+      "sha256": "596a4490512f1597bfaf0ae60f8e3b9808838dcec92637da2e4bce7a07f4f43d"
     },
     {
       "path": "tests/test_presentation.py",
-      "bytes": 12232,
-      "sha256": "c6c7b8303f89f3a598191fcb27e0c0087e70194054138d164706228fefc68729"
+      "bytes": 11915,
+      "sha256": "31529d7ed11b434c2faf191c38800c04cf7059cf3e791ac3943feccc627effbb"
+    },
+    {
+      "path": "tests/test_sorting_imports.py",
+      "bytes": 8618,
+      "sha256": "7c8766407d4ac093491299eada2fc57b674e96960a51f1dc9078fb15297d7085"
+    },
+    {
+      "path": "tests/test_sqlite_demo.py",
+      "bytes": 2069,
+      "sha256": "b007a9c4d0ac0c99f71238d556d6f86fbed3dadb4b167240facae9ca5eded441"
     }
   ]
 }

@@ -17,7 +17,7 @@ from .identity import table_identity
 
 def page_kind(text: str) -> str:
     top=norm(text)[:1800].lower()
-    if re.search(r'(?:machine|main|technical) specifications',top[:450]): return 'machine_specifications'
+    if re.search(r'(?:machine|main|technical)\s+specifications?',top[:450]): return 'machine_specifications'
     if re.search(r'standard.*optional specifications',top): return 'options_matrix'
     if 'numeric control specifications' in top or 'numeric control specifications' in text.lower(): return 'controller_specifications'
     if re.search(r'power\s*\|\s*torque',top): return 'power_torque_diagrams'
@@ -76,18 +76,21 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
             # independent parameter categories. An accessory table must not
             # become the machine's main specifications by default.
             candidate=(sourcepage['kind']=='supplemental' and schema.has_table_header(sourcepage['text']))
+            from .headerless import headerless_tables
+            anchor_tables = headerless_tables(page,pi+1,schema) if not schema.has_table_header(sourcepage['text']) else []
+            candidate = candidate or bool(anchor_tables)
             if not declared_main and not candidate:
                 if progress: progress(.30+.65*(pi+1)/total,'Classifying pages',f'page {pi+1}/{total}: {sourcepage["kind"]}')
                 continue
             tables=extract_tables(page,pi+1,schema)
             if not tables:
-                tables=plumber_fallback(path,pi+1,page,schema)
+                tables=anchor_tables or plumber_fallback(path,pi+1,page,schema)
             if not declared_main:
                 accepted=[]
                 for t in tables:
                     mapped=[schema.match(r.labels,r.unit) for r in t.rows]
                     mapped=[m for m in mapped if m]
-                    if len(mapped)>=5 and len({m['category'] for m in mapped})>=3:
+                    if len(mapped)>=3 and len({m['category'] for m in mapped})>=3:
                         accepted.append(t)
                 tables=accepted
                 if tables: sourcepage['kind']='machine_specifications_structural'
@@ -95,133 +98,7 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
                 if declared_main:
                     result['review'].append(issue(path.name,pi+1,'specification_geometry_unresolved',instruction='Raw text and word coordinates retained; no speculative assignments.'))
                 continue
-            # A final control/NC row may sit below the last vector cell.
-            # Recover only nearby, schema-recognized text with source coordinates.
-            for t in tables:
-                recover_trailing_rows(page,t,schema)
-            result['spec_pages'].append(pi+1)
-            fnrules=footnote_rules(sourcepage['text']+'\n'+page.get_text('text'))
-            for ti,table in enumerate(tables,1):
-                table_class,table_type,class_evidence=table_identity(page,table,schema)
-                # A duplicate identity in distinct header columns must never
-                # silently merge values from different physical machines.
-                header_identities={}
-                for hi,h in enumerate(table.headers):
-                    for ref in parse_header(h.text):
-                        pair=(ref.model,ref.configuration)
-                        if pair in header_identities:
-                            result['review'].append(issue(path.name,pi+1,'model_identity_collision',
-                                model=ref.model,configuration=ref.configuration,
-                                header_raw=h.text,other_header=header_identities[pair],
-                                instruction='Two distinct header columns resolve to one identity; preserve raw table and do not trust combined values.'))
-                        header_identities[pair]=h.text
-                result['raw_tables'].append({'source_file':path.name,'source_table':ti,
-                                            'machine_class':table_class,'machine_type':table_type,
-                                            'class_evidence':class_evidence,**table.to_dict()})
-                header_refs=[]
-                for header in table.headers:
-                    refs=parse_header(header.text)
-                    header_refs.append((header,refs))
-                    if any(ref.header_qualifiers for ref in refs):
-                        result['review'].append(issue(path.name,pi+1,'header_qualifier_requires_review',header_raw=header.text,models=[r.model for r in refs],instruction='Bracketed header qualifier retained; not promoted to an independent model or assumed for all variants.'))
-                    if not refs:
-                        result['review'].append(issue(path.name,pi+1,'model_header_unresolved',header_raw=header.text,bbox=header.bbox))
-                    for ref in refs:
-                        model_class,model_type,evidence=table_identity(page,table,schema,header.text,
-                                                                      (table_class,table_type,class_evidence))
-                        meta=result['registry'].setdefault(ref.model,{'model':ref.model,'model_base':ref.model_base,
-                            'generation':ref.generation,'manufacturer':manufacturer,'machine_class':model_class,
-                            'machine_type':model_type,'class_evidence':evidence,'evidence':'explicit_specification_header','headers':[],
-                            'configurations':[],'header_qualifiers':[]})
-                        if meta['machine_class']!=model_class or meta['machine_type']!=model_type:
-                            meta.update(machine_class='unknown',machine_type='Unclassified machine',class_evidence='class_evidence_conflict')
-                            result['review'].append(issue(path.name,pi+1,'model_class_conflict',model=ref.model))
-                        if ref.configuration not in meta['configurations']: meta['configurations'].append(ref.configuration)
-                        if ref.header_raw not in meta['headers']: meta['headers'].append(ref.header_raw)
-                        meta['header_qualifiers']=sorted(set(meta['header_qualifiers'])|set(ref.header_qualifiers))
-                section_context=''
-                for row in table.rows:
-                    if row.labels and row.labels[-1].startswith(('»','›','▶')) and not row.unit and not any(c.text.strip() for c in row.values):
-                        section_context=row.labels[-1].lstrip('»›▶ ').strip()
-                        continue
-                    if section_context and len(row.labels)==1:row.labels=[section_context]+row.labels
-                    for warning in row.warnings:
-                        result['review'].append(issue(path.name,pi+1,warning,source_table=ti,source_row=row.row_index))
-                    rule=schema.match(row.labels,row.unit)
-                    if rule is None:
-                        result['unmapped_fields'].append({'source_file':path.name,'source_page':pi+1,'source_table':ti,
-                            'source_row':row.row_index,'source_label':' / '.join(row.labels),'unit_source':row.unit,
-                            'cells':[{"value_raw":c.text,"bbox":c.bbox} for c in row.values]})
-                    for cell in row.values:
-                        # The overlapping *cell span* determines applicability,
-                        # never just the nearest text centre.
-                        assignments=[]
-                        for header,refs in header_refs:
-                            overlap=min(cell.bbox[2],header.bbox[2])-max(cell.bbox[0],header.bbox[0])
-                            smaller=min(cell.bbox[2]-cell.bbox[0],header.bbox[2]-header.bbox[0])
-                            if overlap>max(1,smaller*.45): assignments.extend(refs)
-                        if not assignments:
-                            result['review'].append(issue(path.name,pi+1,'value_without_model',value_raw=cell.text,bbox=cell.bbox))
-                            continue
-                        for ref in assignments:
-                            model_meta=result['registry'][ref.model]
-                            rowid=f'{pi+1}:{ti}:{row.row_index}'
-                            record={'source_file':path.name,'source_page':pi+1,'source_table':ti,'source_row':row.row_index,
-                                'source_row_id':rowid,'model':ref.model,'model_base':ref.model_base,'generation':ref.generation,
-                                'configuration':ref.configuration,'source_label':' / '.join(row.labels),
-                                'unit_source':row.unit,'value_raw':cell.text,'cell_bbox':list(cell.bbox),
-                                'source_header':ref.header_raw,'header_qualifiers':list(ref.header_qualifiers),
-                                'manufacturer':manufacturer,'machine_type':model_meta['machine_type'],'machine_class':model_meta['machine_class'],
-                                'method':table.method,'scope':'explicit_specification_cell',
-                                'recovery_note':getattr(row,'recovery','')}
-                            if not rule:
-                                result['cell_statuses'].append({**record,'parameter':'','status':'UNMAPPED_LABEL'})
-                                continue
-                            key=rule['key']
-                            record.update(parameter=key,category=rule['category'],unit_expected=rule['unit'])
-                            selected,transform=select_square_variant(cell.text,ref.square_variant,long_legend)
-                            selected,fntransform=select_footnote(selected,ref.model_base,fnrules)
-                            transformations=[x for x in [transform,fntransform] if x]
-                            # A numeric speed explicitly present in the header AND
-                            # in the shared speed cell defines this configuration.
-                            hs=re.match(r'(\d+)rpm',ref.configuration)
-                            if hs and key=='spindle_speed_rpm' and hs.group(1) in re.findall(r'\d+',selected):
-                                selected=hs.group(1); transformations.append('explicit_header_speed_configuration')
-                            split=split_embedded_conditions(selected,row.labels,key)
-                            for part in split:
-                                val=norm(part['value']);base,options,availability=option_parts(val,key)
-                                optional=schema.is_optional(' / '.join(row.labels))
-                                if optional and availability not in {'not_applicable','missing'}:
-                                    base='';options=list(dict.fromkeys(options+[val]));availability='optional_only'
-                                warnings=value_warnings(val,rule['unit'],row.unit,key)
-                                warnings.extend(row.warnings)
-                                if optional: warnings.append('optional_equipment')
-                                if rule.get('_schema_warning'): warnings.append(rule['_schema_warning'])
-                                if getattr(row,'recovery','')=='below_geometric_table_edge': warnings.append('geometric_tail_row_recovered')
-                                if part.get('warning'): warnings.append(part['warning'])
-                                warnings.extend(x for x in transformations if x.endswith('unresolved'))
-                                # A grouped model header is insufficient to prove
-                                # that all optional values apply to every member.
-                                if options and len(parse_header(ref.header_raw))>1 and fnrules:
-                                    warnings.append('shared_model_options_require_applicability_check')
-                                cond=part['condition']
-                                status='SOURCE_BLANK' if not val else ('NOT_APPLICABLE' if availability=='not_applicable' else 'EXTRACTED_REVIEW' if warnings else 'EXTRACTED')
-                                result['cell_statuses'].append({**record,'condition':cond,'status':status,'value':val})
-                                if not val:
-                                    result['review'].append(issue(path.name,pi+1,'empty_source_cell',model=ref.model,configuration=ref.configuration,parameter=key,source_row_id=rowid,cell_bbox=list(cell.bbox)))
-                                    continue
-                                fact={**record,'value':val,'base_value':base,'options':options,
-                                    'availability':availability,'option_kind':'section_optional' if optional else 'brace_options' if options else '',
-                                    'condition':'; '.join(f'{k}={v}' for k,v in sorted(cond.items())),
-                                    'condition_data':cond,'duty_cycle':part['duty_cycle'],
-                                    'transformations':transformations,'warnings':sorted(set(warnings)),
-                                    'review_status':'NEEDS_REVIEW' if warnings else 'UNVERIFIED',
-                                    'source_quote':' | '.join(row.labels+[row.unit,cell.text]),'human_verified':False}
-                                fact['fact_id']=hashlib.sha256(json.dumps([result['source_sha256'],rowid,ref.model,ref.configuration,key,cond,val],sort_keys=True).encode()).hexdigest()[:20]
-                                result['facts'].append(fact)
-                                for warning in sorted(set(warnings)):
-                                    result['review'].append(issue(path.name,pi+1,warning,model=ref.model,configuration=ref.configuration,
-                                        parameter=key,value_raw=cell.text,source_row_id=rowid,fact_id=fact['fact_id']))
+            collect_tables(result,path,pi,page,tables,schema)
             if progress: progress(.30+.65*(pi+1)/total,'Extracting specification cells',f'page {pi+1}/{total}')
     # Duplicate PDF drawing objects must not multiply facts.
     result['facts']=list({f['fact_id']:f for f in result['facts']}.values())
@@ -234,3 +111,137 @@ def extract_pdf(path: Path, schema: Schema | None = None, progress=None) -> dict
     result['native_timings']={'read_seconds':round(read_elapsed,6),'extract_seconds':round(time.perf_counter()-extraction_started,6)}
     if progress: progress(1,'Extraction finished',f'{len(result["registry"])} models, {len(result["facts"])} records')
     return result
+
+
+def collect_tables(result, path, pi, page, tables, schema, recover_tails=True):
+    sourcepage=result['source_pages'][pi]
+    manufacturer=result.get('manufacturer','')
+    long_legend=result.get('source_legends',{}).get('square_brackets_long_bed',False)
+    # A final control/NC row may sit below the last vector cell.
+    # Recover only nearby, schema-recognized text with source coordinates.
+    if recover_tails:
+        for t in tables:
+            recover_trailing_rows(page,t,schema)
+    result['spec_pages'].append(pi+1)
+    fnrules=footnote_rules(sourcepage['text']+'\n'+page.get_text('text'))
+    for ti,table in enumerate(tables,1):
+        table_class,table_type,class_evidence=table_identity(page,table,schema)
+        # A duplicate identity in distinct header columns must never
+        # silently merge values from different physical machines.
+        header_identities={}
+        for hi,h in enumerate(table.headers):
+            for ref in parse_header(h.text):
+                pair=(ref.model,ref.configuration)
+                if pair in header_identities:
+                    result['review'].append(issue(path.name,pi+1,'model_identity_collision',
+                        model=ref.model,configuration=ref.configuration,
+                        header_raw=h.text,other_header=header_identities[pair],
+                        instruction='Two distinct header columns resolve to one identity; preserve raw table and do not trust combined values.'))
+                header_identities[pair]=h.text
+        result['raw_tables'].append({'source_file':path.name,'source_table':ti,
+                                    'machine_class':table_class,'machine_type':table_type,
+                                    'class_evidence':class_evidence,**table.to_dict()})
+        header_refs=[]
+        for header in table.headers:
+            refs=parse_header(header.text)
+            header_refs.append((header,refs))
+            if any(ref.header_qualifiers for ref in refs):
+                result['review'].append(issue(path.name,pi+1,'header_qualifier_requires_review',header_raw=header.text,models=[r.model for r in refs],instruction='Bracketed header qualifier retained; not promoted to an independent model or assumed for all variants.'))
+            if not refs:
+                result['review'].append(issue(path.name,pi+1,'model_header_unresolved',header_raw=header.text,bbox=header.bbox))
+            for ref in refs:
+                model_class,model_type,evidence=table_identity(page,table,schema,header.text,
+                                                              (table_class,table_type,class_evidence))
+                meta=result['registry'].setdefault(ref.model,{'model':ref.model,'model_base':ref.model_base,
+                    'generation':ref.generation,'manufacturer':manufacturer,'machine_class':model_class,
+                    'machine_type':model_type,'class_evidence':evidence,'evidence':'explicit_specification_header','headers':[],
+                    'configurations':[],'header_qualifiers':[]})
+                if meta['machine_class']!=model_class or meta['machine_type']!=model_type:
+                    meta.update(machine_class='unknown',machine_type='Unclassified machine',class_evidence='class_evidence_conflict')
+                    result['review'].append(issue(path.name,pi+1,'model_class_conflict',model=ref.model))
+                if ref.configuration not in meta['configurations']: meta['configurations'].append(ref.configuration)
+                if ref.header_raw not in meta['headers']: meta['headers'].append(ref.header_raw)
+                meta['header_qualifiers']=sorted(set(meta['header_qualifiers'])|set(ref.header_qualifiers))
+        section_context=''
+        for row in table.rows:
+            if row.labels and row.labels[-1].startswith(('»','›','▶')) and not row.unit and not any(c.text.strip() for c in row.values):
+                section_context=row.labels[-1].lstrip('»›▶ ').strip()
+                continue
+            if section_context and len(row.labels)==1:row.labels=[section_context]+row.labels
+            for warning in row.warnings:
+                result['review'].append(issue(path.name,pi+1,warning,source_table=ti,source_row=row.row_index))
+            rule=schema.match(row.labels,row.unit)
+            if rule is None:
+                result['unmapped_fields'].append({'source_file':path.name,'source_page':pi+1,'source_table':ti,
+                    'source_row':row.row_index,'source_label':' / '.join(row.labels),'unit_source':row.unit,
+                    'cells':[{"value_raw":c.text,"bbox":c.bbox} for c in row.values]})
+            for cell in row.values:
+                # The overlapping *cell span* determines applicability,
+                # never just the nearest text centre.
+                assignments=[]
+                for header,refs in header_refs:
+                    overlap=min(cell.bbox[2],header.bbox[2])-max(cell.bbox[0],header.bbox[0])
+                    smaller=min(cell.bbox[2]-cell.bbox[0],header.bbox[2]-header.bbox[0])
+                    if overlap>max(1,smaller*.45): assignments.extend(refs)
+                if not assignments:
+                    result['review'].append(issue(path.name,pi+1,'value_without_model',value_raw=cell.text,bbox=cell.bbox))
+                    continue
+                for ref in assignments:
+                    model_meta=result['registry'][ref.model]
+                    rowid=f'{pi+1}:{ti}:{row.row_index}'
+                    record={'source_file':path.name,'source_page':pi+1,'source_table':ti,'source_row':row.row_index,
+                        'source_row_id':rowid,'model':ref.model,'model_base':ref.model_base,'generation':ref.generation,
+                        'configuration':ref.configuration,'source_label':' / '.join(row.labels),
+                        'unit_source':row.unit,'value_raw':cell.text,'cell_bbox':list(cell.bbox),
+                        'source_header':ref.header_raw,'header_qualifiers':list(ref.header_qualifiers),
+                        'manufacturer':manufacturer,'machine_type':model_meta['machine_type'],'machine_class':model_meta['machine_class'],
+                        'method':table.method,'scope':'explicit_specification_cell',
+                        'recovery_note':getattr(row,'recovery','')}
+                    if not rule:
+                        result['cell_statuses'].append({**record,'parameter':'','status':'UNMAPPED_LABEL'})
+                        continue
+                    key=rule['key']
+                    record.update(parameter=key,category=rule['category'],unit_expected=rule['unit'])
+                    selected,transform=select_square_variant(cell.text,ref.square_variant,long_legend)
+                    selected,fntransform=select_footnote(selected,ref.model_base,fnrules)
+                    transformations=[x for x in [transform,fntransform] if x]
+                    # A numeric speed explicitly present in the header AND
+                    # in the shared speed cell defines this configuration.
+                    hs=re.match(r'(\d+)rpm',ref.configuration)
+                    if hs and key=='spindle_speed_rpm' and hs.group(1) in re.findall(r'\d+',selected):
+                        selected=hs.group(1); transformations.append('explicit_header_speed_configuration')
+                    split=split_embedded_conditions(selected,row.labels,key)
+                    for part in split:
+                        val=norm(part['value']);base,options,availability=option_parts(val,key)
+                        optional=schema.is_optional(' / '.join(row.labels))
+                        if optional and availability not in {'not_applicable','missing'}:
+                            base='';options=list(dict.fromkeys(options+[val]));availability='optional_only'
+                        warnings=value_warnings(val,rule['unit'],row.unit,key)
+                        warnings.extend(row.warnings)
+                        if optional: warnings.append('optional_equipment')
+                        if rule.get('_schema_warning'): warnings.append(rule['_schema_warning'])
+                        if getattr(row,'recovery','')=='below_geometric_table_edge': warnings.append('geometric_tail_row_recovered')
+                        if part.get('warning'): warnings.append(part['warning'])
+                        warnings.extend(x for x in transformations if x.endswith('unresolved'))
+                        # A grouped model header is insufficient to prove
+                        # that all optional values apply to every member.
+                        if options and len(parse_header(ref.header_raw))>1 and fnrules:
+                            warnings.append('shared_model_options_require_applicability_check')
+                        cond=part['condition']
+                        status='SOURCE_BLANK' if not val else ('NOT_APPLICABLE' if availability=='not_applicable' else 'EXTRACTED_REVIEW' if warnings else 'EXTRACTED')
+                        result['cell_statuses'].append({**record,'condition':cond,'status':status,'value':val})
+                        if not val:
+                            result['review'].append(issue(path.name,pi+1,'empty_source_cell',model=ref.model,configuration=ref.configuration,parameter=key,source_row_id=rowid,cell_bbox=list(cell.bbox)))
+                            continue
+                        fact={**record,'value':val,'base_value':base,'options':options,
+                            'availability':availability,'option_kind':'section_optional' if optional else 'brace_options' if options else '',
+                            'condition':'; '.join(f'{k}={v}' for k,v in sorted(cond.items())),
+                            'condition_data':cond,'duty_cycle':part['duty_cycle'],
+                            'transformations':transformations,'warnings':sorted(set(warnings)),
+                            'review_status':'NEEDS_REVIEW' if warnings else 'UNVERIFIED',
+                            'source_quote':' | '.join(row.labels+[row.unit,cell.text]),'human_verified':False}
+                        fact['fact_id']=hashlib.sha256(json.dumps([result['source_sha256'],rowid,ref.model,ref.configuration,key,cond,val],sort_keys=True).encode()).hexdigest()[:20]
+                        result['facts'].append(fact)
+                        for warning in sorted(set(warnings)):
+                            result['review'].append(issue(path.name,pi+1,warning,model=ref.model,configuration=ref.configuration,
+                                parameter=key,value_raw=cell.text,source_row_id=rowid,fact_id=fact['fact_id']))

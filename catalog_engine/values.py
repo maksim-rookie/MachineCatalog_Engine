@@ -95,8 +95,27 @@ def option_parts(value: str, key: str):
     return base,options,availability
 
 
+def primary_unit(unit):
+    """Normalize a unit token without guessing a different physical dimension."""
+    s = norm(unicodedata.normalize('NFKC', '' if unit is None else str(unit))).lower().replace(' ', '')
+    if s.startswith('(') and s.endswith(')') and s.count('(') == 1:
+        s = s[1:-1]
+    return s.split('(', 1)[0]
+
+
+def metric_text(value, source_unit):
+    """Remove an explicitly labelled imperial equivalent; keep the raw elsewhere."""
+    value = norm(unicodedata.normalize('NFKC', '' if value is None else str(value)))
+    unit = str(source_unit or '').lower()
+    if re.search(r'\((?:in\b|inch|in/min|lb|ib|hp|ft)', unit):
+        match = re.fullmatch(r'(.*?)\s*\([^()]*\)\s*', value)
+        if match:
+            return match[1].strip()
+    return value
+
+
 def unit_family(unit: str):
-    s=norm(unicodedata.normalize('NFKC',unit)).lower().replace(' ','')
+    s=primary_unit(unit)
     if not s or s in {'-','asa','mt'}: return ''
     if s in {'t','ton','tonne','吨','噸','g'} or s.startswith('kg'): return 'mass'
     if s in {'w','mw'} or s.startswith('kw'): return 'power'
@@ -125,7 +144,7 @@ def range_bounds(value):
 
 def unit_multiplier(source,expected):
     """Convert only explicitly supported, dimensionally compatible units."""
-    clean=lambda s: unicodedata.normalize('NFKC',s).lower().replace(' ','')
+    clean=primary_unit
     a,b=clean(source),clean(expected)
     if not a or not b:return None
     if a==b:return 1.0
@@ -166,6 +185,7 @@ def value_warnings(value: str, expected: str, source_unit: str, key: str):
     for pair in pairs:
         ratios={'length':1/25.4,'mass':2.2046226218,'linear_speed':1000/25.4,'power':1.34102209,'torque':0.737562149,'volume':0.264172052}
         factor=ratios.get(b)
+        if b == 'linear_speed' and primary_unit(source_unit) == 'mm/min': factor=1/25.4
         if factor and '(' in source_unit:
             primary,secondary=map(float,pair.groups());target=primary*factor
             # Catalogue rounding often uses a single decimal place.

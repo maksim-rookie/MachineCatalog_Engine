@@ -3,16 +3,28 @@ from pathlib import Path
 import csv
 import hashlib
 import json
+import math
 import os
 import uuid
 from . import ENGINE_VERSION
+
+
+def json_safe(value):
+    """Keep non-finite raw numbers as text; emit standards-compliant JSON."""
+    if isinstance(value,float) and not math.isfinite(value):
+        return str(value)
+    if isinstance(value,dict):
+        return {str(k): json_safe(v) for k,v in value.items()}
+    if isinstance(value,(list,tuple)):
+        return [json_safe(v) for v in value]
+    return value
 
 
 def atomic_json(path:Path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
     temp=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
     try:
-        temp.write_text(json.dumps(value,ensure_ascii=False,indent=2,default=str),encoding='utf-8')
+        temp.write_text(json.dumps(json_safe(value),ensure_ascii=False,indent=2,default=str,allow_nan=False),encoding='utf-8')
         os.replace(temp,path)
     finally:
         if temp.exists(): temp.unlink()
