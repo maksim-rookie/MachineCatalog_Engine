@@ -13,5 +13,5 @@ if not exist ".venv\Scripts\python.exe" (
 :install
 ".venv\Scripts\python.exe" -m pip install -r requirements.txt
 if errorlevel 1 exit /b 1
-> ".venv\installed_8_4_5.ok" echo 8.4.5
+> ".venv\installed_4_8_6.ok" echo 4.8.6
 exit /b 0

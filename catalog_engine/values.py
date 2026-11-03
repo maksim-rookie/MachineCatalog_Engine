@@ -100,7 +100,8 @@ def unit_family(unit: str):
     if not s or s in {'-','asa','mt'}: return ''
     if s in {'t','ton','tonne','吨','噸','g'} or s.startswith('kg'): return 'mass'
     if s in {'w','mw'} or s.startswith('kw'): return 'power'
-    if s in {'cm','m','毫米','厘米','米'} or s.startswith('mm'): return 'length'
+    if s in {'m/min','mm/min','м/мин','мм/мин'}: return 'linear_speed'
+    if s in {'cm','m','мм','毫米','厘米','米'} or s.startswith('mm'): return 'length'
     if s.startswith('inch'): return 'inch'
     if s.startswith('kg'): return 'mass'
     if s.startswith('m/min'): return 'linear_speed'
@@ -131,7 +132,8 @@ def unit_multiplier(source,expected):
     scales={'kg':1.,'t':1000.,'ton':1000.,'tonne':1000.,'吨':1000.,'噸':1000.,'g':.001,
             'mm':1.,'cm':10.,'m':1000.,'毫米':1.,'厘米':10.,'米':1000.,
             'kw':1.,'w':.001,'mw':1000.,'deg':1.,'°':1.,'度':1.,'′′':1/3600,'arcsec':1/3600,
-            'rpm':1.,'r/min':1.,'pcs':1.,'ea':1.,'个':1.,'個':1.,'把':1.,'支':1.,'m/min':1.}
+            'rpm':1.,'r/min':1.,'pcs':1.,'ea':1.,'个':1.,'個':1.,'把':1.,'支':1.,
+            'm/min':1000.,'mm/min':1.,'м/мин':1000.,'мм/мин':1.,'мм':1.}
     # The parenthesis in a printed unit specifies an imperial equivalent, not
     # a scaling of the primary metric value.
     a=a.split('(',1)[0];b=b.split('(',1)[0]

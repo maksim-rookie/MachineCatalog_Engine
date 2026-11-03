@@ -6,6 +6,7 @@ import json
 import re
 from .storage import write_csv,write_jsonl,atomic_json
 from .quality import BLOCKING_WARNINGS
+from .presentation import LEGEND, hidden_parameters, project_cells, target_parameter
 
 IDENTITY=['manufacturer','machine_class','machine_type','model','generation','source_file']
 LONG_COLUMNS=['fact_id']+IDENTITY+['model_base','configuration','category','parameter','value','base_value',
@@ -16,23 +17,6 @@ LONG_COLUMNS=['fact_id']+IDENTITY+['model_base','configuration','category','para
 
 def colname(fact):
     return f'[{fact["category"]}] {fact["parameter"]}'
-
-
-def display_value(facts,clean=False):
-    available=[f for f in facts if f.get('availability')!='not_applicable']
-    if not available:
-        return '' if clean else '[НЕ ПРИМЕНИМО: "-" В PDF]'
-    pieces=[]
-    for f in available:
-        if clean and f.get('availability')=='optional_only':continue
-        if clean and set(f.get('warnings',[]))&BLOCKING_WARNINGS:
-            continue
-        value=f['value']
-        if f.get('condition'): value+=f' [condition: {f["condition"]}]'
-        if f.get('warnings') and not clean:
-            value+=' [ПРОВЕРИТЬ: '+', '.join(f['warnings'])+']'
-        if value not in pieces: pieces.append(value)
-    return ' || '.join(pieces)
 
 
 def typed_number(value: str, expected_unit: str) -> str:
@@ -89,50 +73,75 @@ def write_outputs(output:Path,documents:list[dict],schema,qualities:list[dict]):
         f.setdefault('recovery_note','')
     write_csv(output/'ALL_MODELS_long.csv',facts,LONG_COLUMNS)
     typed_rows=write_typed_measurements(output,facts)
-    hidden=set(schema.config['hidden_wide_parameters'])
-    columns=sorted({colname(f) for f in facts})
-    filtered=[c for c in columns if c.split('] ',1)[-1] not in hidden]
-    fact_groups=defaultdict(list)
+    machines = {(d['source_file'], model, config) for d in documents
+                for model, meta in d['registry'].items()
+                for config in meta.get('configurations', ['base'])}
+    hidden = hidden_parameters(facts, schema.config.get('hidden_wide_parameters', []), machines)
+    b_populated = {(f['source_file'], f['model'], f.get('configuration', 'base')) for f in facts
+                   if f['parameter'] == 'rapid_traverse_b_rpm'
+                   and f.get('value') not in (None, '')
+                   and f.get('availability') not in {'missing', 'not_applicable'}}
+    atomic_json(output/'COLUMN_AUDIT.json', {
+        'hidden_parameters': sorted(hidden), 'registered_configurations': len(machines),
+        'rapid_traverse_b_rpm': {'populated': len(b_populated),
+                                 'fill_ratio': len(b_populated)/len(machines) if machines else None,
+                                 'hidden': 'rapid_traverse_b_rpm' in hidden},
+        'raw_facts_retained': True,
+    })
+    # The schema, source blanks and observed facts all contribute columns.
+    # A failed extraction must not make an entire parameter disappear.
+    categories = {target_parameter(r['key']): r['category'] for r in schema.config['rules']}
     for f in facts:
-        fact_groups[(f['source_file'],f['model'],f.get('configuration','base'),colname(f))].append(f)
-    status_groups=defaultdict(list)
+        categories.setdefault(target_parameter(f['parameter']), f['category'])
     for d in documents:
-        for s in d.get('cell_statuses',[]):
-            if s.get('parameter'):
-                c=f'[{s.get("category", "Other")}] {s["parameter"]}'
-                status_groups[(d['source_file'],s['model'],s.get('configuration','base'),c)].append(s)
-    base_rows=[];clean_rows=[];configs=[]
+        for status in d.get('cell_statuses', []):
+            if status.get('parameter'):
+                categories.setdefault(target_parameter(status['parameter']), status.get('category', 'Other'))
+    parameters = sorted(k for k in categories if k not in hidden)
+    columns = {k: f'[{categories[k]}] {k}' for k in parameters}
+    filtered = [columns[k] for k in parameters]
+    fact_groups, status_groups = defaultdict(list), defaultdict(list)
+    for f in facts:
+        fact_groups[(f['source_file'], f['model'], f.get('configuration', 'base'))].append(f)
     for d in documents:
-        for model,meta in sorted(d['registry'].items()):
-            identity={k:meta.get(k,d.get(k,'')) for k in IDENTITY}
-            identity.update(model=model,source_file=d['source_file'])
-            for config in meta.get('configurations',['base']):
-                row={**identity,'configuration':config}
-                clean=dict(row)
-                for c in columns:
-                    key=(d['source_file'],model,config,c)
-                    fs=fact_groups.get(key,[])
-                    statuses=status_groups.get(key,[])
-                    if fs:
-                        row[c]=display_value(fs)
-                        clean[c]=display_value(fs,clean=True)
-                    elif any(s['status']=='SOURCE_BLANK' for s in statuses):
-                        row[c]='[ПУСТАЯ ЯЧЕЙКА В PDF]';clean[c]=''
-                    else:
-                        row[c]='[НЕ ИЗВЛЕЧЕНО ИЛИ НЕ УКАЗАНО В КАТАЛОГЕ]';clean[c]=''
+        for status in d.get('cell_statuses', []):
+            status_groups[(d['source_file'], status['model'], status.get('configuration', 'base'))].append(status)
+    base_rows, clean_rows, configs, projected_statuses, audit = [], [], [], [], []
+    for d in documents:
+        for model, meta in sorted(d['registry'].items()):
+            identity = {k: meta.get(k, d.get(k, '')) for k in IDENTITY}
+            identity.update(model=model, source_file=d['source_file'])
+            for config in meta.get('configurations', ['base']):
+                identity_config = {**identity, 'configuration': config}
+                key = (d['source_file'], model, config)
+                cells = project_cells(fact_groups[key], status_groups[key], parameters)
+                row, clean = dict(identity_config), dict(identity_config)
+                for parameter in parameters:
+                    cell = cells[parameter]
+                    row[columns[parameter]] = cell.render()
+                    clean[columns[parameter]] = cell.value if cell.status == 'PRESENT' else ''
+                    projected_statuses.append({**identity_config, 'parameter': parameter, 'status': cell.status,
+                                               'numeric_components': [float(n) for n in cell.numbers], 'value': cell.value})
+                    if cell.audit:
+                        audit.append({**identity_config, 'parameter': parameter, 'status': cell.status,
+                                      'value': cell.value, 'source_facts': cell.audit})
                 configs.append(row)
-                if config=='base':
-                    base_rows.append(row);clean_rows.append(clean)
-    write_csv(output/'ALL_MODELS_wide.csv',base_rows,IDENTITY+filtered)
-    write_csv(output/'ALL_MODELS_wide_values.csv',clean_rows,IDENTITY+filtered)
-    write_csv(output/'ALL_CONFIGURATIONS_wide.csv',configs,IDENTITY+['configuration']+filtered)
-    # Full per-series exports include the eight fields hidden in the user-facing
-    # combined wide CSV. Nothing is deleted from detailed facts or provenance.
-    series=defaultdict(list)
-    for row in configs: series[row['model'].split()[0]].append(row)
-    for name,rows in series.items():
-        own=[c for c in columns if any((r['source_file'],r['model'],r['configuration'],c) in fact_groups for r in rows)]
-        write_csv(output/'by_series'/f'{re.sub(r"[^A-Z0-9_-]","_",name.upper())}_models.csv',rows,IDENTITY+['configuration']+own)
+                if config == 'base':
+                    base_rows.append(row)
+                    clean_rows.append(clean)
+    write_csv(output/'ALL_MODELS_wide.csv', base_rows, IDENTITY+filtered)
+    write_csv(output/'ALL_MODELS_wide_values.csv', clean_rows, IDENTITY+filtered)
+    write_csv(output/'ALL_CONFIGURATIONS_wide.csv', configs, IDENTITY+['configuration']+filtered)
+    write_csv(output/'TABLE_FIELD_STATUS.csv', projected_statuses,
+              IDENTITY+['configuration', 'parameter', 'status', 'numeric_components', 'value'])
+    atomic_json(output/'TRANSFORMATION_AUDIT.json', audit)
+    (output/'DATA_LEGEND.txt').write_text(LEGEND+'\n', encoding='utf-8')
+    series = defaultdict(list)
+    for row in configs:
+        series[row['model'].split()[0]].append(row)
+    for name, rows in series.items():
+        write_csv(output/'by_series'/f'{re.sub(r"[^A-Z0-9_-]", "_", name.upper())}_models.csv',
+                  rows, IDENTITY+['configuration']+filtered)
     opt=[]
     for f in facts:
         for value in f.get('options',[]):
@@ -149,10 +158,10 @@ def write_outputs(output:Path,documents:list[dict],schema,qualities:list[dict]):
     write_csv(output/'CELL_ISSUES.csv',reviews,['source_file','source_page','model','configuration','parameter','reason','source_row_id','fact_id','value_raw','cell_bbox','header_raw','models','instruction'])
     atomic_json(output/'NEEDS_REVIEW.json',reviews)
     atomic_json(output/'LOCAL_OCR_AUDIT.json',[event for d in documents for event in d.get('ocr_events',[])])
-    atomic_json(output/'AI_QUEUE_SUMMARY.json',{'project_name':PROJECT_NAME,'version':'8.4.5','mode':'local','enabled':False,'api_calls':0,'note':'Native PDF engine does not call external AI services.'})
+    atomic_json(output/'AI_QUEUE_SUMMARY.json',{'project_name':PROJECT_NAME,'version':'4.8.6','mode':'local','enabled':False,'api_calls':0,'note':'Native PDF engine does not call external AI services.'})
     model_quality=[m for q in qualities for m in q['models']]
     write_csv(output/'MODEL_QUALITY.csv',model_quality,['source_file','model','generation','configuration','machine_class','machine_type','facts','measurement_records','required_total','required_found','missing_required','source_blank_cells','warnings','extraction_gate_passed','quality_status','human_verified'])
-    atomic_json(output/'QUALITY_REPORT.json',{'project_name':PROJECT_NAME,'project_version':'8.4.5','quality_passed':bool(qualities) and all(q['quality_passed'] for q in qualities),
+    atomic_json(output/'QUALITY_REPORT.json',{'project_name':PROJECT_NAME,'project_version':'4.8.6','quality_passed':bool(qualities) and all(q['quality_passed'] for q in qualities),
                                             'extraction_gate_passed':bool(qualities) and all(q['extraction_gate_passed'] for q in qualities),'documents':qualities,'human_verified':False})
     write_jsonl(output/'RAW_TABLES.jsonl',(r for d in documents for r in d.get('raw_tables',[])))
     write_jsonl(output/'SOURCE_PAGES.jsonl',(p for d in documents for p in d.get('source_pages',[])))
@@ -162,7 +171,7 @@ def write_outputs(output:Path,documents:list[dict],schema,qualities:list[dict]):
     for d in documents:
         short={k:v for k,v in d.items() if k not in {'source_pages','raw_tables','source_path'}}
         atomic_json(output/'documents'/(Path(d['source_file']).stem+'_report.json'),short)
-    summary={'project_name':PROJECT_NAME,'project_version':'8.4.5','files':len(documents),'models':sum(len(d['registry']) for d in documents),'configuration_rows':len(configs),
+    summary={'project_name':PROJECT_NAME,'project_version':'4.8.6','files':len(documents),'models':sum(len(d['registry']) for d in documents),'configuration_rows':len(configs),
              'facts':len(facts),'measurement_records':sum(f.get('availability')!='not_applicable' for f in facts),
              'not_applicable_records':sum(f.get('availability')=='not_applicable' for f in facts),
              'source_blank_cells':sum(s['status']=='SOURCE_BLANK' for s in statuses),

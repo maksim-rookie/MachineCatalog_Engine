@@ -61,7 +61,7 @@ def legacy_adapter(path, original=None):
     result.update(source_file=path.name,source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),facts=facts,review=review,
                   registry=registry,machine_class=machine_class,spec_pages=[],engine_version='legacy_fallback')
     result['review'].append({'source_file':path.name,'source_page':0,'reason':'legacy_fallback_unverified',
-                            'instruction':'Legacy compatibility result. Main-specification geometry was not established by v8.4.5.'})
+                            'instruction':'Legacy compatibility result. Main-specification geometry was not established by v4.8.6.'})
     return result
 
 
@@ -87,7 +87,7 @@ def run(settings:Settings):
     atomic_json(output/'SCHEMA_SNAPSHOT.json',schema.config)
     tracker=RunProgress(output,len(paths))
     documents=[];failed=False
-    print(f'MachineCatalog Engine 8.4.5 | files: {len(paths)} | cache: {settings.use_cache} | local only',flush=True)
+    print(f'MachineCatalog Engine 4.8.6 | files: {len(paths)} | cache: {settings.use_cache} | local only',flush=True)
     try:
         for index,path in enumerate(paths):
             start=time.perf_counter()
@@ -159,13 +159,13 @@ def run(settings:Settings):
                        completed_with_errors=failed,cache_hits=timing['cache_hits'],
                        timing_report='RUN_TIMING.json',progress_log='RUN_PROGRESS.jsonl',engine_version=ENGINE_VERSION)
         atomic_json(output/'RUN_SUMMARY.json',summary)
-        atomic_json(output/'RUN_MANIFEST.json',{'project_name':PROJECT_NAME,'project_version':'8.4.5','engine_version':ENGINE_VERSION,
+        atomic_json(output/'RUN_MANIFEST.json',{'project_name':PROJECT_NAME,'project_version':'4.8.6','engine_version':ENGINE_VERSION,
             'engine_fingerprint':fingerprint,'run_id':output.name,'completed_with_errors':failed,
             'quality_passed':summary['quality_passed'],'extraction_gate_passed':summary['extraction_gate_passed'],
             'elapsed_seconds':timing['elapsed_seconds'],
             'source_files':[{'name':d['source_file'],'sha256':d.get('source_sha256','')} for d in documents],
             'artifacts':sorted(str(p.relative_to(output)) for p in output.rglob('*') if p.is_file())})
-        # Pointer contains a portable name relative to output/v8_4_5/.
+        # Pointer contains a portable name relative to output/v4_8_6/.
         (settings.output_root/'LATEST_RUN.txt').write_text(output.name+'\n',encoding='utf-8')
         print(f'\nModels: {summary["models"]}; measurements: {summary["measurement_records"]}; explicit N/A: {summary["not_applicable_records"]}')
         print(f'Elapsed: {timing["duration_hms"]} ({timing["elapsed_seconds"]:.3f} s); cache hits: {timing["cache_hits"]}/{len(paths)}')
@@ -175,7 +175,7 @@ def run(settings:Settings):
         exit_code=1 if failed else 2 if settings.strict_quality and not summary['quality_passed'] else 0
         return output,summary,exit_code
     except BaseException as exc:
-        atomic_json(output/'RUN_ABORTED.json',{'project_name':PROJECT_NAME,'project_version':'8.4.5','error':type(exc).__name__+': '+str(exc),
+        atomic_json(output/'RUN_ABORTED.json',{'project_name':PROJECT_NAME,'project_version':'4.8.6','error':type(exc).__name__+': '+str(exc),
             'elapsed_seconds':round(time.perf_counter()-tracker.start,3),'progress_percent':tracker.last_percent,
             'file_timings':tracker.file_timings,'completed':False})
         raise

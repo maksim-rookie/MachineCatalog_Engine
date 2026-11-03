@@ -57,7 +57,7 @@ class RunProgress:
         stage='Completed with processing errors' if errors else 'Completed; quality review required' if not quality_passed else 'Completed'
         self.update(100,stage,force=True)
         elapsed=time.perf_counter()-self.start
-        return {'project_name':PROJECT_NAME,'project_version':'8.4.5','run_id':self.directory.name,'started_at':self.started_at,
+        return {'project_name':PROJECT_NAME,'project_version':'4.8.6','run_id':self.directory.name,'started_at':self.started_at,
                 'finished_at':datetime.now().astimezone().isoformat(),'elapsed_seconds':round(elapsed,3),
                 'duration_hms':self.format_duration(elapsed),'progress_percent':100,
                 'progress_kind':'weighted_work_units_not_elapsed_time','completed_with_errors':errors,

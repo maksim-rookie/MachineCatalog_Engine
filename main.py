@@ -1,10 +1,11 @@
-"""MachineCatalog Engine 8.4.5. Local, source-grounded catalogue extraction.
+"""MachineCatalog Engine 4.8.6. Local, source-grounded catalogue extraction.
 
 Run ``python main.py --help``. The new geometry engine is the default.
 Legacy v8.4.2 compatibility is isolated in compat_v842.py and opt-in for PDFs.
 """
 from __future__ import annotations
 import argparse
+import logging
 from pathlib import Path
 import sys
 from catalog_engine.runner import Settings,run
@@ -15,11 +16,12 @@ BASE=Path(__file__).resolve().parent
 
 
 def main(argv=None):
-    parser=argparse.ArgumentParser(description='MachineCatalog Engine 8.4.5: local catalogue extraction with provenance and quality gates.')
+    logging.basicConfig(level=logging.INFO, format='%(levelname)s %(name)s: %(message)s')
+    parser=argparse.ArgumentParser(description='MachineCatalog Engine 4.8.6: local catalogue extraction with provenance and quality gates.')
     parser.add_argument('--version',action='version',version=f'{PROJECT_NAME} {PROJECT_VERSION}')
     parser.add_argument('--input',type=Path,default=BASE/'pdf',help='Input directory; defaults to project/pdf')
-    parser.add_argument('--output',type=Path,default=BASE/'output'/'v8_4_5',help='Parent directory for unique dated runs')
-    parser.add_argument('--cache',type=Path,default=BASE/'output'/'cache_v8_4_5',help='Versioned extraction cache')
+    parser.add_argument('--output',type=Path,default=BASE/'output'/'v4_8_6',help='Parent directory for unique dated runs')
+    parser.add_argument('--cache',type=Path,default=BASE/'output'/'cache_v4_8_6',help='Versioned extraction cache')
     parser.add_argument('--no-cache',action='store_true',help='Neither read nor write extraction cache')
     parser.add_argument('--strict-quality',action='store_true',help='Exit 2 when quality needs review; files are still saved')
     parser.add_argument('--schema',type=Path,default=BASE/'config'/'schema.json',help='Parameter rules and required fields')

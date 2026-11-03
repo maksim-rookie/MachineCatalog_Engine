@@ -1,5 +1,5 @@
 {
-  "schema_version": "8.4.5",
+  "schema_version": "4.8.6",
   "label_aliases": {
     "moter": "motor",
     "spdinel": "spindle",
@@ -13,6 +13,57 @@
     "capasity": "capacity"
   },
   "rules": [
+    {
+      "key": "cutting_feed_x_m_min",
+      "pattern": "\\bx[- ]?axis\\b|\\bx\\b",
+      "section": "^(?:cutting feed|working feed|рабоч)",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "cutting_feed_y_m_min",
+      "pattern": "\\by[- ]?axis\\b|\\by\\b",
+      "section": "^(?:cutting feed|working feed|рабоч)",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "cutting_feed_z_m_min",
+      "pattern": "\\bz[- ]?axis\\b|\\bz\\b",
+      "section": "^(?:cutting feed|working feed|рабоч)",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "cutting_feed_xyz_mm_min",
+      "pattern": "(?:cutting|working) feed(?:rate)?|рабочая подача",
+      "unit": "mm/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "rapid_traverse_xyz_m_min",
+      "pattern": "(?:rapid traverse|rapid feed).*x\\s*/\\s*y\\s*/\\s*z|x\\s*/\\s*y\\s*/\\s*z.*(?:rapid traverse|rapid feed)",
+      "unit": "m/min",
+      "category": "Feedrate"
+    },
+    {
+      "key": "machine_dimension_1_mm",
+      "pattern": "(?:dimension|размер)[ _-]*1\\b",
+      "unit": "mm",
+      "category": "Machine dimensions"
+    },
+    {
+      "key": "machine_dimension_2_mm",
+      "pattern": "(?:dimension|размер)[ _-]*2\\b",
+      "unit": "mm",
+      "category": "Machine dimensions"
+    },
+    {
+      "key": "machine_dimension_3_mm",
+      "pattern": "(?:dimension|размер)[ _-]*3\\b",
+      "unit": "mm",
+      "category": "Machine dimensions"
+    },
     {
       "key": "swing_over_bed_mm",
       "pattern": "swing over bed",

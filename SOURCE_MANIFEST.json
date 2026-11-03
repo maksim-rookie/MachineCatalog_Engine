@@ -1,27 +1,43 @@
 {
   "project_name": "MachineCatalog Engine",
-  "version": "8.4.5",
+  "version": "4.8.6",
   "distribution": "source-only",
   "excluded": [
     "user PDFs",
     "generated outputs",
-    "test catalogues"
+    "dependency caches",
+    "previous release archives"
   ],
   "files": [
     {
+      "path": ".gitignore",
+      "bytes": 23,
+      "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1566,
+      "sha256": "6c5d5a505b01c3dc1b15e56e04821bf9d9c6296a5b0386895ca111ea2a4f650b"
+    },
+    {
       "path": "INSTALL_DEPS.bat",
       "bytes": 477,
-      "sha256": "d777163af23bf94f5e608b9b6e215416ef93c04a68e252f6ecb239c20241ce3a"
+      "sha256": "f19205d0ad73ee9ea4e59e6cc6577b198f86e779a2f279ad1ea9346851f51e83"
+    },
+    {
+      "path": "README.md",
+      "bytes": 494,
+      "sha256": "23eb68c53be4f75a20cb6b5df459b0e8ee00ca9d98c4528d4d2e90b973915b30"
     },
     {
       "path": "README_RU.md",
-      "bytes": 1995,
-      "sha256": "75f6de15797d8e0553a84f4f953acee7490fde0359e440d0023fb49436629436"
+      "bytes": 5894,
+      "sha256": "1bcc6a0162bcaad23c347ac955000ca72cdaa929c0098570eff6001bce9841f7"
     },
     {
       "path": "START_LOCAL.bat",
       "bytes": 551,
-      "sha256": "3587c456e2716096a2749acd0b7e6d1801b49ec9da939412c2f785992ae583fb"
+      "sha256": "a0054984a2f19a2abd5cd556881c5c85fc8e25e18b5c77daae56f835004acf4f"
     },
     {
       "path": "START_NO_CACHE.bat",
@@ -30,13 +46,13 @@
     },
     {
       "path": "catalog_engine/__init__.py",
-      "bytes": 195,
-      "sha256": "11a0a43401dd164a6722e803a2e44fe4113ba4caf9ce3c6bc93fd1c5aad49453"
+      "bytes": 194,
+      "sha256": "407d64ce26dade8fd36c846297b52f28c984441c3822ec8827aa9e6fbea26f05"
     },
     {
       "path": "catalog_engine/exports.py",
-      "bytes": 12301,
-      "sha256": "9b781b71b4df66191d8ff3f5f26e9de64f551c53eb3492567038449257304d3a"
+      "bytes": 13573,
+      "sha256": "9fe309d947a62f1d6e29d15d51cd2e5fedd38d91cfb782f19ae01d6d1196aa1b"
     },
     {
       "path": "catalog_engine/extract.py",
@@ -59,9 +75,14 @@
       "sha256": "f084d3fa3ba8de41a45cb10f84d7a1e826c918493be51fc358f61b017905166a"
     },
     {
+      "path": "catalog_engine/presentation.py",
+      "bytes": 12901,
+      "sha256": "51ab7caca7ce18cb88b6549641afb0c2b4a6729c889b51b574b8bf30ce2c7233"
+    },
+    {
       "path": "catalog_engine/progress.py",
       "bytes": 3677,
-      "sha256": "573c294795fadca04d1a6a3ebb7815760e5e38c714d90b1f99fa2b966fb4ac4e"
+      "sha256": "519ba2c744ee8e678ce5957af15cfa2ddd8f819af48f16edc498f18ccd05eb1a"
     },
     {
       "path": "catalog_engine/quality.py",
@@ -71,7 +92,7 @@
     {
       "path": "catalog_engine/runner.py",
       "bytes": 11314,
-      "sha256": "65838570cfe663b332cc9fc2a1b8edb32a13165e8d9f60f7ad1a4b2933e1a576"
+      "sha256": "7efef844e205a6af097f225dcfae77269452b59c9e6d997cd4b847c50a527223"
     },
     {
       "path": "catalog_engine/schema.py",
@@ -85,8 +106,8 @@
     },
     {
       "path": "catalog_engine/values.py",
-      "bytes": 9973,
-      "sha256": "0cfab7ad57336a9deee1c4da0c71071770d3411fccb68c95b4e50bcb787db98a"
+      "bytes": 10133,
+      "sha256": "b22048a4497c1c460cbba84374bfb88c91c29e567edb0ec522aa1c403628b3c8"
     },
     {
       "path": "compat_v842.py",
@@ -115,18 +136,28 @@
     },
     {
       "path": "config/schema.json",
-      "bytes": 16448,
-      "sha256": "e338a9ad3129e408aac4a51db755fde7da9f3266b40ad7c63bb2d477f554a517"
+      "bytes": 17999,
+      "sha256": "af19a77d73eca88cabc0165239c10153e4794980de69e1410b0d30d11d0c0ab7"
     },
     {
       "path": "main.py",
-      "bytes": 2309,
-      "sha256": "40e73339202f30f4d7b9737c5cad84383a797fc8d5a40b9a42bc945214527fac"
+      "bytes": 2414,
+      "sha256": "c09cdda1062a691b059ad6cb92bf2648e37c51963bd9e3c7fe779e6700745a1a"
     },
     {
       "path": "requirements.txt",
       "bytes": 238,
       "sha256": "298dd88c3cc6703ae9fa19588bf609d580cb10b1641a8a02bec34514ff6c05fc"
+    },
+    {
+      "path": "tests/test_pdf_workflow.py",
+      "bytes": 3274,
+      "sha256": "8d0d1e7bb2938bfa1f4b6d77dff05d50b09edc646adb9ceab01fb8eb20b0b8eb"
+    },
+    {
+      "path": "tests/test_presentation.py",
+      "bytes": 12232,
+      "sha256": "c6c7b8303f89f3a598191fcb27e0c0087e70194054138d164706228fefc68729"
     }
   ]
 }
